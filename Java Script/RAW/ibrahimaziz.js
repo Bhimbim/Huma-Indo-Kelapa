@@ -50,6 +50,7 @@ function navigationPanelShow(stringNavigationTriggerJavaScriptID)
 			// $(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(-50px)");
 			// $(stringCurtainLayoutJQueryID).css("display", "block");
 			// cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
+			$("input[name='RadioButtonNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
 		}
 		else
 		{
