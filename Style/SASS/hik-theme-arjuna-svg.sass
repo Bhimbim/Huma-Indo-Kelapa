@@ -23,10 +23,10 @@ $theme_tertiary_blue: 225
 
 /* HIGHLIGHT SECTION */
 
-$theme_quaternary_color: #0073BE
+$theme_quaternary_color: #0055A0
 $theme_quaternary_red: 0
-$theme_quaternary_green: 115
-$theme_quaternary_blue: 190
+$theme_quaternary_green: 85
+$theme_quaternary_blue: 160
 
 /* BLACK SECTION */
 
@@ -165,4 +165,14 @@ input, textarea, select
 	background-color: transparent
 	.Check
 		border-color: $theme_quaternary_color
+		background-color: transparent
+
+// BUTTON
+
+.ButtonContainer
+	background-color: $theme_quaternary_color
+	color: $theme_primary_color
+	.ButtonHighlight
+		background-color: rgba($theme_quaternary_red + 30, $theme_quaternary_green + 30, $theme_quaternary_blue + 30, 1)
+	img
 		background-color: transparent

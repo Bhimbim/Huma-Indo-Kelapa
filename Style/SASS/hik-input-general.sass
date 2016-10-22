@@ -7,6 +7,19 @@
 @import hik-initialization-general
 
 
+// GROUP
+
+.GroupInput
+	margin: $general_space_small
+	.GroupHeader
+		font-size: $fontsize_span_groupheader
+		line-height: $size_height_single
+		text-align: left
+
+.GroupInput:first-of-type
+	margin-left: 0px
+
+
 // TEXT
 
 input, textarea, select
@@ -29,21 +42,21 @@ textarea
 // CHECKBOX
 
 .Checkbox
-	width: $size_icon_ldpi
-	height: $size_icon_ldpi
+	margin-right: $general_space_little
+	width: ($size_icon_ldpi / 6) * 4
+	height: ($size_icon_ldpi / 6) * 4
 	border-style: solid
 	border-width: $size_border_thin
-	vertical-align: center
+	vertical-align: middle
+	display: inline-block
 	.Check
 		position: relative
-		margin-top: $general_space_small
+		margin-top: $general_space_little
 		margin-left: auto
 		margin-right: auto
-		width: $size_icon_ldpi / 2
-		border-left-style: solid
-		border-bottom-style: solid
-		border-left-width: $size_border_bold
-		border-bottom-width: $size_border_bold
+		border-left-width: $size_border_thick
+		border-bottom-width: $size_border_thick
+		+Rotate-Z(-45deg)
 
 input[type="checkbox"] + .Checkbox .Check
 	+Animation(animationCheckboxNotChecked, 0.25s, 0s, 1, forwards)

@@ -104,3 +104,33 @@ input[name="RadioButtonNavigationDetail"]:checked + li .NavigationDetailTail
 	border-right-style: solid
 	border-right-width: $size_height_navigationdetailtail
 	border-top-style: none
+
+
+/* BUTTON */
+
+.ButtonPrimary, .ButtonSecondary
+	display: none
+
+.ButtonContainer
+	margin: $general_space_little
+	height: $size_height_single
+	line-height: $size_height_single
+	display: inline-block
+	vertical-align: middle
+	overflow-x: hidden
+	padding-right: $general_space_small
+	.ButtonHighlight
+		position: absolute
+		width: 0px
+		height: $size_height_single
+		vertical-align: middle
+	img
+		position: absolute
+		width: $size_width_tiny
+		height: $size_height_single
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-left: $general_space_small + $size_width_tiny
+.ButtonContainer:hover > .ButtonHighlight
+	width: $size_width_tiny

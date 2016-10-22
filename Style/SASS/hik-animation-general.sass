@@ -40,17 +40,30 @@
 
 +Keyframes(animationCheckboxChecked)
 	0%
-		margin-top: $general_space_small
-		height: 0px
-	100%
 		margin-top: $general_space_little
-		height: $size_icon_ldpi / 6
-		+Rotate-Z(-45deg)
+		height: 0px
+		width: 0px
+		border-left-style: none
+		border-bottom-style: none
+	100%
+		margin-top: $general_space_tiny
+		height: $size_icon_ldpi / 9
+		width: $size_icon_ldpi / 3
+		border-left-style: solid
+		border-bottom-style: solid
 
 +Keyframes(animationCheckboxNotChecked)
 	0%
-		margin-top: $general_space_little
-		height: $size_icon_ldpi / 6
+		margin-top: $general_space_tiny
+		height: $size_icon_ldpi / 9
+		width: $size_icon_ldpi / 3
+		border-left-style: solid
+		border-bottom-style: solid
 	100%
-		margin-top: $general_space_small
+		margin-top: $general_space_little
 		height: 0px
+		width: 0px
+		border-left-style: none
+		border-bottom-style: none
+
+/* RADIO BUTTON */
