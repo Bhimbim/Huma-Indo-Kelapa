@@ -1,0 +1,52 @@
+%nav
+	%header
+		%img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+		%div.ProfileContainer
+			%span.SpanProfileHeader Logan Howlett
+			%span.SpanProfileDetail administrator
+
+	%ul.ListNavigationHeader
+		%input#radioButtonNavigationHeaderSecurity{ :type => "radio", :name => "RadioButtonNavigationHeader", :value => "security" }
+		%li
+			%label{ :for => "radioButtonNavigationHeaderSecurity" }
+				Security
+			%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+			%ul.ListNavigationItem
+				%li User Password
+				%li User Group
+				%li User Account
+		%input#radioButtonNavigationHeaderTransaction{ :type => "radio", :name => "RadioButtonNavigationHeader", :value => "transaction" }
+		%li
+			%label{ :for => "radioButtonNavigationHeaderTransaction" }
+				Transaction
+			%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+			%ul.ListNavigationItem
+				%li User Password
+				%li User Group
+				%li User Account
+		%input#radioButtonNavigationHeaderReport{ :type => "radio", :name => "RadioButtonNavigationHeader", :value => "report" }
+		%li
+			%label{ :for => "radioButtonNavigationHeaderReport" }
+				Report
+			%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+			%ul.ListNavigationItem
+				%li User Password
+				%li User Group
+				%li User Account
+		%input#radioButtonNavigationHeaderSetting{ :type => "radio", :name => "RadioButtonNavigationHeader", :value => "setting" }
+		%li
+			%label{ :for => "radioButtonNavigationHeaderSetting" }
+				Setting
+			%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+			%ul.ListNavigationItem
+				%li Pricing
+				%li Preference
+		%input#radioButtonNavigationHeaderManufacturing{ :type => "radio", :name => "RadioButtonNavigationHeader", :value => "manufacturing" }
+		%li
+			%label{ :for => "radioButtonNavigationHeaderManufacturing" }
+				Manufacturing
+			%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+			%ul.ListNavigationItem
+				%li User Password
+				%li User Group
+				%li User Account

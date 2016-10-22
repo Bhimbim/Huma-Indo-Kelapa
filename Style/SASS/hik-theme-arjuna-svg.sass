@@ -1,0 +1,168 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// ARJUNA
+
+/* THEME */
+
+/* WHITE SECTION */
+
+$theme_primary_color: #ffffff
+$theme_primary_red: 255
+$theme_primary_green: 255
+$theme_primary_blue: 255
+$theme_secondary_color: #F5F5F5
+$theme_secondary_red: 245
+$theme_secondary_green: 245
+$theme_secondary_blue: 245
+$theme_tertiary_color: #E1E1E1
+$theme_tertiary_red: 225
+$theme_tertiary_green: 225
+$theme_tertiary_blue: 225
+
+/* HIGHLIGHT SECTION */
+
+$theme_quaternary_color: #0073BE
+$theme_quaternary_red: 0
+$theme_quaternary_green: 115
+$theme_quaternary_blue: 190
+
+/* BLACK SECTION */
+
+$theme_quinary_color: #1E1E1E
+$theme_quinary_red: 30
+$theme_quinary_green: 30
+$theme_quinary_blue: 30
+$theme_senary_color: #2D2D2D
+$theme_senary_red: 45
+$theme_senary_green: 45
+$theme_senary_blue: 45
+$theme_septenary_color: #3C3C3C
+$theme_septenary_red: 60
+$theme_septenary_green: 60
+$theme_septenary_blue: 60
+$theme_octonary_color: #5A5A5A
+$theme_octonary_red: 90
+$theme_octonary_green: 90
+$theme_octonary_blue: 90
+
+
+/* FORM SECTION */
+
+$theme_success_color: #3cb94b
+$theme_fail_color: #c3232d
+$theme_valid_color: #c3232d
+$theme_invalid_color: #c3232d
+$theme_disable_color: #c3232d
+$theme_readonlt_color: #c3232d
+$theme_enable_color: #c3232d
+
+
+// IMPORT
+
+@import hik-initialization-general
+
+
+// SETUP
+
+/* SEMANTIC ELEMENTS */
+
+body
+	background-color: $theme_senary_color
+
+#Curtain
+	background-color: rgba($theme_septenary_red, $theme_senary_green, $theme_senary_blue, 0.2)
+
+main
+	background-color: transparent
+
+/* NEUTRALIZATION */
+
+h1, h2, h3, h4, h5, h6, p, mark, ol, ul, li
+	background-color: transparent
+
+
+// LAYOUT
+
+/* HEADER */
+
+header
+	background-color: $theme_primary_color
+	div.MainHeader
+		border-bottom-color: $theme_tertiary_color
+	div.SubHeader
+		ul.ListNavigationDetail
+			li
+				h3
+					color: $theme_senary_color
+				.NavigationDetailBody
+					background-color: $theme_quaternary_color
+					h3
+						color: $theme_primary_color
+				.NavigationDetailTail
+					border-left-color: transparent
+					border-right-color: transparent
+					border-top-color: $theme_quaternary_color
+
+/* MAIN */
+
+form
+	background-color: $theme_secondary_color
+	fieldset
+		background-color: $theme_primary_color
+
+
+/* NAVIGATION */
+
+nav
+	background-color: $theme_quinary_color
+	header
+		background-color: $theme_quaternary_color
+		color: $theme_primary_color
+	ul.ListNavigationHeader
+		background-color: $theme_quinary_color
+		li
+			color: $theme_primary_color
+			ul.ListNavigationItem
+				background-color: $theme_senary_color
+				li
+					color: $theme_primary_color
+
+
+// FONT
+
+header
+	h1
+		color: $theme_senary_color
+	h2
+		color: $theme_quinary_color
+	p
+		color: $theme_senary_color
+
+
+// LINK
+
+header
+	.ButtonNavigation, .ButtonSetting, .ButtonLogout
+		background-color: transparent
+	.ButtonNavigation
+		background-image: url("../../Resource/Icon/Arjuna/icon_navigation_trigger.svg")
+	.ButtonSetting
+		background-image: url("../../Resource/Icon/Arjuna/icon_setting.svg")
+	.ButtonLogout
+		background-image: url("../../Resource/Icon/Arjuna/icon_logout.svg")
+
+
+// INPUT
+
+input, textarea, select
+	border-color: $theme_tertiary_color
+	background-color: transparent
+
+.Checkbox
+	border-color: $theme_tertiary_color
+	background-color: transparent
+	.Check
+		border-color: $theme_quaternary_color
+		background-color: transparent

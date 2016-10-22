@@ -1,0 +1,106 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+
+
+// LINK
+
+/* Clear Hyperlink */
+
+a.Clear
+	text-decoration: none
+
+a.Clear:link
+	text-decoration: none
+
+a.Clear:visited
+	text-decoration: none
+
+a.Clear:hover
+	text-decoration: none
+
+a.Clear:active
+	text-decoration: none
+
+/* Underline Hyperlink */
+
+a.Underline
+	text-decoration: underline
+
+a.Underline:link
+	color: inherit
+	text-decoration: underline
+
+a.Underline:visited
+	color: inherit
+	text-decoration: underline
+
+a.Underlinek:hover
+	color: inherit
+	text-decoration: underline
+
+a.Underline:active
+	color: inherit
+	text-decoration: underline
+
+
+// HEADER
+
+header
+	.ButtonNavigation, .ButtonSetting, .ButtonLogout
+		width: $size_icon_mdpi
+		height: $size_icon_mdpi
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		border: none
+		vertical-align: middle
+	.ButtonNavigation
+		margin-left: $general_space_small
+		margin-right: $general_space_small
+	.ButtonSetting, .ButtonLogout
+		float: right
+		margin-top: ($size_height_mainheader / 2) - ($size_icon_mdpi / 2)
+		margin-left: $general_space_small
+		margin-right: $general_space_small
+		margin-bottom: ($size_height_mainheader / 2) - ($size_icon_mdpi / 2)
+
+
+/* NAVIGATION */
+
+input[name="RadioButtonNavigationHeader"]
+	float: right
+	vertical-align: middle
+
+input[name="RadioButtonNavigationHeader"]:checked + ul.ListNavigationItem
+
+input[name="RadioButtonNavigationDetail"] + li .NavigationDetailBody
+	+Animation(animationNavigationDetailBodyHide, 0.25s, 0s, 1, forwards)
+
+input[name="RadioButtonNavigationDetail"]:checked + li .NavigationDetailBody
+	+Animation(animationNavigationDetailBodyShow, 0.25s, 0s, 1, forwards)
+
+input[name="RadioButtonNavigationDetail"] + li .NavigationDetailTail
+	+Animation(animationNavigationDetailTailHide, 0.25s, 0s, 1, forwards)
+
+input[name="RadioButtonNavigationDetail"]:checked + li .NavigationDetailTail
+	border-top-style: solid
+	+Animation(animationNavigationDetailTailShow, 0.25s, 0s, 1, forwards)
+
+.NavigationDetailBody
+	height: $size_height_navigationdetail
+
+.NavigationDetailTail
+	position: absolute
+	margin-top: -$size_height_navigationdetail
+	width: 0px
+	height: 0px
+	border-left-style: solid
+	border-left-width: $size_height_navigationdetailtail
+	border-right-style: solid
+	border-right-width: $size_height_navigationdetailtail
+	border-top-style: none

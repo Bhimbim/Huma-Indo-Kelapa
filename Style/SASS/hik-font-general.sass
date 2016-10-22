@@ -1,0 +1,88 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+
+
+// HEADER
+
+header
+	h1, h2, h3
+		vertical-align: middle
+	h1
+		height: $size_height_mainheader
+		line-height: $size_height_mainheader
+		font-size: $fontsize_h1_mainheader
+		display: inline-block
+	div.SubHeader
+		h2
+			line-height: 78px
+			font-size: $fontsize_h2_subheader
+		ul.ListNavigationDetail
+			margin: 0px
+			height: $size_height_navigationdetail
+			padding: 0px
+			list-style-type: none
+			overflow-y: hidden
+			li
+				display: inline-block
+				h3
+					padding-left: $general_space_medium
+					padding-right: $general_space_medium
+					line-height: $size_height_navigationdetail
+					font-size: $fontsize_h3_detailheader
+				.NavigationDetailBody
+					text-align: center
+
+
+// NAVIGATION
+
+nav
+	.SpanProfileHeader
+		font-size: $fontsize_span_profileheader
+	.SpanProfileDetail
+		font-size: $fontsize_span_profiledetail
+	ul, ol, li
+		margin: 0px
+		padding: 0px
+		vertical-align: middle
+		list-style-type: none
+		display: block
+	ul.ListNavigationHeader
+		li
+			min-height: $size_height_navigationheader
+			line-height: $size_height_navigationheader
+			label
+				padding-left: $general_space_medium
+				padding-right: $general_space_medium
+				font-size: $fontsize_li_navigationheader
+			ul.ListNavigationItem
+				height: 0px
+				padding-left: $general_space_medium
+				padding-right: $general_space_medium
+				overflow: hidden
+				li
+					min-height: $size_height_navigationitem
+					line-height: $size_height_navigationitem
+					font-size: $fontsize_li_navigationitem
+
+
+// CONTENT
+
+main
+	form
+		fieldset
+			display: inline-block
+			legend
+				float: left
+				margin: 0px
+				padding: 0px
+				font-size: $fontsize_legend_fieldset
+				line-height: $size_height_single
+				text-transform: uppercase
+			label
+				font-size: $fontsize_label_fieldset
+				line-height: $size_height_single

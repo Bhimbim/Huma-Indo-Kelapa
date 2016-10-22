@@ -1,0 +1,117 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+
+
+// TYPEFACE
+
+/* PRIMARY */
+
+@font-face
+	font-family: $fontfamily_primary_regular
+	src: url($url_font + $url_font_primary + $fontfamily_primary_regular + '.eot?#iefix') format('embedded-opentype'), url($url_font + $url_font_primary + $fontfamily_primary_regular + '.woff') format('woff'), url($url_font + $url_font_primary + $fontfamily_primary_regular + '.ttf') format('truetype'), url($url_font + $url_font_primary + $fontfamily_primary_regular + '.svg#' + $fontfamily_primary_regular) format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: $fontfamily_primary_bold
+	src: url($url_font + $url_font_primary + $fontfamily_primary_bold + '.eot?#iefix') format('embedded-opentype'), url($url_font + $url_font_primary + $fontfamily_primary_bold + '.woff') format('woff'), url($url_font + $url_font_primary + $fontfamily_primary_bold + '.ttf') format('truetype'), url($url_font + $url_font_primary + $fontfamily_primary_bold + '.svg#' + $fontfamily_primary_bold) format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: $fontfamily_primary_light
+	src: url($url_font + $url_font_primary + $fontfamily_primary_light + '.eot?#iefix') format('embedded-opentype'), url($url_font + $url_font_primary + $fontfamily_primary_light + '.woff') format('woff'), url($url_font + $url_font_primary + $fontfamily_primary_light + '.ttf') format('truetype'), url($url_font + $url_font_primary + $fontfamily_primary_light + '.svg#' + $fontfamily_primary_light) format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+// SETUP
+
+/* SEMANTIC ELEMENTS */
+
+body
+    position: relative
+    margin: 0px
+    padding: 0px
+
+#Window
+    perspective: 200px
+
+#Curtain
+    position: fixed
+    top: 0px
+    left: 0px
+    right: 0px
+    bottom: 0px
+    display: none
+    +Transition(all, 0.25, ease-out)
+
+br
+    padding: 0px
+    width: 0px
+    height: 0px
+    clear: both
+    display: block
+    content: ''
+
+li, p, table
+    br
+        clear: none
+        content: none
+
+img
+	border: none
+
+label
+	cursor: pointer
+	cursor: hand
+
+input[type=button], input[type=submit], input[type=reset]
+	cursor: pointer
+	cursor: hand
+
+input[type=radio], input[type=checkbox]
+	display: none
+
+/* ANIMATION */
+
+*
+	+Transition(all, 0.25s, ease-out)
+
+/**
+	transition-property: position, margin, width, height, padding, background-color, opacity, border
+	-ms-transition-property: position, margin, width, height, padding, background-color, opacity, border
+	-moz-transition-property: position, margin, width, height, padding, background-color, opacity, border
+	-o-transition-property: position, margin, width, height, padding, background-color, opacity, border
+	-webkit-transition-property: position, margin, width, height, padding, background-color, opacity, border
+	transition-duration: 0.75s
+	-ms-transition-duration: 0.75s
+	-moz-transition-duration: 0.75s
+	-o-transition-duration: 0.75s
+	-webkit-transition-duration: 0.75s
+	transition-movement: ease-out
+	-ms-transition-movement: ease-out
+	-moz-transition-movement: ease-out
+	-o-transition-movement: ease-out
+	-webkit-transition-movement: ease-out*/
+
+body
+	+Transition(all, 0, linear)
+
+
+// NEUTRALIZE
+
+h1, h2, h3, h4, h5, h6, p, mark, ol, ul, li
+	margin: auto
+	padding: auto
+	font-family: inherit
+	font-size: inherit
+	font-weight: inherit
+	color: inherit
+	text-decoration: inherit
+	text-transform: inherit

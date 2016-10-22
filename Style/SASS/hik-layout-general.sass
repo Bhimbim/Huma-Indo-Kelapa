@@ -1,0 +1,185 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+@import hik-setup
+
+
+// HEADER
+
+main
+	header
+		div.MainHeader, div.SubHeader
+			vertical-align: middle
+			left: 0px
+			right: 0px
+			padding-left: $general_space_large
+			padding-right: $general_space_large
+		div.MainHeader
+			top: 0px
+			height: $size_height_mainheader
+			border-bottom-style: solid
+			border-bottom-width: $size_border_thin
+		div.SubHeader
+			height: $size_height_subheader
+			padding-left: $general_space_large * 2
+			padding-right: $general_space_large * 2
+
+
+// NAVIGATION
+
+nav
+	position: fixed
+	top: 0px
+	left: -$size_width_navigation
+	bottom: 0px
+	width: $size_width_navigation
+	height: 100%
+	padding: 0px
+	margin: 0px
+	z-index: 5
+	header
+		height: $size_height_mainheader - $size_icon_mdpi - 4px
+		padding-top: ($size_height_mainheader - $size_icon_mdpi) / 2
+		padding-left: $general_space_medium
+		padding-right: $general_space_medium
+		padding-bottom: ($size_height_mainheader - $size_icon_mdpi) / 2
+		img
+			float: left
+			width: $size_icon_mdpi
+			height: $size_icon_mdpi
+			vertical-align: middle
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+			+BorderRadius(50%)
+		.ProfileContainer
+			float: left
+			margin-left: $general_space_small
+			vertical-align: middle
+			span
+				line-height: 24px
+				display: block
+			span.SpanProfileHeader
+				vertical-align: bottom
+			span.SpanProfileDetail
+				vertical-align: top
+	ul.ListNavigationHeader
+		img
+			float: right
+			margin-top: ($size_height_navigationheader - $size_icon_ldpi) / 2
+			margin-left: $general_space_small
+			margin-right: $general_space_small
+			margin-bottom: ($size_height_navigationheader - $size_icon_ldpi) / 2
+			width: $size_icon_ldpi
+			height: $size_icon_ldpi
+			+Rotate-Z(45deg)
+
+
+// CONTENT
+
+main
+	form
+		top: $size_height_mainheader + $size_height_subheader
+		bottom: 0px
+		padding-top: $general_space_large
+		padding-left: $general_space_medium
+		padding-right: $general_space_medium
+		padding-bottom: $general_space_medium
+		overflow: auto;
+		fieldset
+			margin: $general_space_medium
+			padding: $general_space_medium
+			border: none
+			display: block
+
+
+// CONDITIONER
+
+/* FLEX */
+
+.ContainerFit, .ContainerLeft, .ContainerRight
+	display: flex
+	flex-wrap: nowrap
+	align-content: stretch
+	align-items: stretch
+	.Item1
+		flex-grow: 1
+	.Item2
+		flex-grow: 2
+	.Item3
+		flex-grow: 3
+.ContainerFit
+	justify-content: space-between
+.ContainerLeft
+	justify-content: flex-start
+.ContainerRight
+	justify-content: flex-end
+
+/* SIZE */
+
+.Tiny
+	min-width: $size_width_tiny
+	width: $size_width_tiny
+.Short
+	min-width: $size_width_short
+	width: $size_width_short
+.Medium
+	min-width: $size_width_medium
+	width: $size_width_medium
+.Long
+	min-width: $size_width_long
+	width: $size_width_long
+.Full
+	width: $size_width_full
+
+.TinyFix
+	width: $size_width_short
+	max-width: $size_width_short
+.ShortFix
+	width: $size_width_short
+	max-width: $size_width_short
+.MediumFix
+	width: $size_width_medium
+	max-width: $size_width_medium
+.LongFix
+	width: $size_width_long
+	max-width: $size_width_long
+.FullFix
+	width: $size_width_full
+	max-width: $size_width_full
+
+/* ALIGNEMNT */
+
+.Center
+	text-align: center
+.Left
+	text-align: left
+.Right
+	text-align: right
+.Justify
+	text-align: justify
+
+/* SPACE */
+
+.Padding
+	margin: $general_space_tiny
+.Margin
+	margin: $general_space_tiny
+
+/* POSITIONER */
+
+.PositionerRight
+	float: right
+	vertical-align: top
+
+.PositionerLeft
+	float: left
+	vertical-align: top
+
+.PositionerCenter
+	position: relative
+	margin: auto

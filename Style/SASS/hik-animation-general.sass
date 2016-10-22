@@ -1,0 +1,56 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+
+
+// NAVIGATION
+
+/* NAVIGATION DETAIL */
+
++Keyframes(animationNavigationDetailBodyShow)
+	0%
+	100%
+		+TransformY(-$size_height_navigationdetail)
+
++Keyframes(animationNavigationDetailBodyHide)
+	0%
+	100%
+		+TransformY($size_height_navigationdetail)
+
++Keyframes(animationNavigationDetailTailShow)
+	0%
+		border-top-width: 0px
+	100%
+		border-top-width: $size_height_navigationdetailtail
+
++Keyframes(animationNavigationDetailTailHide)
+	0%
+		border-top-width: $size_height_navigationdetailtail
+	100%
+		border-top-width: 0px
+
+
+// INPUT
+
+/* CHECKBOX */
+
++Keyframes(animationCheckboxChecked)
+	0%
+		margin-top: $general_space_small
+		height: 0px
+	100%
+		margin-top: $general_space_little
+		height: $size_icon_ldpi / 6
+		+Rotate-Z(-45deg)
+
++Keyframes(animationCheckboxNotChecked)
+	0%
+		margin-top: $general_space_little
+		height: $size_icon_ldpi / 6
+	100%
+		margin-top: $general_space_small
+		height: 0px
