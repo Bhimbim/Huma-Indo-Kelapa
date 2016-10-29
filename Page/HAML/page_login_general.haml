@@ -1,0 +1,68 @@
+!!! 5
+
+%html
+
+	/ HEAD
+
+	%head
+		= Haml::Engine.new(File.read("include_general_header.haml")).render
+		%title Huma Indo Kelapa - Factory Management System, Security | User Group
+
+		/ JQUERY
+
+		:javascript
+
+			// READY
+
+			$(document).ready(function()
+			{
+
+			});
+
+
+	/ BODY
+
+	%body#Login
+
+		/ NAVIGATION
+
+		%nav
+			%ul
+				%li About
+				%li FAQ
+				%li Help
+				%li Contact
+
+		/ MAIN
+
+		%main
+
+			#Curtain{ :style => "display: block; z-index: -1;" }
+
+			/ TITLE
+
+			%div.TitleContainer
+				%h1 Huma Indo Kelapa
+				%span
+					Lorem Ipsum is simply dummy text of the printing
+					%br
+					and typesetting industry. Lorem Ipsum has been
+					%br
+					the industry's standard.
+
+			/ FORM
+
+			%form
+				%fieldset.PositionerCenter
+					%input.Medium.Login{ :type => "text", :placeholder => "username" }
+					%input.Medium.Login{ :type => "password", :placeholder => "userpassword" }
+					%br
+
+					%label{ :for => "buttonFind" }
+						%div.ButtonContainer
+							%div.ButtonHighlight
+							%img{ :src => "../../Resource/Icon/Arjuna/icon_login.svg" }
+							%span Find Existing
+					%input#buttonFind.ButtonPrimary{ :type => "button" }
+
+					%a.Underline{ :href => "../../Page/HTML/page_login_general.html" }

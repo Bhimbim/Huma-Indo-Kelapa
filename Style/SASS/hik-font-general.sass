@@ -37,6 +37,17 @@ header
 				.NavigationDetailBody
 					text-align: center
 
+div.TitleContainer
+	margin-top: 20%
+	margin-bottom: $general_space_medium
+	text-align: center
+	h1, span
+		margin: $general_space_tiny
+	h1
+		font-size: $fontsize_h1_photoheader
+	span
+		font-size: $fontsize_span_photodetail
+
 
 // NAVIGATION
 
@@ -68,6 +79,15 @@ nav
 					min-height: $size_height_navigationitem
 					line-height: $size_height_navigationitem
 					font-size: $fontsize_li_navigationitem
+
+body#Login
+	nav
+		width: auto
+		ul
+			li
+				font-size: $fontsize_li_navigationphoto
+				text-transform: lowercase
+				display: inline-block
 
 
 // CONTENT
