@@ -19,6 +19,11 @@
 
 			});
 
+			function goToChangePassword()
+			{
+				window.location.replace("../../Page/HTML/page_security_changepassword.html");
+			}
+
 
 	/ BODY
 
@@ -62,7 +67,7 @@
 						%div.ButtonContainer
 							%div.ButtonHighlight
 							%img{ :src => "../../Resource/Icon/Arjuna/icon_login.svg" }
-							%span Find Existing
-					%input#buttonFind.ButtonPrimary{ :type => "button" }
+							%span Employee Login
+					%input#buttonFind.ButtonPrimary{ :type => "button", :onclick => "goToChangePassword()" }
 
 					%a.Underline{ :href => "../../Page/HTML/page_login_general.html" }

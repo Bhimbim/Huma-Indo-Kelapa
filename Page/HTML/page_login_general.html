@@ -43,6 +43,11 @@
       {
       
       });
+      
+      function goToChangePassword()
+      {
+      	window.location.replace("../../Page/HTML/page_security_changepassword.html");
+      }
     </script>
   </head>
   <!-- BODY -->
@@ -80,10 +85,10 @@
             <div class='ButtonContainer'>
               <div class='ButtonHighlight'></div>
               <img src='../../Resource/Icon/Arjuna/icon_login.svg'>
-              <span>Find Existing</span>
+              <span>Employee Login</span>
             </div>
           </label>
-          <input class='ButtonPrimary' id='buttonFind' type='button'>
+          <input class='ButtonPrimary' id='buttonFind' onclick='goToChangePassword()' type='button'>
           <a class='Underline' href='../../Page/HTML/page_login_general.html'></a>
         </fieldset>
       </form>

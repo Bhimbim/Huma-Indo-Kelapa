@@ -1,0 +1,158 @@
+!!! 5
+
+%html
+
+	/ HEAD
+
+	%head
+		= Haml::Engine.new(File.read("include_general_header.haml")).render
+		%title Huma Indo Kelapa - Factory Management System, Security | User Group
+
+		/ JQUERY
+
+		:javascript
+
+			// READY
+
+			$(document).ready(function()
+			{
+				navigationPanelShow("buttonNavigationTrigger");
+				navigationHeaderShow();
+				navigationDetailShow();
+				formInitializeSize();
+			});
+
+
+	/ BODY
+
+	%body
+
+		/ NAVIGATION
+
+		= Haml::Engine.new(File.read("navigation_general_slide.haml")).render
+
+		/ MAIN
+
+		%div#Window
+			%main
+
+				/ HEADER
+
+				%header
+
+					= Haml::Engine.new(File.read("header_general_top.haml")).render
+
+					%div.SubHeader
+						%h2 User Account
+						%ul.ListNavigationDetail
+							%input#radioButtonFind{ :type => "radio", :name => "RadioButtonNavigationDetail", :checked => "true" }
+							%li
+								%label{ :for => "radioButtonFind" }
+									%h3 Find Existing
+								%div.NavigationDetailBody
+									%h3 Find Existing
+								%div.NavigationDetailTail
+							%input#radioButtonAdd{ :type => "radio", :name => "RadioButtonNavigationDetail" }
+							%li
+								%label{ :for => "radioButtonAdd" }
+									%h3 Add New
+								%div.NavigationDetailBody
+									%h3 Add New
+								%div.NavigationDetailTail
+
+				/ FORM
+
+				%div.FormWindow
+
+					%div.FormContainer
+
+						%form.PositionerLeft
+							%fieldset
+								%legend User Data
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } User name
+								%br
+								%input#textSecurityUserName.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "textSecurityGroupCode" } User code
+								%br
+								%input#textSecurityUserCode.Long{ :type => "text" }
+							%br
+
+							%div.PositionerCenter.Center
+								%label{ :for => "buttonFind" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_find.svg" }
+										%span Find Existing
+								%input#buttonFind.ButtonPrimary{ :type => "button" }
+								%label{ :for => "buttonReset" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_reset.svg" }
+										%span Reset
+								%input#buttonReset.ButtonPrimary{ :type => "reset" }
+
+						%form.PositionerLeft
+							%fieldset
+								%legend User Data
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } User name
+								%br
+								%input#textSecurityUserName.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "textSecurityGroupCode" } User code
+								%br
+								%input#textSecurityUserCode.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "areaSecurityNewPassword" } New password
+								%br
+								%input#textSecurityNewPassword.Long{ :type => "password" }
+								%br
+								%label.Long{ :for => "areaSecurityConfirmNewPassword" } Confirm new password
+								%br
+								%input#textSecurityConfirmNewPassword.Long{ :type => "password" }
+								%br
+								%label.Long{ :for => "areaSecurityConfirmNewPassword" } Sex
+								%br
+								%input#radioButtonSecuritySexFemale{ :type => "radio", :name => "RadioButtonSecuritySex", :value => "female"}
+								%div.RadioButton
+									%div.Check
+								%label{ :for => "radioButtonSecuritySexFemale" } Female
+								%input#radioButtonSecuritySexMale{ :type => "radio", :name => "RadioButtonSecuritySex", :value => "male"}
+								%div.RadioButton
+									%div.Check
+								%label{ :for => "radioButtonSecuritySexMale" } Male
+								%br
+								%label.Long{ :for => "textSecurityAddress" } Address
+								%br
+								%textarea#textSecurityAddress.Long
+								%br
+								%label.Long{ :for => "textSecurityTelephone" } Telephone
+								%br
+								%input#phoneSecurityTelephone.Long{ :type => "phone" }
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } Handphone
+								%br
+								%input#phoneSecurityHandphone.Long{ :type => "phone" }
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } Email
+								%br
+								%input#emailSecurityEmail.Long{ :type => "email" }
+							%br
+
+							%div.PositionerCenter.Center
+								%label{ :for => "buttonAdd" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_add.svg" }
+										%span Add New
+								%input#buttonAdd.ButtonPrimary{ :type => "button" }
+								%label{ :for => "buttonReset" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_reset.svg" }
+										%span Reset
+								%input#buttonReset.ButtonPrimary{ :type => "reset" }
+
+		#Curtain

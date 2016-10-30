@@ -67,3 +67,28 @@
 		border-bottom-style: none
 
 /* RADIO BUTTON */
+
++Keyframes(animationRadioButtonChecked)
+	0%
+		height: 0px
+		width: 0px
+	0%
+		height: $size_icon_ldpi * 0.6
+		width: $size_icon_ldpi * 0.6
+	100%
+		height: $size_icon_ldpi * 0.4
+		width: $size_icon_ldpi * 0.4
+
++Keyframes(animationRadioButtonNotChecked)
+	0%
+		margin-top: $general_space_tiny
+		height: $size_icon_ldpi / 9
+		width: $size_icon_ldpi / 3
+		border-left-style: solid
+		border-bottom-style: solid
+	100%
+		margin-top: $general_space_little
+		height: 0px
+		width: 0px
+		border-left-style: none
+		border-bottom-style: none

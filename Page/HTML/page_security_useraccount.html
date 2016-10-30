@@ -132,7 +132,6 @@
     <!-- MAIN -->
     <div id='Window'>
       <main>
-        <main></main>
         <!-- HEADER -->
         <header>
           <div class='MainHeader'>
@@ -142,15 +141,25 @@
             <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
           </div>
           <div class='SubHeader'>
-            <h2>Change Password</h2>
+            <h2>User Account</h2>
             <ul class='ListNavigationDetail'>
-              <input checked='true' id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <input checked='true' id='radioButtonFind' name='RadioButtonNavigationDetail' type='radio'>
               <li>
-                <label for='radioButtonAdd'>
-                  <h3>Edit</h3>
+                <label for='radioButtonFind'>
+                  <h3>Find Existing</h3>
                 </label>
                 <div class='NavigationDetailBody'>
-                  <h3>Edit</h3>
+                  <h3>Find Existing</h3>
+                </div>
+                <div class='NavigationDetailTail'></div>
+              </li>
+              <input id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <li>
+                <label for='radioButtonAdd'>
+                  <h3>Add New</h3>
+                </label>
+                <div class='NavigationDetailBody'>
+                  <h3>Add New</h3>
                 </div>
                 <div class='NavigationDetailTail'></div>
               </li>
@@ -158,42 +167,111 @@
           </div>
         </header>
         <!-- FORM -->
-        <form>
-          <fieldset>
-            <legend>User Password</legend>
-            <br>
-            <label class='Long' for='textSecurityOldPassword'>Old password</label>
-            <br>
-            <input class='Long' id='textSecurityOldPassword' type='password'>
-            <br>
-            <label class='Long' for='areaSecurityNewPassword'>New password</label>
-            <br>
-            <input class='Long' id='textSecurityNewPassword' type='password'>
-            <br>
-            <label class='Long' for='areaSecurityConfirmNewPassword'>Confirm new password</label>
-            <br>
-            <input class='Long' id='textSecurityConfirmNewPassword' type='password'>
-          </fieldset>
-          <br>
-          <div class='PositionerCenter Center'>
-            <label for='buttonChange'>
-              <div class='ButtonContainer'>
-                <div class='ButtonHighlight'></div>
-                <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
-                <span>Change</span>
+        <div class='FormWindow'>
+          <div class='FormContainer'>
+            <form class='PositionerLeft'>
+              <fieldset>
+                <legend>User Data</legend>
+                <br>
+                <label class='Long' for='textSecurityGroupName'>User name</label>
+                <br>
+                <input class='Long' id='textSecurityUserName' type='text'>
+                <br>
+                <label class='Long' for='textSecurityGroupCode'>User code</label>
+                <br>
+                <input class='Long' id='textSecurityUserCode' type='text'>
+              </fieldset>
+              <br>
+              <div class='PositionerCenter Center'>
+                <label for='buttonFind'>
+                  <div class='ButtonContainer'>
+                    <div class='ButtonHighlight'></div>
+                    <img src='../../Resource/Icon/Arjuna/icon_find.svg'>
+                    <span>Find Existing</span>
+                  </div>
+                </label>
+                <input class='ButtonPrimary' id='buttonFind' type='button'>
+                <label for='buttonReset'>
+                  <div class='ButtonContainer'>
+                    <div class='ButtonHighlight'></div>
+                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                    <span>Reset</span>
+                  </div>
+                </label>
+                <input class='ButtonPrimary' id='buttonReset' type='reset'>
               </div>
-            </label>
-            <input class='ButtonPrimary' id='buttonChange' type='button'>
-            <label for='buttonReset'>
-              <div class='ButtonContainer'>
-                <div class='ButtonHighlight'></div>
-                <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
-                <span>Reset</span>
+            </form>
+            <form class='PositionerLeft'>
+              <fieldset>
+                <legend>User Data</legend>
+                <br>
+                <label class='Long' for='textSecurityGroupName'>User name</label>
+                <br>
+                <input class='Long' id='textSecurityUserName' type='text'>
+                <br>
+                <label class='Long' for='textSecurityGroupCode'>User code</label>
+                <br>
+                <input class='Long' id='textSecurityUserCode' type='text'>
+                <br>
+                <label class='Long' for='areaSecurityNewPassword'>New password</label>
+                <br>
+                <input class='Long' id='textSecurityNewPassword' type='password'>
+                <br>
+                <label class='Long' for='areaSecurityConfirmNewPassword'>Confirm new password</label>
+                <br>
+                <input class='Long' id='textSecurityConfirmNewPassword' type='password'>
+                <br>
+                <label class='Long' for='areaSecurityConfirmNewPassword'>Sex</label>
+                <br>
+                <input id='radioButtonSecuritySexFemale' name='RadioButtonSecuritySex' type='radio' value='female'>
+                <div class='RadioButton'>
+                  <div class='Check'></div>
+                </div>
+                <label for='radioButtonSecuritySexFemale'>Female</label>
+                <input id='radioButtonSecuritySexMale' name='RadioButtonSecuritySex' type='radio' value='male'>
+                <div class='RadioButton'>
+                  <div class='Check'></div>
+                </div>
+                <label for='radioButtonSecuritySexMale'>Male</label>
+                <br>
+                <label class='Long' for='textSecurityAddress'>Address</label>
+                <br>
+                <textarea class='Long' id='textSecurityAddress'></textarea>
+                <br>
+                <label class='Long' for='textSecurityTelephone'>Telephone</label>
+                <br>
+                <input class='Long' id='phoneSecurityTelephone' type='phone'>
+                <br>
+                <label class='Long' for='textSecurityGroupName'>Handphone</label>
+                <br>
+                <input class='Long' id='phoneSecurityHandphone' type='phone'>
+                <br>
+                <label class='Long' for='textSecurityGroupName'>Email</label>
+                <br>
+                <input class='Long' id='emailSecurityEmail' type='email'>
+              </fieldset>
+              <br>
+              <div class='PositionerCenter Center'>
+                <label for='buttonAdd'>
+                  <div class='ButtonContainer'>
+                    <div class='ButtonHighlight'></div>
+                    <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
+                    <span>Add New</span>
+                  </div>
+                </label>
+                <input class='ButtonPrimary' id='buttonAdd' type='button'>
+                <label for='buttonReset'>
+                  <div class='ButtonContainer'>
+                    <div class='ButtonHighlight'></div>
+                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                    <span>Reset</span>
+                  </div>
+                </label>
+                <input class='ButtonPrimary' id='buttonReset' type='reset'>
               </div>
-            </label>
-            <input class='ButtonPrimary' id='buttonReset' type='reset'>
+            </form>
           </div>
-        </form>
+        </div>
       </main>
     </div>
     <div id='Curtain'></div>

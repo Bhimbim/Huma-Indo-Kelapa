@@ -1,0 +1,161 @@
+!!! 5
+
+%html
+
+	/ HEAD
+
+	%head
+		= Haml::Engine.new(File.read("include_general_header.haml")).render
+		%title Huma Indo Kelapa - Factory Management System, Security | User Group
+
+		/ JQUERY
+
+		:javascript
+
+			// READY
+
+			$(document).ready(function()
+			{
+				navigationPanelShow("buttonNavigationTrigger");
+				navigationHeaderShow();
+				navigationDetailShow();
+				formInitializeSize();
+			});
+
+
+	/ BODY
+
+	%body
+
+		/ NAVIGATION
+
+		= Haml::Engine.new(File.read("navigation_general_slide.haml")).render
+
+		/ MAIN
+
+		%div#Window
+
+			%main
+
+				/ HEADER
+
+				%header
+
+					= Haml::Engine.new(File.read("header_general_top.haml")).render
+
+					%div.SubHeader
+						%h2 User Group
+						%ul.ListNavigationDetail
+							%input#radioButtonFind{ :type => "radio", :name => "RadioButtonNavigationDetail", :checked => "true" }
+							%li
+								%label{ :for => "radioButtonFind" }
+									%h3 Find Existing
+								%div.NavigationDetailBody
+									%h3 Find Existing
+								%div.NavigationDetailTail
+							%input#radioButtonAdd{ :type => "radio", :name => "RadioButtonNavigationDetail" }
+							%li
+								%label{ :for => "radioButtonAdd" }
+									%h3 Add New
+								%div.NavigationDetailBody
+									%h3 Add New
+								%div.NavigationDetailTail
+
+				/ FORM
+
+				%div.FormWindow
+
+					%div.FormContainer
+
+						%form.PositionerLeft
+							%fieldset
+								%legend Group Data
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } Group name
+								%br
+								%input#textSecurityGroupName.Long{ :type => "text" }
+							%br
+
+							%div.PositionerCenter.Center
+								%label{ :for => "buttonFind" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_add.svg" }
+										%span Find Existing
+								%input#buttonFind.ButtonPrimary{ :type => "button" }
+								%label{ :for => "buttonReset" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_reset.svg" }
+										%span Reset
+								%input#buttonReset.ButtonPrimary{ :type => "reset" }
+
+						%form.PositionerLeft
+							%fieldset
+								%legend Group Data
+								%br
+								%label.Long{ :for => "textSecurityGroupName" } Group name
+								%br
+								%input#textSecurityGroupName.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "areaSecurityGroupDescription" } Group description
+								%br
+								%textarea#areaSecurityGroupDescription.Long
+							%br
+
+							%fieldset
+								%legend Group Data
+								%br
+
+								%div.GroupInput.PositionerLeft
+									%span.GroupHeader Security
+									%br
+									%input#checkboxSecurityChangePassword{ :type => "checkbox", :name => "CheckboxSecurity", :value => "changepassword"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityChangePassword" } User Password
+									%br
+									%input#checkboxSecurityUserGroup{ :type => "checkbox", :name => "CheckboxSecurity", :value => "usergroup"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityUserGroup" } User Group
+									%br
+									%input#checkboxSecurityUserAccount{ :type => "checkbox", :name => "CheckboxSecurity", :value => "useraccount"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityUserAccount" } User Account
+
+								%div.GroupInput.PositionerLeft
+									%span.GroupHeader Security
+									%br
+									%input#checkboxSecurityChangePassword{ :type => "checkbox", :name => "CheckboxSecurity", :value => "changepassword"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityChangePassword" } User Password
+									%br
+									%input#checkboxSecurityUserGroup{ :type => "checkbox", :name => "CheckboxSecurity", :value => "usergroup"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityUserGroup" } User Group
+									%br
+									%input#checkboxSecurityUserAccount{ :type => "checkbox", :name => "CheckboxSecurity", :value => "useraccount"}
+									%div.Checkbox
+										%div.Check
+									%label{ :for => "checkboxSecurityUserAccount" } User Account
+							%br
+
+							%div.PositionerCenter.Center
+								%label{ :for => "buttonFind" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_add.svg" }
+										%span Add New
+								%input#buttonFind.ButtonPrimary{ :type => "button" }
+								%label{ :for => "buttonReset" }
+									%div.ButtonContainer
+										%div.ButtonHighlight
+										%img{ :src => "../../Resource/Icon/Arjuna/icon_reset.svg" }
+										%span Reset
+								%input#buttonReset.ButtonPrimary{ :type => "reset" }
+
+		#Curtain

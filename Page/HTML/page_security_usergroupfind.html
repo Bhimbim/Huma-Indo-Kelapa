@@ -42,9 +42,8 @@
       $(document).ready(function()
       {
       	navigationPanelShow("buttonNavigationTrigger");
-      	navigationHeaderShow();
-      	navigationDetailShow();
-      	formInitializeSize();
+      	navigationHeaderShow("buttonNavigationTrigger");
+      	formInitializeHeight();
       });
     </script>
   </head>
@@ -59,98 +58,101 @@
           <span class='SpanProfileDetail'>administrator</span>
         </div>
       </header>
-      <div class='NavigationContainer'>
-        <ul class='ListNavigationHeader'>
-          <input id='checkboxButtonNavigationHeaderSecurity' name='CheckboxNavigationHeader' type='checkbox' value='security'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderSecurity'>
-              Security
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>
-                <a class='Clear' href='../../Page/HTML/page_security_changepassword.html'>User Password</a>
-              </li>
-              <li>
-                <a class='Clear' href='../../Page/HTML/page_security_usergroup.html'>User Group</a>
-              </li>
-              <li>
-                <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>User Account</a>
-              </li>
-            </ul>
-          </li>
-          <input id='checkboxButtonNavigationHeaderTransaction' name='CheckboxNavigationHeader' type='checkbox' value='transaction'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderTransaction'>
-              Transaction
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
-            </ul>
-          </li>
-          <input id='checkboxButtonNavigationHeaderReport' name='CheckboxNavigationHeader' type='checkbox' value='report'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderReport'>
-              Report
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
-            </ul>
-          </li>
-          <input id='checkboxButtonNavigationHeaderSetting' name='CheckboxNavigationHeader' type='checkbox' value='setting'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderSetting'>
-              Setting
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>Pricing</li>
-              <li>Preference</li>
-            </ul>
-          </li>
-          <input id='checkboxButtonNavigationHeaderManufacturing' name='CheckboxNavigationHeader' type='checkbox' value='manufacturing'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderManufacturing'>
-              Manufacturing
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <ul class='ListNavigationHeader'>
+        <input id='radioButtonNavigationHeaderSecurity' name='RadioButtonNavigationHeader' type='radio' value='security'>
+        <li>
+          <label for='radioButtonNavigationHeaderSecurity'>
+            Security
+          </label>
+          <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+          <ul class='ListNavigationItem'>
+            <li>
+              <a class='Clear' href='../../Page/HTML/page_security_usergroup.html'>User Password</a>
+            </li>
+            <li>User Group</li>
+            <li>User Account</li>
+          </ul>
+        </li>
+        <input id='radioButtonNavigationHeaderTransaction' name='RadioButtonNavigationHeader' type='radio' value='transaction'>
+        <li>
+          <label for='radioButtonNavigationHeaderTransaction'>
+            Transaction
+          </label>
+          <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+          <ul class='ListNavigationItem'>
+            <li>User Password</li>
+            <li>User Group</li>
+            <li>User Account</li>
+          </ul>
+        </li>
+        <input id='radioButtonNavigationHeaderReport' name='RadioButtonNavigationHeader' type='radio' value='report'>
+        <li>
+          <label for='radioButtonNavigationHeaderReport'>
+            Report
+          </label>
+          <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+          <ul class='ListNavigationItem'>
+            <li>User Password</li>
+            <li>User Group</li>
+            <li>User Account</li>
+          </ul>
+        </li>
+        <input id='radioButtonNavigationHeaderSetting' name='RadioButtonNavigationHeader' type='radio' value='setting'>
+        <li>
+          <label for='radioButtonNavigationHeaderSetting'>
+            Setting
+          </label>
+          <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+          <ul class='ListNavigationItem'>
+            <li>Pricing</li>
+            <li>Preference</li>
+          </ul>
+        </li>
+        <input id='radioButtonNavigationHeaderManufacturing' name='RadioButtonNavigationHeader' type='radio' value='manufacturing'>
+        <li>
+          <label for='radioButtonNavigationHeaderManufacturing'>
+            Manufacturing
+          </label>
+          <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+          <ul class='ListNavigationItem'>
+            <li>User Password</li>
+            <li>User Group</li>
+            <li>User Account</li>
+          </ul>
+        </li>
+      </ul>
     </nav>
     <!-- MAIN -->
     <div id='Window'>
       <main>
-        <main></main>
         <!-- HEADER -->
         <header>
           <div class='MainHeader'>
             <input class='ButtonNavigation' id='buttonNavigationTrigger' type='button'>
             <h1>Huma Indo Kelapa</h1>
             <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
-            <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
+            <input class='ButtonLogout' id='buttonLogoutTrigger' type='button'>
           </div>
           <div class='SubHeader'>
-            <h2>Change Password</h2>
+            <h2>User Group</h2>
             <ul class='ListNavigationDetail'>
-              <input checked='true' id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <input id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
               <li>
                 <label for='radioButtonAdd'>
-                  <h3>Edit</h3>
+                  <h3>Add New</h3>
                 </label>
                 <div class='NavigationDetailBody'>
-                  <h3>Edit</h3>
+                  <h3>Add New</h3>
+                </div>
+                <div class='NavigationDetailTail'></div>
+              </li>
+              <input id='radioButtonFind' name='RadioButtonNavigationDetail' type='radio'>
+              <li>
+                <label for='radioButtonFind'>
+                  <h3>Find Existing</h3>
+                </label>
+                <div class='NavigationDetailBody'>
+                  <h3>Find Existing</h3>
                 </div>
                 <div class='NavigationDetailTail'></div>
               </li>
@@ -160,35 +162,27 @@
         <!-- FORM -->
         <form>
           <fieldset>
-            <legend>User Password</legend>
+            <legend>Group Data</legend>
             <br>
-            <label class='Long' for='textSecurityOldPassword'>Old password</label>
+            <label class='Long' for='textSecurityGroupName'>Group name</label>
             <br>
-            <input class='Long' id='textSecurityOldPassword' type='password'>
-            <br>
-            <label class='Long' for='areaSecurityNewPassword'>New password</label>
-            <br>
-            <input class='Long' id='textSecurityNewPassword' type='password'>
-            <br>
-            <label class='Long' for='areaSecurityConfirmNewPassword'>Confirm new password</label>
-            <br>
-            <input class='Long' id='textSecurityConfirmNewPassword' type='password'>
+            <input class='Long' id='textSecurityGroupName' type='text'>
           </fieldset>
           <br>
           <div class='PositionerCenter Center'>
-            <label for='buttonChange'>
+            <label for='buttonFind'>
               <div class='ButtonContainer'>
                 <div class='ButtonHighlight'></div>
                 <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
-                <span>Change</span>
+                <span>Find Existing</span>
               </div>
             </label>
-            <input class='ButtonPrimary' id='buttonChange' type='button'>
+            <input class='ButtonPrimary' id='buttonFind' type='button'>
             <label for='buttonReset'>
               <div class='ButtonContainer'>
                 <div class='ButtonHighlight'></div>
                 <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
-                <span>Reset</span>
+                <span>Find Existing</span>
               </div>
             </label>
             <input class='ButtonPrimary' id='buttonReset' type='reset'>

@@ -42,9 +42,8 @@
       $(document).ready(function()
       {
       	navigationPanelShow("buttonNavigationTrigger");
-      	navigationHeaderShow();
-      	navigationDetailShow();
-      	formInitializeSize();
+      	navigationHeaderShow("buttonNavigationTrigger");
+      	formInitializeHeight();
       });
     </script>
   </head>
@@ -132,7 +131,6 @@
     <!-- MAIN -->
     <div id='Window'>
       <main>
-        <main></main>
         <!-- HEADER -->
         <header>
           <div class='MainHeader'>
@@ -142,15 +140,25 @@
             <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
           </div>
           <div class='SubHeader'>
-            <h2>Change Password</h2>
+            <h2>User Group</h2>
             <ul class='ListNavigationDetail'>
-              <input checked='true' id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <input id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
               <li>
                 <label for='radioButtonAdd'>
-                  <h3>Edit</h3>
+                  <h3>Add New</h3>
                 </label>
                 <div class='NavigationDetailBody'>
-                  <h3>Edit</h3>
+                  <h3>Add New</h3>
+                </div>
+                <div class='NavigationDetailTail'></div>
+              </li>
+              <input id='radioButtonFind' name='RadioButtonNavigationDetail' type='radio'>
+              <li>
+                <label for='radioButtonFind'>
+                  <h3>Find Existing</h3>
+                </label>
+                <div class='NavigationDetailBody'>
+                  <h3>Find Existing</h3>
                 </div>
                 <div class='NavigationDetailTail'></div>
               </li>
@@ -160,35 +168,78 @@
         <!-- FORM -->
         <form>
           <fieldset>
-            <legend>User Password</legend>
+            <legend>Group Data</legend>
             <br>
-            <label class='Long' for='textSecurityOldPassword'>Old password</label>
+            <label class='Long' for='textSecurityGroupName'>Group name</label>
             <br>
-            <input class='Long' id='textSecurityOldPassword' type='password'>
+            <input class='Long' id='textSecurityGroupName' type='text'>
             <br>
-            <label class='Long' for='areaSecurityNewPassword'>New password</label>
+            <label class='Long' for='areaSecurityGroupDescription'>Group description</label>
             <br>
-            <input class='Long' id='textSecurityNewPassword' type='password'>
+            <textarea class='Long' id='areaSecurityGroupDescription'></textarea>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Group Data</legend>
             <br>
-            <label class='Long' for='areaSecurityConfirmNewPassword'>Confirm new password</label>
-            <br>
-            <input class='Long' id='textSecurityConfirmNewPassword' type='password'>
+            <div class='GroupInput PositionerLeft'>
+              <span class='GroupHeader'>Security</span>
+              <br>
+              <input id='checkboxSecurityChangePassword' name='CheckboxSecurity' type='checkbox' value='changepassword'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityChangePassword'>User Password</label>
+              <br>
+              <input id='checkboxSecurityUserGroup' name='CheckboxSecurity' type='checkbox' value='usergroup'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityUserGroup'>User Group</label>
+              <br>
+              <input id='checkboxSecurityUserAccount' name='CheckboxSecurity' type='checkbox' value='useraccount'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityUserAccount'>User Account</label>
+            </div>
+            <div class='GroupInput PositionerLeft'>
+              <span class='GroupHeader'>Security</span>
+              <br>
+              <input id='checkboxSecurityChangePassword' name='CheckboxSecurity' type='checkbox' value='changepassword'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityChangePassword'>User Password</label>
+              <br>
+              <input id='checkboxSecurityUserGroup' name='CheckboxSecurity' type='checkbox' value='usergroup'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityUserGroup'>User Group</label>
+              <br>
+              <input id='checkboxSecurityUserAccount' name='CheckboxSecurity' type='checkbox' value='useraccount'>
+              <div class='Checkbox'>
+                <div class='Check'></div>
+              </div>
+              <label for='checkboxSecurityUserAccount'>User Account</label>
+            </div>
           </fieldset>
           <br>
           <div class='PositionerCenter Center'>
-            <label for='buttonChange'>
+            <label for='buttonFind'>
               <div class='ButtonContainer'>
                 <div class='ButtonHighlight'></div>
                 <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
-                <span>Change</span>
+                <span>Find Existing</span>
               </div>
             </label>
-            <input class='ButtonPrimary' id='buttonChange' type='button'>
+            <input class='ButtonPrimary' id='buttonFind' type='button'>
             <label for='buttonReset'>
               <div class='ButtonContainer'>
                 <div class='ButtonHighlight'></div>
                 <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
-                <span>Reset</span>
+                <span>Find Existing</span>
               </div>
             </label>
             <input class='ButtonPrimary' id='buttonReset' type='reset'>

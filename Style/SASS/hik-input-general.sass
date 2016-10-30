@@ -67,3 +67,34 @@ input[type="checkbox"] + .Checkbox .Check
 
 input[type="checkbox"]:checked + .Checkbox .Check
 	+Animation(animationCheckboxChecked, 0.25s, 0s, 1, forwards)
+
+
+// RADIO BUTTON
+
+.RadioButton
+	margin-right: $general_space_little
+	width: ($size_icon_ldpi / 6) * 4
+	height: ($size_icon_ldpi / 6) * 4
+	border-style: solid
+	border-width: $size_border_thin
+	line-height: (($size_icon_ldpi / 6) * 4) - 2px
+	vertical-align: middle
+	display: inline-block
+	text-align: center
+	+BorderRadius(50%)
+	.Check
+		position: relative
+		margin-left: auto
+		margin-right: auto
+		width: ($size_icon_ldpi / 6) * 3
+		height: ($size_icon_ldpi / 6) * 3
+		line-height: ($size_icon_ldpi / 6) * 4
+		vertical-align: middle
+		display: inline-block
+		+BorderRadius(50%)
+
+input[type="radio"] + .RadioButton .Check
+	+Animation(animationRadioButtonNotChecked, 0.25s, 0s, 1, forwards)
+
+input[type="radio"]:checked + .RadioButton .Check
+	+Animation(animationRadioButtonChecked, 0.25s, 0s, 1, forwards)

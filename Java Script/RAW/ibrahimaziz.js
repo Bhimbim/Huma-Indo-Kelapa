@@ -59,6 +59,12 @@ function navigationPanelShow(stringNavigationTriggerJavaScriptID)
 			// $(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(0px)");
 			// $(stringCurtainLayoutJQueryID).css("display", "none");
 			cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
+			$("input[name='CheckboxNavigationHeader']").each(function()
+			{
+				$(this).prop('checked', false);
+			});
+			$("input[name='CheckboxNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
+			cssPrefix("input[name='CheckboxNavigationHeader'] + li img", "transform", "rotateZ(-45deg)");
 		}
 	});
 }
@@ -67,43 +73,77 @@ function navigationHeaderShow()
 {
 	var intListNavigationItemLength;
 	var intListNavigationItemHeight;
-	var booleanRadioButtonChecked;
+	var booleanCheckboxChecked;
+	var stringInputJavaScriptID;
+	var stringInputJQueryID;
 
-	$("input[name='RadioButtonNavigationHeader']").each(function()
+	$("input[name='CheckboxNavigationHeader']").each(function()
 	{
 		$(this).change(function()
 		{
-			cssPrefix("input[name='RadioButtonNavigationHeader'] + li img", "transform", "rotateZ(-45deg)");
-			booleanRadioButtonChecked = $(this).is(":checked");
+			stringInputJavaScriptID = $(this).attr("id");
+			stringInputJQueryID = stringKres + stringInputJavaScriptID;
+			cssPrefix(stringInputJQueryID + " + li img", "transform", "rotateZ(-45deg)");
+			booleanCheckboxChecked = $(this).is(":checked");
 			
-			if (booleanRadioButtonChecked == true)
+			if (booleanCheckboxChecked == true)
 			{
-				intListNavigationItemLength = $("input[name='RadioButtonNavigationHeader']:checked + li .ListNavigationItem li").length;
+				intListNavigationItemLength = $(stringInputJQueryID + ":checked + li .ListNavigationItem li").length;
 				intListNavigationItemHeight = intListNavigationItemLength * 30;
-				$("input[name='RadioButtonNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
-				$("input[name='RadioButtonNavigationHeader']:checked + li .ListNavigationItem").css("height", intListNavigationItemHeight + stringPX);
-				cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
+				$(stringInputJQueryID + ":checked + li .ListNavigationItem").css("height", "0" + stringPX);
+				$(stringInputJQueryID + ":checked + li .ListNavigationItem").css("height", intListNavigationItemHeight + stringPX);
+				cssPrefix(stringInputJQueryID + ":checked + li img", "transform", "rotateZ(0deg)");
 			}
 			else
 			{
-				$("input[name='RadioButtonNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
-				cssPrefix("input[name='RadioButtonNavigationHeader'] + li img", "transform", "rotateZ(-45deg)");
+				$(stringInputJQueryID + " + li .ListNavigationItem").css("height", "0" + stringPX);
+				cssPrefix(stringInputJQueryID + " + li img", "transform", "rotateZ(-45deg)");
 			}
 			
 		});
 	});
 }
 
+function navigationDetailShow()
+{
+	var intHTMLWidth = $(window).width();
+	var intSelectedIndex;
+
+	$(".SubHeader input[name='RadioButtonNavigationDetail']").change(function()
+	{
+		intSelectedIndex = $(".SubHeader input[name='RadioButtonNavigationDetail']").index($(".SubHeader input[name='RadioButtonNavigationDetail']").filter(':checked'))
+		$(".FormContainer").css("margin-left", -1 * intHTMLWidth * intSelectedIndex);
+	});
+}
+
+function goToLogin()
+{
+	window.location.replace("../../Page/HTML/page_login_general.html");
+}
+
 
 // MAIN
 
-function formInitializeHeight()
+function formInitializeSize()
 {
 	var intHTMLHeight = $(window).height();
 	var intMainHeaderHeight = $(".MainHeader").height();
 	var intSubHeaderHeight = $(".SubHeader").height();
-	var intFormHeight = intHTMLHeight - intMainHeaderHeight - intSubHeaderHeight - 41;
+	var intFormHeight = intHTMLHeight - intMainHeaderHeight - intSubHeaderHeight - 46;
 	// alert(intFormHeight + " = " + intHTMLHeight + " - " + intMainHeaderHeight + " - " + intSubHeaderHeight);
+	var intHTMLWidth = $(window).width();
+	var intFormWidth = intHTMLWidth - 40;
 
 	$("form").css("height", intFormHeight + stringPX);
+	$("form").css("width", intFormWidth + stringPX);
+
+	var intAccumulateWidth = 0;
+
+	$("form").each(function()
+	{
+		intAccumulateWidth += intFormWidth + 40;
+	});
+
+	$(".FormWindow").css("width", intHTMLWidth + stringPX);
+	$(".FormContainer").css("width", intAccumulateWidth + stringPX);
 }
