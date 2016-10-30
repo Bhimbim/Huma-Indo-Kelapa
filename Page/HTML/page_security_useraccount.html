@@ -218,6 +218,15 @@
                 <div class='NavigationDetailTail'></div>
               </li>
             </ul>
+            <div id='MessageContainer'>
+              <div id='MessageWingLeft'></div>
+              <img id='MessageImage'>
+              <div id='MessageText'>
+                <span id='MessageTitle'>Validation Error !</span>
+                <br>
+                <span id='MessageDescription'>your email address is not in the  correct format, example : test@domain.com</span>
+              </div>
+            </div>
           </div>
         </header>
         <!-- FORM -->
@@ -323,7 +332,7 @@
                     <span>Add New</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonAdd' type='submit'>
+                <input class='ButtonPrimary' id='buttonAdd' onclick="formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" type='button'>
                 <label for='buttonReset'>
                   <div class='ButtonContainer'>
                     <div class='ButtonHighlight'></div>

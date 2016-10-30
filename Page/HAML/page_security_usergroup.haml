@@ -61,6 +61,13 @@
 								%div.NavigationDetailBody
 									%h3 Add New
 								%div.NavigationDetailTail
+						%div#MessageContainer
+							%div#MessageWingLeft
+							%img#MessageImage
+							%div#MessageText
+								%span#MessageTitle Validation Error !
+								%br
+								%span#MessageDescription your email address is not in the  correct format, example : test@domain.com
 
 				/ FORM
 
@@ -146,12 +153,12 @@
 							%br
 
 							%div.PositionerCenter.Center
-								%label{ :for => "buttonFind" }
+								%label{ :for => "buttonAdd" }
 									%div.ButtonContainer
 										%div.ButtonHighlight
 										%img{ :src => "../../Resource/Icon/Arjuna/icon_add.svg" }
 										%span Add New
-								%input#buttonFind.ButtonPrimary{ :type => "button" }
+								%input#buttonAdd.ButtonPrimary{ :type => "button", :onclick => "formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" }
 								%label{ :for => "buttonReset" }
 									%div.ButtonContainer
 										%div.ButtonHighlight
