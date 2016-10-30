@@ -46,23 +46,25 @@ function navigationPanelShow(stringNavigationTriggerJavaScriptID)
 		if (stringNavigationLayoutState == stringNavigationLeftSlideOut)
 		{
 			$(stringNavigationLayoutJQueryID).css("left", stringNavigationLeftSlideIn);
-			$(stringMainLayoutJQueryID).css("margin-left", stringMainLeftSlideIn);
-			// $(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(-50px)");
-			// $(stringCurtainLayoutJQueryID).css("display", "block");
-			// cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
+			// $(stringMainLayoutJQueryID).css("margin-left", stringMainLeftSlideIn);
+			$(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(-50px)");
+			$(stringCurtainLayoutJQueryID).css("display", "block");
+			cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
 			$("input[name='RadioButtonNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
 		}
 		else
 		{
 			$(stringNavigationLayoutJQueryID).css("left", stringNavigationLeftSlideOut);
-			$(stringMainLayoutJQueryID).css("margin-left", stringMainLeftSlideOut);
-			// $(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(0px)");
-			// $(stringCurtainLayoutJQueryID).css("display", "none");
+			// $(stringMainLayoutJQueryID).css("margin-left", stringMainLeftSlideOut);
+			$(stringMainLayoutJQueryID).css("-webkit-transform", "translateZ(0px)");
+			$(stringCurtainLayoutJQueryID).css("display", "none");
 			cssPrefix("input[name='RadioButtonNavigationHeader']:checked + li img", "transform", "rotateZ(0deg)");
+
 			$("input[name='CheckboxNavigationHeader']").each(function()
 			{
 				$(this).prop('checked', false);
 			});
+
 			$("input[name='CheckboxNavigationHeader'] + li .ListNavigationItem").css("height", "0" + stringPX);
 			cssPrefix("input[name='CheckboxNavigationHeader'] + li img", "transform", "rotateZ(-45deg)");
 		}
@@ -173,33 +175,40 @@ function formInitializeMessage(stringTitle, stringDescription, booleanState)
 	var intColorGreen;
 	var intColorBlue;
 
-	if (booleanState == false)
+	if (stringDescription.length == 0)
 	{
-		intColorRed = 193;
-		intColorGreen = 39;
-		intColorBlue = 45;
+
 	}
 	else
 	{
-		intColorRed = 0;
-		intColorGreen = 85;
-		intColorBlue = 160;
-	}
+		if (booleanState == false)
+		{
+			intColorRed = 193;
+			intColorGreen = 39;
+			intColorBlue = 45;
+		}
+		else
+		{
+			intColorRed = 0;
+			intColorGreen = 85;
+			intColorBlue = 160;
+		}
 
-	$("#MessageContainer").css("background-color", "rgba(" + intColorRed + ", " + intColorGreen + ", " + intColorBlue + ", 1)");
-	$("#MessageWingLeft").css("background-color", "rgba(" + (intColorRed + 30) + ", " + (intColorGreen + 30) + ", " + (intColorBlue + 30) + ", 1)");
+		$("#MessageContainer").css("background-color", "rgba(" + intColorRed + ", " + intColorGreen + ", " + intColorBlue + ", 1)");
+		$("#MessageWingLeft").css("background-color", "rgba(" + (intColorRed + 30) + ", " + (intColorGreen + 30) + ", " + (intColorBlue + 30) + ", 1)");
 
-	if (intMessageContainerRight == "-80" + stringPX)
-	{
-		$("#MessageContainer").css("right", "-480px");
-		$("#MessageWingLeft").css("margin-left", "-40px");
-	}
-	else
-	{
-		$("#MessageContainer").css("right", "-80px");
-		$("#MessageWingLeft").css("margin-left", "0px");
-	}
+		/* if (intMessageContainerRight == "-80" + stringPX)
+		{
+			$("#MessageContainer").css("right", "-480px");
+			$("#MessageWingLeft").css("margin-left", "-40px");
+		}
+		else
+		{ */
+			$("#MessageContainer").css("right", "-80px");
+			$("#MessageWingLeft").css("margin-left", "0px");
+		// }
 
-	$("#MessageTitle").text(stringTitle);
-	$("#MessageDescription").text(stringDescription);
+		$("#MessageTitle").text(stringTitle);
+		$("#MessageDescription").text(stringDescription);
+	}
 }
