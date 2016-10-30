@@ -32,11 +32,14 @@ input, textarea, select
 	border-style: solid
 	border-width: $size_border_thin
 
-input
+input, select
+	min-height: $size_height_single
+
+select
 	height: $size_height_single
 
 textarea
-	height: $size_height_tripple
+	min-height: $size_height_tripple
 
 body#Login
 	input, textarea, select

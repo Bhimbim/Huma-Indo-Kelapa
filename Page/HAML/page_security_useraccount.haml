@@ -124,6 +124,15 @@
 									%div.Check
 								%label{ :for => "radioButtonSecuritySexMale" } Male
 								%br
+								%label.Long{ :for => "textSecurityAddress" } Religion
+								%br
+								%select#selectSecurityReligion.Long
+									%option{ :value => "moslem" } Islam
+									%option{ :value => "catholic" } Kristen Katolik
+									%option{ :value => "protestan" } Kristen Protestan
+									%option{ :value => "hindu" } Hindu
+									%option{ :value => "budha" } Budha
+								%br
 								%label.Long{ :for => "textSecurityAddress" } Address
 								%br
 								%textarea#textSecurityAddress.Long
