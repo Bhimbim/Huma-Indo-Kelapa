@@ -20,6 +20,7 @@
 				navigationHeaderShow();
 				navigationDetailShow();
 				formInitializeSize();
+				userInitial("Logan Hawlett", "administrator");
 			});
 
 
@@ -139,11 +140,11 @@
 								%br
 								%label.Long{ :for => "textSecurityTelephone" } Telephone
 								%br
-								%input#phoneSecurityTelephone.Long{ :type => "phone" }
+								%input#phoneSecurityTelephone.Long{ :type => "tel" }
 								%br
 								%label.Long{ :for => "textSecurityGroupName" } Handphone
 								%br
-								%input#phoneSecurityHandphone.Long{ :type => "phone" }
+								%input#phoneSecurityHandphone.Long{ :type => "tel" }
 								%br
 								%label.Long{ :for => "textSecurityGroupName" } Email
 								%br
@@ -156,7 +157,7 @@
 										%div.ButtonHighlight
 										%img{ :src => "../../Resource/Icon/Arjuna/icon_add.svg" }
 										%span Add New
-								%input#buttonAdd.ButtonPrimary{ :type => "button" }
+								%input#buttonAdd.ButtonPrimary{ :type => "submit" }
 								%label{ :for => "buttonReset" }
 									%div.ButtonContainer
 										%div.ButtonHighlight

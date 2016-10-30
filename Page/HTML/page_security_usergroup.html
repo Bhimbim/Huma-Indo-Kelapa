@@ -45,6 +45,7 @@
       	navigationHeaderShow();
       	navigationDetailShow();
       	formInitializeSize();
+      	userInitial("Logan Hawlett", "administrator");
       });
     </script>
   </head>
@@ -53,7 +54,8 @@
     <!-- NAVIGATION -->
     <nav>
       <header>
-        <img class='ImageProfile' src='../../Resource/Photo/photo_profile_loganhowlett.jpg'>
+        <!-- / %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" } -->
+        <div id='InitialProfile'></div>
         <div class='ProfileContainer'>
           <span class='SpanProfileHeader'>Logan Howlett</span>
           <span class='SpanProfileDetail'>administrator</span>
@@ -65,8 +67,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderSecurity'>
               Security
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>
                 <a class='Clear' href='../../Page/HTML/page_security_changepassword.html'>User Password</a>
@@ -83,8 +85,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderTransaction'>
               Transaction
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>User Password</li>
               <li>User Group</li>
@@ -95,8 +97,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderReport'>
               Report
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>User Password</li>
               <li>User Group</li>
@@ -107,8 +109,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderSetting'>
               Setting
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>Pricing</li>
               <li>Preference</li>
@@ -118,8 +120,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderManufacturing'>
               Manufacturing
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>User Password</li>
               <li>User Group</li>

@@ -121,6 +121,21 @@ function goToLogin()
 	window.location.replace("../../Page/HTML/page_login_general.html");
 }
 
+function userInitial(stringUserName, stringUserPosition)
+{
+	var arrayUserName = stringUserName.split(" ");
+	var stringUserInitial = "";
+
+	for (var i = 0; i < arrayUserName.length; i++)
+	{
+		stringUserInitial += arrayUserName[i].substring(0, 1);
+	}
+
+	$("#InitialProfile").text(stringUserInitial);
+	$(".SpanProfileHeader").text(stringUserName);
+	$(".SpanProfileDetail").text(stringUserPosition);
+}
+
 
 // MAIN
 
@@ -146,4 +161,42 @@ function formInitializeSize()
 
 	$(".FormWindow").css("width", intHTMLWidth + stringPX);
 	$(".FormContainer").css("width", intAccumulateWidth + stringPX);
+}
+
+
+// FORM
+
+function formInitializeMessage(stringTitle, stringDescription, booleanState)
+{
+	var intMessageContainerRight = $("#MessageContainer").css("right");
+	var intColorRed;
+	var intColorGreen;
+	var intColorBlue;
+
+	if (booleanState == false)
+	{
+		intColorRed = 193;
+		intColorGreen = 39;
+		intColorBlue = 45;
+	}
+	else
+	{
+		intColorRed = 0;
+		intColorGreen = 85;
+		intColorBlue = 160;
+	}
+
+	$("#MessageContainer").css("background-color", "rgba(" + intColorRed + ", " + intColorGreen + ", " + intColorBlue + ", 1)");
+	$("#MessageWingLeft").css("background-color", "rgba(" + (intColorRed + 30) + ", " + (intColorGreen + 30) + ", " + (intColorBlue + 30) + ", 1)");
+
+	if (intMessageContainerRight == "-20" + stringPX)
+	{
+		$("#MessageContainer").css("right", "-430px");
+		$("#MessageWingLeft").css("margin-left", "-40px");
+	}
+	else
+	{
+		$("#MessageContainer").css("right", "-20px");
+		$("#MessageWingLeft").css("margin-left", "0px");
+	}
 }

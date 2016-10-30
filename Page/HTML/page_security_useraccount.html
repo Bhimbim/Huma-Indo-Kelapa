@@ -45,6 +45,7 @@
       	navigationHeaderShow();
       	navigationDetailShow();
       	formInitializeSize();
+      	userInitial("Logan Hawlett", "administrator");
       });
     </script>
   </head>
@@ -53,7 +54,8 @@
     <!-- NAVIGATION -->
     <nav>
       <header>
-        <img class='ImageProfile' src='../../Resource/Photo/photo_profile_loganhowlett.jpg'>
+        <!-- / %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" } -->
+        <div id='InitialProfile'></div>
         <div class='ProfileContainer'>
           <span class='SpanProfileHeader'>Logan Howlett</span>
           <span class='SpanProfileDetail'>administrator</span>
@@ -65,8 +67,8 @@
           <li>
             <label for='checkboxButtonNavigationHeaderSecurity'>
               Security
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
               <li>
                 <a class='Clear' href='../../Page/HTML/page_security_changepassword.html'>User Password</a>
@@ -77,53 +79,105 @@
               <li>
                 <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>User Account</a>
               </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_security_resetpassword.html'>Reset Password</a>
+              </li>
             </ul>
           </li>
-          <input id='checkboxButtonNavigationHeaderTransaction' name='CheckboxNavigationHeader' type='checkbox' value='transaction'>
+          <input id='checkboxButtonNavigationHeaderMaster' name='CheckboxNavigationHeader' type='checkbox' value='master'>
           <li>
-            <label for='checkboxButtonNavigationHeaderTransaction'>
-              Transaction
+            <label for='checkboxButtonNavigationHeaderMaster'>
+              Master
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
-            </ul>
-          </li>
-          <input id='checkboxButtonNavigationHeaderReport' name='CheckboxNavigationHeader' type='checkbox' value='report'>
-          <li>
-            <label for='checkboxButtonNavigationHeaderReport'>
-              Report
-            </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
-            <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_master_customer.html'>Customer</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_master_supplier.html'>Supplier</a>
+              </li>
             </ul>
           </li>
           <input id='checkboxButtonNavigationHeaderSetting' name='CheckboxNavigationHeader' type='checkbox' value='setting'>
           <li>
             <label for='checkboxButtonNavigationHeaderSetting'>
               Setting
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
-              <li>Pricing</li>
-              <li>Preference</li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_setting_baseprice.html'>Base Price</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_setting_minimumsellingprice.html'>Minimum Selling Price</a>
+              </li>
             </ul>
           </li>
-          <input id='checkboxButtonNavigationHeaderManufacturing' name='CheckboxNavigationHeader' type='checkbox' value='manufacturing'>
+          <input id='checkboxButtonNavigationHeaderProcessing' name='CheckboxNavigationHeader' type='checkbox' value='processing'>
           <li>
-            <label for='checkboxButtonNavigationHeaderManufacturing'>
-              Manufacturing
+            <label for='checkboxButtonNavigationHeaderProcessing'>
+              Processing
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             </label>
-            <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
             <ul class='ListNavigationItem'>
-              <li>User Password</li>
-              <li>User Group</li>
-              <li>User Account</li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_processing_rawmaterial.html'>Raw Material</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_processing_flour.html'>Flour</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_processing_coconutoil.html'>Coconut Oil</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_processing_purecoconutoil.html'>Pure Coconut Oil</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_processing_activecarbon.html'>Active Carbon</a>
+              </li>
+            </ul>
+          </li>
+          <input id='checkboxButtonNavigationHeaderTransaction' name='CheckboxNavigationHeader' type='checkbox' value='transaction'>
+          <li>
+            <label for='checkboxButtonNavigationHeaderTransaction'>
+              Transaction
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+            </label>
+            <ul class='ListNavigationItem'>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_transaction_purchasing.html'>Purchasing</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_transactioin_sales.html'>Sales</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_transaction_stockopname.html'>Stock Opname</a>
+              </li>
+            </ul>
+          </li>
+          <input id='checkboxButtonNavigationHeaderReport' name='CheckboxNavigationHeader' type='checkbox' value='report'>
+          <li>
+            <label for='checkboxButtonNavigationHeaderReport'>
+              Report
+              <img src='../../Resource/Icon/Arjuna/icon_navigation_expand.svg'>
+            </label>
+            <ul class='ListNavigationItem'>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_report_purchasing.html'>Purchasing</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_report_processingproduct.html'>Processing Product</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_report_movementstockproduct.html'>Movement Stock Product</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_report_sales.html'>Sales</a>
+              </li>
+              <li>
+                <a class='Clear' href='../../Page/HTML/page_report_paymentcontract.html'>Payment Contract Employee</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -250,11 +304,11 @@
                 <br>
                 <label class='Long' for='textSecurityTelephone'>Telephone</label>
                 <br>
-                <input class='Long' id='phoneSecurityTelephone' type='phone'>
+                <input class='Long' id='phoneSecurityTelephone' type='tel'>
                 <br>
                 <label class='Long' for='textSecurityGroupName'>Handphone</label>
                 <br>
-                <input class='Long' id='phoneSecurityHandphone' type='phone'>
+                <input class='Long' id='phoneSecurityHandphone' type='tel'>
                 <br>
                 <label class='Long' for='textSecurityGroupName'>Email</label>
                 <br>
@@ -269,7 +323,7 @@
                     <span>Add New</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonAdd' type='button'>
+                <input class='ButtonPrimary' id='buttonAdd' type='submit'>
                 <label for='buttonReset'>
                   <div class='ButtonContainer'>
                     <div class='ButtonHighlight'></div>

@@ -19,7 +19,7 @@ header
 		display: inline-block
 	div.SubHeader
 		h2
-			line-height: 78px
+			line-height: $size_height_subheader - $size_height_single + 4px
 			font-size: $fontsize_h2_subheader
 		ul.ListNavigationDetail
 			margin: 0px
@@ -36,6 +36,9 @@ header
 					font-size: $fontsize_h3_detailheader
 				.NavigationDetailBody
 					text-align: center
+		span#MessageTitle, span#MessageDescription
+			margin: $general_space_tiny
+			font-size: $fontsize_span_message
 
 div.TitleContainer
 	margin-top: 20%

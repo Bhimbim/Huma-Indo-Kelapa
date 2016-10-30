@@ -1,6 +1,8 @@
 %nav
 	%header
-		%img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+		// %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+		%div#InitialProfile
+
 		%div.ProfileContainer
 			%span.SpanProfileHeader Logan Howlett
 			%span.SpanProfileDetail administrator
@@ -11,7 +13,7 @@
 			%li
 				%label{ :for => "checkboxButtonNavigationHeaderSecurity" }
 					Security
-				%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
 				%ul.ListNavigationItem
 					%li
 						%a.Clear{ :href => "../../Page/HTML/page_security_changepassword.html" } User Password
@@ -19,38 +21,69 @@
 						%a.Clear{ :href => "../../Page/HTML/page_security_usergroup.html" } User Group
 					%li
 						%a.Clear{ :href => "../../Page/HTML/page_security_useraccount.html" } User Account
-			%input#checkboxButtonNavigationHeaderTransaction{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "transaction" }
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_security_resetpassword.html" } Reset Password
+			%input#checkboxButtonNavigationHeaderMaster{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "master" }
 			%li
-				%label{ :for => "checkboxButtonNavigationHeaderTransaction" }
-					Transaction
-				%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+				%label{ :for => "checkboxButtonNavigationHeaderMaster" }
+					Master
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
 				%ul.ListNavigationItem
-					%li User Password
-					%li User Group
-					%li User Account
-			%input#checkboxButtonNavigationHeaderReport{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "report" }
-			%li
-				%label{ :for => "checkboxButtonNavigationHeaderReport" }
-					Report
-				%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
-				%ul.ListNavigationItem
-					%li User Password
-					%li User Group
-					%li User Account
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_master_customer.html" } Customer
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_master_supplier.html" } Supplier
 			%input#checkboxButtonNavigationHeaderSetting{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "setting" }
 			%li
 				%label{ :for => "checkboxButtonNavigationHeaderSetting" }
 					Setting
-				%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
 				%ul.ListNavigationItem
-					%li Pricing
-					%li Preference
-			%input#checkboxButtonNavigationHeaderManufacturing{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "manufacturing" }
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_setting_baseprice.html" } Base Price
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_setting_minimumsellingprice.html" } Minimum Selling Price
+			%input#checkboxButtonNavigationHeaderProcessing{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "processing" }
 			%li
-				%label{ :for => "checkboxButtonNavigationHeaderManufacturing" }
-					Manufacturing
-				%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+				%label{ :for => "checkboxButtonNavigationHeaderProcessing" }
+					Processing
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
 				%ul.ListNavigationItem
-					%li User Password
-					%li User Group
-					%li User Account
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_processing_rawmaterial.html" } Raw Material
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_processing_flour.html" } Flour
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_processing_coconutoil.html" } Coconut Oil
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_processing_purecoconutoil.html" } Pure Coconut Oil
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_processing_activecarbon.html" } Active Carbon
+			%input#checkboxButtonNavigationHeaderTransaction{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "transaction" }
+			%li
+				%label{ :for => "checkboxButtonNavigationHeaderTransaction" }
+					Transaction
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+				%ul.ListNavigationItem
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_transaction_purchasing.html" } Purchasing
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_transactioin_sales.html" } Sales
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_transaction_stockopname.html" } Stock Opname
+			%input#checkboxButtonNavigationHeaderReport{ :type => "checkbox", :name => "CheckboxNavigationHeader", :value => "report" }
+			%li
+				%label{ :for => "checkboxButtonNavigationHeaderReport" }
+					Report
+					%img{ :src => "../../Resource/Icon/Arjuna/icon_navigation_expand.svg"}
+				%ul.ListNavigationItem
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_report_purchasing.html" } Purchasing
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_report_processingproduct.html" } Processing Product
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_report_movementstockproduct.html" } Movement Stock Product
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_report_sales.html" } Sales
+					%li
+						%a.Clear{ :href => "../../Page/HTML/page_report_paymentcontract.html" } Payment Contract Employee

@@ -31,12 +31,17 @@ input, textarea, select
 	vertical-align: middle
 	border-style: solid
 	border-width: $size_border_thin
+	background-position: right center
+	background-size: auto
+	background-repeat: no-repeat
 
 input, select
 	min-height: $size_height_single
 
 select
 	height: $size_height_single
+	+Appearance(none)
+	+BorderRadius(0)
 
 textarea
 	min-height: $size_height_tripple
@@ -44,6 +49,10 @@ textarea
 body#Login
 	input, textarea, select
 		margin: $general_space_little
+
+// input:invalid, textarea:invalid, select:invalid
+	// +Animation(animationTextInvalid, 0.5s, 0s, 1, forwards)
+
 
 
 // CHECKBOX

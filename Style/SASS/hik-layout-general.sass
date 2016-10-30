@@ -21,12 +21,42 @@ main
 		div.MainHeader
 			top: 0px
 			height: $size_height_mainheader
-			border-bottom-style: solid
-			border-bottom-width: $size_border_thin
 		div.SubHeader
 			height: $size_height_subheader
 			padding-left: $general_space_large * 2
 			padding-right: $general_space_large * 2
+		div#MessageContainer
+			position: absolute
+			top: $size_height_mainheader
+			right: -$general_space_medium - 400px
+			height: $size_height_subheader
+			width: 400px
+			overflow-x: hidden
+			-webkit-transform: skew(-20deg);
+			-moz-transform: skew(-20deg);
+			-o-transform: skew(-20deg);
+			div#MessageWingLeft
+				float: left
+				margin-left: -40px
+				height: $size_height_subheader
+				width: 30px
+				+Transition(all, 0.5s, ease-out)
+			div#MessageText
+				float: right
+				margin-top: $general_space_small
+				margin-left: $general_space_small
+				margin-right: $general_space_medium
+				margin-bottom: $general_space_small
+				text-align: right
+				span#MessageTitle, span#MessageDescription
+					max-width: 280px
+					display: block
+			img#MessageImage
+				float: right
+				margin-top: $general_space_small
+				margin-left: $general_space_small
+				margin-right: $general_space_large
+				margin-bottom: $general_space_small
 
 
 // NAVIGATION
@@ -55,14 +85,16 @@ nav
 		padding-left: $general_space_medium
 		padding-right: $general_space_medium
 		padding-bottom: ($size_height_mainheader - $size_icon_mdpi) / 2
-		img
+		img, #InitialProfile
 			float: left
 			width: $size_icon_mdpi
 			height: $size_icon_mdpi
+			line-height: $size_icon_mdpi
 			vertical-align: middle
 			background-position: center
 			background-size: contain
 			background-repeat: no-repeat
+			text-align: center
 			+BorderRadius(50%)
 		.ProfileContainer
 			float: left
