@@ -123,9 +123,24 @@ main
 
 .TableControl
 	.TableControlRow
+		display: flex
+		justify-content: space-between
+		align-items: center
+		align-content: stretch
+		.TableControlLeft, .TableControlCenter, .TableControlRight
+			vertical-align: middle
+			flex-grow: 1
+			img
+				width: $size_icon_ldpi
+				height: $size_icon_ldpi
 		.TableControlLeft
+			text-align: left
 		.TableControlCenter
+			text-align: center
+			font-size: $fontsize_table_title
 		.TableControlRight
+			text-align: right
+
 table
 	margin: $general_space_tiny
 	border-collapse: collapse
@@ -134,13 +149,10 @@ table
 			th
 				min-width: $size_width_medium
 				padding: $general_space_small
+				font-size: $fontsize_table_header
 	tbody
 		tr
 			td
 				padding: $general_space_small
 				text-align: left
-.TableControl
-	.TableControlRow
-		.TableControlLeft
-		.TableControlCenter
-		.TableControlRight
+				font-size: $fontsize_table_data

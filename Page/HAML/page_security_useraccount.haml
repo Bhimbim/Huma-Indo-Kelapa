@@ -108,15 +108,15 @@
 									%div.TableControl
 										%div.TableControlRow
 											%div.TableControlLeft
-												%img
-												%img
-												%img
-												%img
+												%img{ :src => "../../Resource/Icon/Arjuna/icon_first.svg" }
+												%img{ :src => "../../Resource/Icon/Arjuna/icon_previous.svg" }
+												%img{ :src => "../../Resource/Icon/Arjuna/icon_next.svg" }
+												%img{ :src => "../../Resource/Icon/Arjuna/icon_last.svg" }
 											%div.TableControlCenter
 												User Account
 											%div.TableControlRight
 												Jump to
-												%input{ :type => "number" }
+												%input.Short{ :type => "number" }
 											%input#buttonFind.ButtonPrimary{ :type => "button" }
 									%table
 										%thead
@@ -143,9 +143,9 @@
 											%div.TableControlCenter
 											%div.TableControlRight
 												Show item per page :
-												%input#buttonFind.ButtonPrimary{ :type => "button" }
-												%input#buttonFind.ButtonPrimary{ :type => "button" }
-												%input#buttonFind.ButtonPrimary{ :type => "button" }
+												%input#buttonPage25.ButtonPage{ :type => "button", :value => "25" }
+												%input#buttonPage50.ButtonPage{ :type => "button", :value => "50" }
+												%input#buttonPage100.ButtonPage{ :type => "button", :value => "100" }
 
 						%form.PositionerLeft
 							%fieldset
