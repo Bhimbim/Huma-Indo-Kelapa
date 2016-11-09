@@ -165,6 +165,31 @@ function formInitializeSize()
 	$(".FormContainer").css("width", intAccumulateWidth + stringPX);
 }
 
+function formInitializeSizeNoPaging()
+{
+	var intHTMLHeight = $(window).height();
+	var intMainHeaderHeight = $(".MainHeader").height();
+	var intSubHeaderHeight = $(".SubHeader").height();
+	var intFormHeight = intHTMLHeight - intMainHeaderHeight - intSubHeaderHeight - 46;
+	// alert(intFormHeight + " = " + intHTMLHeight + " - " + intMainHeaderHeight + " - " + intSubHeaderHeight);
+	var intHTMLWidth = $(window).width();
+	var intFormWidth = intHTMLWidth - 40;
+
+	$("form").css("height", intFormHeight + stringPX);
+	$("form").css("width", intFormWidth + stringPX);
+
+	// var intAccumulateWidth = 0;
+
+	// $("form").each(function()
+	// {
+	// 	intAccumulateWidth += intFormWidth + 40;
+	// });
+
+	$(".FormWindow").css("width", intHTMLWidth + stringPX);
+	// $(".FormContainer").css("width", intAccumulateWidth + stringPX);
+	$(".FormContainer").css("width", intHTMLWidth + stringPX);
+}
+
 
 // FORM
 
