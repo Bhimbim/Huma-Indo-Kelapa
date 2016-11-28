@@ -120,16 +120,49 @@ function navigationDetailShow()
 
 function navigationTileShow(stringInputName)
 {
-	$("div[name='" + stringInputName + "']").each(function()
+	var stringInputValue;
+
+	$("input:radio[name='" + stringInputName + "']").change(function()
 	{
-		if ($(this).hasClass("Flip"))
+		var intFlipUpCounter = 0;
+		var intFlipDownCounter = 0;
+		stringInputValue = $(this).val();
+
+		$(".NavigationItem").each(function(index)
 		{
-			$(this).removeClass("Flip");
-		}
-		else
-		{
-			$(this).addClass("Flip");
-		}
+			if ($(this).attr("name") == stringInputValue)
+			{
+				intFlipUpCounter ++;
+				var elementItem = this;
+		        var timeOutFlipUp = setTimeout(function() 
+		        { 
+		            if ($(elementItem).hasClass("Flip"))
+					{
+						$(elementItem).removeClass("Flip");
+					}
+					else
+					{
+						$(elementItem).addClass("Flip");
+					}
+		        }, intFlipUpCounter * 200);
+			}
+			else
+			{
+				var elementItem = this;
+		        var timeOutFlipDown = setTimeout(function() 
+		        { 
+		            if ($(elementItem).hasClass("Flip"))
+					{
+						intFlipDownCounter ++;
+						$(elementItem).removeClass("Flip");
+					}
+					else
+					{
+						
+					}
+		        }, intFlipDownCounter * 200);
+			}
+		});
 	});
 }
 

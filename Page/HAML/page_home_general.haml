@@ -16,7 +16,7 @@
 
 			$(document).ready(function()
 			{
-
+				navigationTileShow("RadioButtonNavigationTile");
 			});
 
 
@@ -58,8 +58,10 @@
 
 		%main
 			%nav
-				%div#NavigationSettingHeader.NavigationHeader.Square{ :style => "bottom: 0px; right: 0px;", :onclick => "navigationTileShow('NavigationItemSetting')" }
-					%span.SpanNavigationHeader Setting
+				%input#radioButtonNavigationHeaderSetting{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemSetting" }
+				%label{ :for => "radioButtonNavigationHeaderSetting" }
+					%div#NavigationSettingHeader.NavigationHeader.Square{ :style => "bottom: 0px; right: 0px;" }
+						%span.SpanNavigationHeader Setting
 				%div#NavigationSettingItem1.NavigationItem.Highlight{ :style => "bottom: 120px; right: 0px;", :name => "NavigationItemSetting" }
 					%div.Card
 						%div.Front
@@ -70,8 +72,10 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Minimum Selling Price
-				%div#NavigationReportHeader.NavigationHeader.Board{ :style => "bottom: 0px; right: 120px;", :onclick => "navigationTileShow('NavigationItemReport')" }
-					%span.SpanNavigationHeader Report
+				%input#radioButtonNavigationHeaderReport{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemReport" }
+				%label{ :for => "radioButtonNavigationHeaderReport" }
+					%div#NavigationReportHeader.NavigationHeader.Board{ :style => "bottom: 0px; right: 120px;" }
+						%span.SpanNavigationHeader Report
 				%div#NavigationReportItem1.NavigationItem.Highlight{ :style => "bottom: 0px; right: 360px;", :name => "NavigationItemReport" }
 					%div.Card
 						%div.Front
@@ -97,8 +101,10 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Payment Contract Employee
-				%div#NavigationProcessingHeader.NavigationHeader.Board{ :style => "bottom: 240px; right: 360px;", :onclick => "navigationTileShow('NavigationItemProcessing')" }
-					%span.SpanNavigationHeader Processing
+				%input#radioButtonNavigationHeaderProcessing{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemProcessing" }
+				%label{ :for => "radioButtonNavigationHeaderProcessing" }
+					%div#NavigationProcessingHeader.NavigationHeader.Board{ :style => "bottom: 240px; right: 360px;" }
+						%span.SpanNavigationHeader Processing
 				%div#NavigationProcessingItem1.NavigationItem.Base{ :style => "bottom: 480px; right: 480px;", :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
@@ -124,25 +130,32 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Active Carbon
-				%div#NavigationSecurityHeader.NavigationHeader.Square{ :style => "bottom: 480px; right: 600px;", :onclick => "navigationTileShow('NavigationItemSecurity')" }
-					%span.SpanNavigationHeader Security
-				%div#NavigationSecurityItem1.NavigationItem.Base{ :style => "bottom: 360px; right: 600px;", :name => "NavigationItemSecurity" }
-					%div.Card
-						%div.Front
-						%div.Back
-							%span.SpanNavigationItem User Account
-				%div#NavigationSecurityItem2.NavigationItem.Highlight{ :style => "bottom: 240px; right: 600px;", :name => "NavigationItemSecurity" }
-					%div.Card
-						%div.Front
-						%div.Back
-							%span.SpanNavigationItem User Group
-				%div#NavigationSecurityItem3.NavigationItem.Base{ :style => "bottom: 120px; right: 600px;", :name => "NavigationItemSecurity" }
-					%div.Card
-						%div.Front
-						%div.Back
-							%span.SpanNavigationItem Reset Password
-				%div#NavigationTransactionHeader.NavigationHeader.Rectangle{ :style => "bottom: 240px; right: 120px;", :onclick => "navigationTileShow('NavigationItemTransaction')" }
-					%span.SpanNavigationHeader Transaction
+				%input#radioButtonNavigationHeaderSecurity{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemSecurity" }
+				%label{ :for => "radioButtonNavigationHeaderSecurity" }
+					%div#NavigationSecurityHeader.NavigationHeader.Square{ :style => "bottom: 480px; right: 600px;" }
+						%span.SpanNavigationHeader Security
+				%a.Clear{ :href => "../../Page/HTML/page_security_useraccount.html" }
+					%div#NavigationSecurityItem1.NavigationItem.Base{ :style => "bottom: 360px; right: 600px;", :name => "NavigationItemSecurity" }
+						%div.Card
+							%div.Front
+							%div.Back
+								%span.SpanNavigationItem User Account
+				%a.Clear{ :href => "../../Page/HTML/page_security_usergroup.html" }
+					%div#NavigationSecurityItem2.NavigationItem.Highlight{ :style => "bottom: 240px; right: 600px;", :name => "NavigationItemSecurity" }
+						%div.Card
+							%div.Front
+							%div.Back
+								%span.SpanNavigationItem User Group
+				%a.Clear{ :href => "../../Page/HTML/page_security_resetpassword.html" }
+					%div#NavigationSecurityItem3.NavigationItem.Base{ :style => "bottom: 120px; right: 600px;", :name => "NavigationItemSecurity" }
+						%div.Card
+							%div.Front
+							%div.Back
+								%span.SpanNavigationItem Reset Password
+				%input#radioButtonNavigationHeaderTransaction{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemTransaction" }
+				%label{ :for => "radioButtonNavigationHeaderTransaction" }
+					%div#NavigationTransactionHeader.NavigationHeader.Rectangle{ :style => "bottom: 240px; right: 120px;" }
+						%span.SpanNavigationHeader Transaction
 				%div#NavigationTransactionItem1.NavigationItem.Highlight{ :style => "bottom: 360px; right: 240px;", :name => "NavigationItemTransaction" }
 					%div.Card
 						%div.Front
@@ -153,8 +166,10 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Sales
-				%div#NavigationMasterHeader.NavigationHeader.Square{ :style => "bottom: 360px; right: 120px;", :onclick => "navigationTileShow('NavigationItemMaster')" }
-					%span.SpanNavigationHeader Master
+				%input#radioButtonNavigationHeaderMaster{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemMaster" }
+				%label{ :for => "radioButtonNavigationHeaderMaster" }
+					%div#NavigationMasterHeader.NavigationHeader.Square{ :style => "bottom: 360px; right: 120px;" }
+						%span.SpanNavigationHeader Master
 				%div#NavigationMasterItem1.NavigationItem.Base{ :style => "bottom: 360px; right: 0px;", :name => "NavigationItemMaster" }
 					%div.Card
 						%div.Front

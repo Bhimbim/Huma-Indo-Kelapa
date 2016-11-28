@@ -41,7 +41,7 @@
       
       $(document).ready(function()
       {
-      
+      	navigationTileShow("RadioButtonNavigationTile");
       });
     </script>
   </head>
@@ -51,7 +51,7 @@
     <header>
       <div class='MainHeader'>
         <h1>
-          <a href='page_home_general.html'>Huma Indo Kelapa</a>
+          <a class='Clear' href='page_home_general.html'>Huma Indo Kelapa</a>
         </h1>
         <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
         <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
@@ -90,9 +90,12 @@
     <!-- MAIN -->
     <main>
       <nav>
-        <div class='NavigationHeader Square' id='NavigationSettingHeader' onclick="navigationTileShow('NavigationItemSetting')" style='bottom: 0px; right: 0px;'>
-          <span class='SpanNavigationHeader'>Setting</span>
-        </div>
+        <input id='radioButtonNavigationHeaderSetting' name='RadioButtonNavigationTile' type='radio' value='NavigationItemSetting'>
+        <label for='radioButtonNavigationHeaderSetting'>
+          <div class='NavigationHeader Square' id='NavigationSettingHeader' style='bottom: 0px; right: 0px;'>
+            <span class='SpanNavigationHeader'>Setting</span>
+          </div>
+        </label>
         <div class='NavigationItem Highlight' id='NavigationSettingItem1' name='NavigationItemSetting' style='bottom: 120px; right: 0px;'>
           <div class='Card'>
             <div class='Front'></div>
@@ -109,9 +112,12 @@
             </div>
           </div>
         </div>
-        <div class='NavigationHeader Board' id='NavigationReportHeader' onclick="navigationTileShow('NavigationItemReport')" style='bottom: 0px; right: 120px;'>
-          <span class='SpanNavigationHeader'>Report</span>
-        </div>
+        <input id='radioButtonNavigationHeaderReport' name='RadioButtonNavigationTile' type='radio' value='NavigationItemReport'>
+        <label for='radioButtonNavigationHeaderReport'>
+          <div class='NavigationHeader Board' id='NavigationReportHeader' style='bottom: 0px; right: 120px;'>
+            <span class='SpanNavigationHeader'>Report</span>
+          </div>
+        </label>
         <div class='NavigationItem Highlight' id='NavigationReportItem1' name='NavigationItemReport' style='bottom: 0px; right: 360px;'>
           <div class='Card'>
             <div class='Front'></div>
@@ -152,9 +158,12 @@
             </div>
           </div>
         </div>
-        <div class='NavigationHeader Board' id='NavigationProcessingHeader' onclick="navigationTileShow('NavigationItemProcessing')" style='bottom: 240px; right: 360px;'>
-          <span class='SpanNavigationHeader'>Processing</span>
-        </div>
+        <input id='radioButtonNavigationHeaderProcessing' name='RadioButtonNavigationTile' type='radio' value='NavigationItemProcessing'>
+        <label for='radioButtonNavigationHeaderProcessing'>
+          <div class='NavigationHeader Board' id='NavigationProcessingHeader' style='bottom: 240px; right: 360px;'>
+            <span class='SpanNavigationHeader'>Processing</span>
+          </div>
+        </label>
         <div class='NavigationItem Base' id='NavigationProcessingItem1' name='NavigationItemProcessing' style='bottom: 480px; right: 480px;'>
           <div class='Card'>
             <div class='Front'></div>
@@ -195,36 +204,48 @@
             </div>
           </div>
         </div>
-        <div class='NavigationHeader Square' id='NavigationSecurityHeader' onclick="navigationTileShow('NavigationItemSecurity')" style='bottom: 480px; right: 600px;'>
-          <span class='SpanNavigationHeader'>Security</span>
-        </div>
-        <div class='NavigationItem Base' id='NavigationSecurityItem1' name='NavigationItemSecurity' style='bottom: 360px; right: 600px;'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>User Account</span>
+        <input id='radioButtonNavigationHeaderSecurity' name='RadioButtonNavigationTile' type='radio' value='NavigationItemSecurity'>
+        <label for='radioButtonNavigationHeaderSecurity'>
+          <div class='NavigationHeader Square' id='NavigationSecurityHeader' style='bottom: 480px; right: 600px;'>
+            <span class='SpanNavigationHeader'>Security</span>
+          </div>
+        </label>
+        <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>
+          <div class='NavigationItem Base' id='NavigationSecurityItem1' name='NavigationItemSecurity' style='bottom: 360px; right: 600px;'>
+            <div class='Card'>
+              <div class='Front'></div>
+              <div class='Back'>
+                <span class='SpanNavigationItem'>User Account</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class='NavigationItem Highlight' id='NavigationSecurityItem2' name='NavigationItemSecurity' style='bottom: 240px; right: 600px;'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>User Group</span>
+        </a>
+        <a class='Clear' href='../../Page/HTML/page_security_usergroup.html'>
+          <div class='NavigationItem Highlight' id='NavigationSecurityItem2' name='NavigationItemSecurity' style='bottom: 240px; right: 600px;'>
+            <div class='Card'>
+              <div class='Front'></div>
+              <div class='Back'>
+                <span class='SpanNavigationItem'>User Group</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class='NavigationItem Base' id='NavigationSecurityItem3' name='NavigationItemSecurity' style='bottom: 120px; right: 600px;'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Reset Password</span>
+        </a>
+        <a class='Clear' href='../../Page/HTML/page_security_resetpassword.html'>
+          <div class='NavigationItem Base' id='NavigationSecurityItem3' name='NavigationItemSecurity' style='bottom: 120px; right: 600px;'>
+            <div class='Card'>
+              <div class='Front'></div>
+              <div class='Back'>
+                <span class='SpanNavigationItem'>Reset Password</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class='NavigationHeader Rectangle' id='NavigationTransactionHeader' onclick="navigationTileShow('NavigationItemTransaction')" style='bottom: 240px; right: 120px;'>
-          <span class='SpanNavigationHeader'>Transaction</span>
-        </div>
+        </a>
+        <input id='radioButtonNavigationHeaderTransaction' name='RadioButtonNavigationTile' type='radio' value='NavigationItemTransaction'>
+        <label for='radioButtonNavigationHeaderTransaction'>
+          <div class='NavigationHeader Rectangle' id='NavigationTransactionHeader' style='bottom: 240px; right: 120px;'>
+            <span class='SpanNavigationHeader'>Transaction</span>
+          </div>
+        </label>
         <div class='NavigationItem Highlight' id='NavigationTransactionItem1' name='NavigationItemTransaction' style='bottom: 360px; right: 240px;'>
           <div class='Card'>
             <div class='Front'></div>
@@ -241,9 +262,12 @@
             </div>
           </div>
         </div>
-        <div class='NavigationHeader Square' id='NavigationMasterHeader' onclick="navigationTileShow('NavigationItemMaster')" style='bottom: 360px; right: 120px;'>
-          <span class='SpanNavigationHeader'>Master</span>
-        </div>
+        <input id='radioButtonNavigationHeaderMaster' name='RadioButtonNavigationTile' type='radio' value='NavigationItemMaster'>
+        <label for='radioButtonNavigationHeaderMaster'>
+          <div class='NavigationHeader Square' id='NavigationMasterHeader' style='bottom: 360px; right: 120px;'>
+            <span class='SpanNavigationHeader'>Master</span>
+          </div>
+        </label>
         <div class='NavigationItem Base' id='NavigationMasterItem1' name='NavigationItemMaster' style='bottom: 360px; right: 0px;'>
           <div class='Card'>
             <div class='Front'></div>
