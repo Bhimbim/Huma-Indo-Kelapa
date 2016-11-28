@@ -118,6 +118,21 @@ function navigationDetailShow()
 	});
 }
 
+function navigationTileShow(stringInputName)
+{
+	$("div[name='" + stringInputName + "']").each(function()
+	{
+		if ($(this).hasClass("Flip"))
+		{
+			$(this).removeClass("Flip");
+		}
+		else
+		{
+			$(this).addClass("Flip");
+		}
+	});
+}
+
 function goToLogin()
 {
 	window.location.replace("../../Page/HTML/page_login_general.html");

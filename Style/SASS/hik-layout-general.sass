@@ -130,6 +130,62 @@ body#Login
 		height: auto
 		margin: $general_space_huge
 
+body#Home
+	nav
+		position: absolute
+		top: $size_height_mainheader
+		right: 0px
+		left: 260px
+		bottom: 0px
+		width: auto
+		height: auto
+		.NavigationHeader
+			position: absolute
+			text-align: center
+			.SpanNavigationHeader
+				position: relative
+				top: 47.5%
+				transform: perspective(1px) translateY(-47.5%)
+		.NavigationItem
+			position: absolute
+			text-align: center
+			width: $size_tile_square
+			height: $size_tile_square
+			+Perspective(1000px)
+			.SpanNavigationItem
+				position: relative
+				top: 47.5%
+				transform: perspective(1px) translateY(-47.5%)
+			.Card, .Front, .Back
+				width: $size_tile_square
+				height: $size_tile_square
+			.Card
+				transform-style: preserve-3d
+				position: relative
+				.Front, .Back
+					position: absolute
+					top: 0
+					left: 0
+					+BackfaceVisibility(hidden)
+				.Front
+					z-index: 2
+					transform: rotateY(0deg)
+				.Back
+					display: block
+					transform: rotateY(180deg)
+		.NavigationItem.Flip
+			.Card
+				transform: rotateY(180deg)
+		.Square
+			width: $size_tile_square
+			height: $size_tile_square
+		.Rectangle
+			width: $size_tile_square * 2
+			height: $size_tile_square
+		.Board
+			width: $size_tile_board
+			height: $size_tile_board
+
 
 // CONTENT
 
@@ -159,6 +215,15 @@ body#Login
 		text-align: center
 		fieldset
 			text-align: center
+
+body#Home
+	position: absolute
+	top: 0px
+	right: 0px
+	left: 0px
+	bottom: 0px
+	width: auto
+	height: auto
 
 
 // CONDITIONER

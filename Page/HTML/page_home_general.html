@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <!-- HEAD -->
+  <head>
+    <!-- META DATA -->
+    <meta charset='utf-8'>
+    <meta content='Huma Indo Kelapa - HIKES' name='application-name'>
+    <meta content='Huma Indo Kelapa Electronic Submission.' name='description'>
+    <meta content='Huma Indo Kelapa Electronic Submission.' name='keywords'>
+    <meta content='Huma Indo Kelapa' name='author'>
+    <meta content='Ibrahim Aziz' name='designer'>
+    <meta content='Copyright 2016 Huma Indo Kelapa' name='copyright'>
+    <meta content='Huma Indo Kelapa Electronic Submission.' name='dcterms.description'>
+    <meta content='Huma Indo Kelapa' name='dcterms.creator'>
+    <meta content='Huma Indo Kelapa' name='dcterms.rightsHolder'>
+    <meta content='All rights reserved. No part of this document may be reproduced or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission from the Author, Huma Indo Kelapa.' name='dcterms.rights'>
+    <meta content='2016' name='dcterms.dateCopyrighted'>
+    <meta content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+    <!-- FAVICON -->
+    <!-- %link{ :rel => "shortcut icon", :href => "#{urlResource}logo_favicon.ico" } -->
+    <!-- %link{ :rel => "shortcut icon", :href => "#{urlResource}logo_favicon.ico", :type => "image/x-icon" } -->
+    <!-- %link{ :rel => "icon", :href => "#{urlResource}logo_favicon.ico", :type => "image/x-icon" } -->
+    <!-- CSS -->
+    <link href='../../Style/CSS/hik-layout-general.css' id='csslayout' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-font-general.css' id='cssfont' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-input-general.css' id='cssinput' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-link-general.css' id='csslink' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-fontsize-medium.css' id='cssfontsize' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-fontfamily-newjune.css' id='cssfontfamily' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-animation-general.css' id='csstheme' rel='stylesheet' type='text/css'>
+    <link href='../../Style/CSS/hik-theme-arjuna-svg.css' id='csstheme' rel='stylesheet' type='text/css'>
+    <!-- %link{ :id => "cssresponsive", :href => "#{urlCSS}#{urlCSSSectionPrefix}-responsive-general.css", :rel => "stylesheet", :type => "text/css" } -->
+    <!-- JAVA SCRIPT -->
+    <script src='../../Java Script/Minimized/jquery-3.1.1.min.js' type='text/javascript'></script>
+    <script src='../../Java Script/Minimized/jquery-migrate-1.4.1.min.js' type='text/javascript'></script>
+    <script src='../../Java Script/Minimized/ibrahimaziz.min.js' type='text/javascript'></script>
+    <title>Huma Indo Kelapa - Factory Management System, Home</title>
+    <!-- JQUERY -->
+    <script>
+      // READY
+      
+      $(document).ready(function()
+      {
+      
+      });
+    </script>
+  </head>
+  <!-- BODY -->
+  <body id='Home'>
+    <!-- HEADER -->
+    <header>
+      <div class='MainHeader'>
+        <h1>
+          <a href='page_home_general.html'>Huma Indo Kelapa</a>
+        </h1>
+        <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
+        <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
+      </div>
+    </header>
+    <!-- ASIDE -->
+    <aside>
+      <img class='ImageProfile' src='../../Resource/Photo/photo_profile_loganhowlett.jpg'>
+      <ul>
+        <li>
+          <span class='SpanProfileHeader'>Logan Howlett</span>
+          <span class='SpanProfileDetail'>username</span>
+        </li>
+        <li>
+          <span class='SpanProfileHeader'>Administrator</span>
+          <span class='SpanProfileDetail'>user group</span>
+        </li>
+        <li>
+          <span class='SpanProfileHeader'>Jambi</span>
+          <span class='SpanProfileDetail'>branch</span>
+        </li>
+        <li>
+          <span class='SpanProfileHeader'>Jane Grey</span>
+          <span class='SpanProfileDetail'>supervisor</span>
+        </li>
+        <li>
+          <span class='SpanProfileHeader'>1234567890</span>
+          <span class='SpanProfileDetail'>employee id</span>
+        </li>
+        <li>
+          <span class='SpanProfileHeader'>logan_howlett@hik.com</span>
+          <span class='SpanProfileDetail'>email</span>
+        </li>
+      </ul>
+    </aside>
+    <!-- MAIN -->
+    <main>
+      <nav>
+        <div class='NavigationHeader Square' id='NavigationSettingHeader' onclick="navigationTileShow('NavigationItemSetting')" style='bottom: 0px; right: 0px;'>
+          <span class='SpanNavigationHeader'>Setting</span>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationSettingItem1' name='NavigationItemSetting' style='bottom: 120px; right: 0px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Base Price</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationSettingItem2' name='NavigationItemSetting' style='bottom: 240px; right: 0px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Minimum Selling Price</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationHeader Board' id='NavigationReportHeader' onclick="navigationTileShow('NavigationItemReport')" style='bottom: 0px; right: 120px;'>
+          <span class='SpanNavigationHeader'>Report</span>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationReportItem1' name='NavigationItemReport' style='bottom: 0px; right: 360px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Purchasing</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationReportItem2' name='NavigationItemReport' style='bottom: 120px; right: 360px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Purchasing Product</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationReportItem3' name='NavigationItemReport' style='bottom: 0px; right: 480px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Movement Stock Product</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationReportItem4' name='NavigationItemReport' style='bottom: 120px; right: 480px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Sales</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationReportItem5' name='NavigationItemReport' style='bottom: 0px; right: 600px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Payment Contract Employee</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationHeader Board' id='NavigationProcessingHeader' onclick="navigationTileShow('NavigationItemProcessing')" style='bottom: 240px; right: 360px;'>
+          <span class='SpanNavigationHeader'>Processing</span>
+        </div>
+        <div class='NavigationItem Base' id='NavigationProcessingItem1' name='NavigationItemProcessing' style='bottom: 480px; right: 480px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>RAW Material</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationProcessingItem2' name='NavigationItemProcessing' style='bottom: 480px; right: 360px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Flour</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationProcessingItem3' name='NavigationItemProcessing' style='bottom: 600px; right: 480px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Coconut Oil</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationProcessingItem4' name='NavigationItemProcessing' style='bottom: 600px; right: 360px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Pure Coconut Oil</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationProcessingItem5' name='NavigationItemProcessing' style='bottom: 600px; right: 240px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Active Carbon</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationHeader Square' id='NavigationSecurityHeader' onclick="navigationTileShow('NavigationItemSecurity')" style='bottom: 480px; right: 600px;'>
+          <span class='SpanNavigationHeader'>Security</span>
+        </div>
+        <div class='NavigationItem Base' id='NavigationSecurityItem1' name='NavigationItemSecurity' style='bottom: 360px; right: 600px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>User Account</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationSecurityItem2' name='NavigationItemSecurity' style='bottom: 240px; right: 600px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>User Group</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationSecurityItem3' name='NavigationItemSecurity' style='bottom: 120px; right: 600px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Reset Password</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationHeader Rectangle' id='NavigationTransactionHeader' onclick="navigationTileShow('NavigationItemTransaction')" style='bottom: 240px; right: 120px;'>
+          <span class='SpanNavigationHeader'>Transaction</span>
+        </div>
+        <div class='NavigationItem Highlight' id='NavigationTransactionItem1' name='NavigationItemTransaction' style='bottom: 360px; right: 240px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Purchasing</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationTransactionItem2' name='NavigationItemTransaction' style='bottom: 480px; right: 240px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Sales</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationHeader Square' id='NavigationMasterHeader' onclick="navigationTileShow('NavigationItemMaster')" style='bottom: 360px; right: 120px;'>
+          <span class='SpanNavigationHeader'>Master</span>
+        </div>
+        <div class='NavigationItem Base' id='NavigationMasterItem1' name='NavigationItemMaster' style='bottom: 360px; right: 0px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Customer</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationMasterItem2' name='NavigationItemMaster' style='bottom: 480px; right: 0px;'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Supplier</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>

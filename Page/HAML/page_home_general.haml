@@ -1,0 +1,167 @@
+!!! 5
+
+%html
+
+	/ HEAD
+
+	%head
+		= Haml::Engine.new(File.read("include_general_header.haml")).render
+		%title Huma Indo Kelapa - Factory Management System, Home
+
+		/ JQUERY
+
+		:javascript
+
+			// READY
+
+			$(document).ready(function()
+			{
+
+			});
+
+
+	/ BODY
+
+	%body#Home
+
+		/ HEADER
+
+		%header
+			= Haml::Engine.new(File.read("header_home_top.haml")).render
+
+		/ ASIDE
+
+		%aside
+			%img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+
+			%ul
+				%li
+					%span.SpanProfileHeader Logan Howlett
+					%span.SpanProfileDetail username
+				%li
+					%span.SpanProfileHeader Administrator
+					%span.SpanProfileDetail user group
+				%li
+					%span.SpanProfileHeader Jambi
+					%span.SpanProfileDetail branch
+				%li
+					%span.SpanProfileHeader Jane Grey
+					%span.SpanProfileDetail supervisor
+				%li
+					%span.SpanProfileHeader 1234567890
+					%span.SpanProfileDetail employee id
+				%li
+					%span.SpanProfileHeader logan_howlett@hik.com
+					%span.SpanProfileDetail email
+
+		/ MAIN
+
+		%main
+			%nav
+				%div#NavigationSettingHeader.NavigationHeader.Square{ :style => "bottom: 0px; right: 0px;", :onclick => "navigationTileShow('NavigationItemSetting')" }
+					%span.SpanNavigationHeader Setting
+				%div#NavigationSettingItem1.NavigationItem.Highlight{ :style => "bottom: 120px; right: 0px;", :name => "NavigationItemSetting" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Base Price
+				%div#NavigationSettingItem2.NavigationItem.Base{ :style => "bottom: 240px; right: 0px;", :name => "NavigationItemSetting" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Minimum Selling Price
+				%div#NavigationReportHeader.NavigationHeader.Board{ :style => "bottom: 0px; right: 120px;", :onclick => "navigationTileShow('NavigationItemReport')" }
+					%span.SpanNavigationHeader Report
+				%div#NavigationReportItem1.NavigationItem.Highlight{ :style => "bottom: 0px; right: 360px;", :name => "NavigationItemReport" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Purchasing
+				%div#NavigationReportItem2.NavigationItem.Base{ :style => "bottom: 120px; right: 360px;", :name => "NavigationItemReport" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Purchasing Product
+				%div#NavigationReportItem3.NavigationItem.Base{ :style => "bottom: 0px; right: 480px;", :name => "NavigationItemReport" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Movement Stock Product
+				%div#NavigationReportItem4.NavigationItem.Highlight{ :style => "bottom: 120px; right: 480px;", :name => "NavigationItemReport" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Sales
+				%div#NavigationReportItem5.NavigationItem.Base{ :style => "bottom: 0px; right: 600px;", :name => "NavigationItemReport" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Payment Contract Employee
+				%div#NavigationProcessingHeader.NavigationHeader.Board{ :style => "bottom: 240px; right: 360px;", :onclick => "navigationTileShow('NavigationItemProcessing')" }
+					%span.SpanNavigationHeader Processing
+				%div#NavigationProcessingItem1.NavigationItem.Base{ :style => "bottom: 480px; right: 480px;", :name => "NavigationItemProcessing" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem RAW Material
+				%div#NavigationProcessingItem2.NavigationItem.Highlight{ :style => "bottom: 480px; right: 360px;", :name => "NavigationItemProcessing" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Flour
+				%div#NavigationProcessingItem3.NavigationItem.Highlight{ :style => "bottom: 600px; right: 480px;", :name => "NavigationItemProcessing" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Coconut Oil
+				%div#NavigationProcessingItem4.NavigationItem.Base{ :style => "bottom: 600px; right: 360px;", :name => "NavigationItemProcessing" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Pure Coconut Oil
+				%div#NavigationProcessingItem5.NavigationItem.Base{ :style => "bottom: 600px; right: 240px;", :name => "NavigationItemProcessing" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Active Carbon
+				%div#NavigationSecurityHeader.NavigationHeader.Square{ :style => "bottom: 480px; right: 600px;", :onclick => "navigationTileShow('NavigationItemSecurity')" }
+					%span.SpanNavigationHeader Security
+				%div#NavigationSecurityItem1.NavigationItem.Base{ :style => "bottom: 360px; right: 600px;", :name => "NavigationItemSecurity" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem User Account
+				%div#NavigationSecurityItem2.NavigationItem.Highlight{ :style => "bottom: 240px; right: 600px;", :name => "NavigationItemSecurity" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem User Group
+				%div#NavigationSecurityItem3.NavigationItem.Base{ :style => "bottom: 120px; right: 600px;", :name => "NavigationItemSecurity" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Reset Password
+				%div#NavigationTransactionHeader.NavigationHeader.Rectangle{ :style => "bottom: 240px; right: 120px;", :onclick => "navigationTileShow('NavigationItemTransaction')" }
+					%span.SpanNavigationHeader Transaction
+				%div#NavigationTransactionItem1.NavigationItem.Highlight{ :style => "bottom: 360px; right: 240px;", :name => "NavigationItemTransaction" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Purchasing
+				%div#NavigationTransactionItem2.NavigationItem.Base{ :style => "bottom: 480px; right: 240px;", :name => "NavigationItemTransaction" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Sales
+				%div#NavigationMasterHeader.NavigationHeader.Square{ :style => "bottom: 360px; right: 120px;", :onclick => "navigationTileShow('NavigationItemMaster')" }
+					%span.SpanNavigationHeader Master
+				%div#NavigationMasterItem1.NavigationItem.Base{ :style => "bottom: 360px; right: 0px;", :name => "NavigationItemMaster" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Customer
+				%div#NavigationMasterItem2.NavigationItem.Base{ :style => "bottom: 480px; right: 0px;", :name => "NavigationItemMaster" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Supplier

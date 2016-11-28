@@ -74,6 +74,9 @@ body
 body#Login
 	background-image: url("../../Resource/Photo/Arjuna/photo_background_login.jpg")
 
+body#Home
+	background-color: $theme_quinary_color
+
 #Curtain
 	background-color: rgba($theme_quinary_red, $theme_quinary_green, $theme_quinary_blue, 0.4)
 
@@ -115,6 +118,19 @@ header
 			background-color: rgba($theme_quaternary_red + 30, $theme_quaternary_green + 30, $theme_quaternary_blue + 30, 1)
 		div#MessageText
 			color: $theme_primary_color
+
+body#Home
+	header
+		background-color: transparent
+
+
+/* ASIDE */
+
+body#Home
+	aside
+		ul
+			li
+				color: $theme_primary_color
 
 
 /* MAIN */
@@ -201,6 +217,26 @@ body#Login
 				padding-right: $general_space_medium
 				color: $theme_primary_color
 
+body#Home
+	nav
+		.NavigationHeader
+			background-color: $theme_quaternary_color
+			.SpanNavigationHeader
+				color: $theme_primary_color
+		.NavigationItem
+			.SpanNavigationItem
+				color: $theme_primary_color
+			.Card
+				.Back
+					background-color: rgba($theme_quaternary_red + 30, $theme_quaternary_green + 30, $theme_quaternary_blue + 30, 1)
+		.NavigationItem.Base
+			.Card
+				.Front
+					background-color: $theme_quinary_color
+		.NavigationItem.Highlight
+			.Card
+				.Front
+					background-color: $theme_senary_color
 
 // FONT
 
@@ -217,6 +253,11 @@ header
 div.TitleContainer
 	h1, span
 		color: $theme_primary_color
+
+#Home
+	header
+		h1
+			color: $theme_primary_color
 
 
 // LINK
