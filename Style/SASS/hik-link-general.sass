@@ -99,6 +99,56 @@ input[name="RadioButtonNavigationDetail"]:checked + li .NavigationDetailTail
 	border-right-width: $size_height_navigationdetailtail
 	border-top-style: none
 
+.NavigationHorn, .NavigationWingLeft, .NavigationWingRight, .NavigationTail
+	position: absolute
+	width: 0px
+	height: 0px
+	z-index: 2
+
+.NavigationHorn, .NavigationTail
+	left: 50%
+	margin-left: -$size_height_navigationdetailtail
+
+.NavigationWingLeft, .NavigationWingRight
+	top: 50%
+	margin-top: -$size_height_navigationdetailtail
+
+.NavigationHorn
+	top: 0px
+	border-left-style: solid
+	border-left-width: $size_height_navigationdetailtail
+	border-right-style: solid
+	border-right-width: $size_height_navigationdetailtail
+	border-bottom-style: solid
+	border-bottom-width: $size_height_navigationdetailtail
+
+.NavigationWingLeft
+	left: 0px
+	border-top-style: solid
+	border-top-width: $size_height_navigationdetailtail
+	border-right-style: solid
+	border-right-width: $size_height_navigationdetailtail
+	border-bottom-style: solid
+	border-bottom-width: $size_height_navigationdetailtail
+
+.NavigationWingRight
+	right: 0px
+	border-top-style: solid
+	border-top-width: $size_height_navigationdetailtail
+	border-left-style: solid
+	border-left-width: $size_height_navigationdetailtail
+	border-bottom-style: solid
+	border-bottom-width: $size_height_navigationdetailtail
+
+.NavigationTail
+	bottom: 0px
+	border-left-style: solid
+	border-left-width: $size_height_navigationdetailtail
+	border-right-style: solid
+	border-right-width: $size_height_navigationdetailtail
+	border-top-style: solid
+	border-top-width: $size_height_navigationdetailtail
+
 
 /* CONTENT */
 

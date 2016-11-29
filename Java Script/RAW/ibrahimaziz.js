@@ -121,6 +121,7 @@ function navigationDetailShow()
 function navigationTileShow(stringInputName)
 {
 	var stringInputValue;
+	var stringInputJavaScriptID;
 
 	$("input:radio[name='" + stringInputName + "']").change(function()
 	{
@@ -163,6 +164,39 @@ function navigationTileShow(stringInputName)
 		        }, intFlipDownCounter * 100);
 			}
 		});
+
+		$(".NavigationHeader .NavigationHorn").each(function()
+		{
+			$(this).css("top", "0px");
+		});
+		
+		$(".NavigationHeader .NavigationWingLeft").each(function()
+		{
+			$(this).css("left", "0px");
+		});
+
+		$(".NavigationHeader .NavigationWingRight").each(function()
+		{
+			$(this).css("right", "0px");
+		});
+
+		$(".NavigationHeader .NavigationTail").each(function()
+		{
+			$(this).css("bottom", "0px");
+		});
+
+		if ($(this).is(":checked") == true)
+		{
+			stringInputJavaScriptID = $(this).attr("id");
+			$(stringKres + stringInputJavaScriptID + " + label .NavigationHorn").css("top", "-18px");
+			$(stringKres + stringInputJavaScriptID + " + label .NavigationWingLeft").css("left", "-18px");
+			$(stringKres + stringInputJavaScriptID + " + label .NavigationWingRight").css("right", "-18px");
+			$(stringKres + stringInputJavaScriptID + " + label .NavigationTail").css("bottom", "-18px");
+		}
+		else
+		{
+			
+		}
 	});
 }
 
