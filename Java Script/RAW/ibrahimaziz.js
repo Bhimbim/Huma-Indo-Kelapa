@@ -144,7 +144,7 @@ function navigationTileShow(stringInputName)
 					{
 						$(elementItem).addClass("Flip");
 					}
-		        }, intFlipUpCounter * 200);
+		        }, intFlipUpCounter * 100);
 			}
 			else
 			{
@@ -160,7 +160,7 @@ function navigationTileShow(stringInputName)
 					{
 						
 					}
-		        }, intFlipDownCounter * 200);
+		        }, intFlipDownCounter * 100);
 			}
 		});
 	});

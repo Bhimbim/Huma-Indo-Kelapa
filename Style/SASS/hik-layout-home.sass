@@ -1,0 +1,318 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+
+// IMPORT
+
+@import hik-initialization-general
+@import hik-setup
+
+
+/* TILE POSITION */
+
+@media screen and (min-width: 520px) and (min-height: 360px)
+	$size_tile_square: 60px
+	$size_tile_board: $size_tile_square * 2
+	body#Home
+		nav
+			.NavigationHeader
+				font-size: 0.75em
+			.NavigationItem
+				width: $size_tile_square
+				height: $size_tile_square
+				font-size: 0.6em
+				+Perspective(1000px)
+				.Card, .Front, .Back
+					width: $size_tile_square
+					height: $size_tile_square
+			.Square
+				width: $size_tile_square
+				height: $size_tile_square
+			.Rectangle
+				width: $size_tile_square * 2
+				height: $size_tile_square
+			.Board
+				width: $size_tile_board
+				height: $size_tile_board
+			#NavigationSettingHeader
+				bottom: 0px
+				right: 0px
+			#NavigationSettingItem1
+				bottom: $size_tile_square
+				right: 0px
+			#NavigationSettingItem2
+				bottom: $size_tile_square * 2
+				right: 0px
+			#NavigationReportHeader
+				bottom: 0px
+				right: $size_tile_square
+			#NavigationReportItem1
+				bottom: 0px
+				right: $size_tile_square * 3
+			#NavigationReportItem2
+				bottom: $size_tile_square
+				right: $size_tile_square * 3
+			#NavigationReportItem3
+				bottom: 0px
+				right: $size_tile_square * 4
+			#NavigationReportItem4
+				bottom: $size_tile_square
+				right: $size_tile_square * 4
+			#NavigationReportItem5
+				bottom: 0px
+				right: $size_tile_square * 5
+			#NavigationProcessingHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 3
+			#NavigationProcessingItem1
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 4
+			#NavigationProcessingItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square *3
+			#NavigationProcessingItem3
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 4
+			#NavigationProcessingItem4
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 3
+			#NavigationProcessingItem5
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 2
+			#NavigationSecurityHeader
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 5
+			#NavigationSecurityItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 5
+			#NavigationSecurityItem2
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 5
+			#NavigationSecurityItem3
+				bottom: $size_tile_square
+				right: $size_tile_square * 5
+			#NavigationTransactionHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square
+			#NavigationTransactionItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 2
+			#NavigationTransactionItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 2
+			#NavigationTransactionItem3
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterHeader
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterItem1
+				bottom: $size_tile_square * 3
+				right: 0px
+			#NavigationMasterItem2
+				bottom: $size_tile_square * 4
+				right: 0px
+
+@media screen and (min-width: 800px) and (min-height: 480px)
+	$size_tile_square: 90px
+	$size_tile_board: $size_tile_square * 2
+	body#Home
+		nav
+			.NavigationHeader
+				font-size: 0.9em
+			.NavigationItem
+				width: $size_tile_square
+				height: $size_tile_square
+				font-size: 0.75em
+				+Perspective(1000px)
+				.Card, .Front, .Back
+					width: $size_tile_square
+					height: $size_tile_square
+			.Square
+				width: $size_tile_square
+				height: $size_tile_square
+			.Rectangle
+				width: $size_tile_square * 2
+				height: $size_tile_square
+			.Board
+				width: $size_tile_board
+				height: $size_tile_board
+			#NavigationSettingHeader
+				bottom: 0px
+				right: 0px
+			#NavigationSettingItem1
+				bottom: $size_tile_square
+				right: 0px
+			#NavigationSettingItem2
+				bottom: $size_tile_square * 2
+				right: 0px
+			#NavigationReportHeader
+				bottom: 0px
+				right: $size_tile_square
+			#NavigationReportItem1
+				bottom: 0px
+				right: $size_tile_square * 3
+			#NavigationReportItem2
+				bottom: $size_tile_square
+				right: $size_tile_square * 3
+			#NavigationReportItem3
+				bottom: 0px
+				right: $size_tile_square * 4
+			#NavigationReportItem4
+				bottom: $size_tile_square
+				right: $size_tile_square * 4
+			#NavigationReportItem5
+				bottom: 0px
+				right: $size_tile_square * 5
+			#NavigationProcessingHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 3
+			#NavigationProcessingItem1
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 4
+			#NavigationProcessingItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square *3
+			#NavigationProcessingItem3
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 4
+			#NavigationProcessingItem4
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 3
+			#NavigationProcessingItem5
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 2
+			#NavigationSecurityHeader
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 5
+			#NavigationSecurityItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 5
+			#NavigationSecurityItem2
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 5
+			#NavigationSecurityItem3
+				bottom: $size_tile_square
+				right: $size_tile_square * 5
+			#NavigationTransactionHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square
+			#NavigationTransactionItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 2
+			#NavigationTransactionItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 2
+			#NavigationTransactionItem3
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterHeader
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterItem1
+				bottom: $size_tile_square * 3
+				right: 0px
+			#NavigationMasterItem2
+				bottom: $size_tile_square * 4
+				right: 0px
+
+@media screen and (min-width: 980px) and (min-height: 680px)
+	$size_tile_square: 120px
+	$size_tile_board: $size_tile_square * 2
+	body#Home
+		nav
+			.NavigationHeader
+			.NavigationItem
+				width: $size_tile_square
+				height: $size_tile_square
+				+Perspective(1000px)
+				.Card, .Front, .Back
+					width: $size_tile_square
+					height: $size_tile_square
+			.Square
+				width: $size_tile_square
+				height: $size_tile_square
+			.Rectangle
+				width: $size_tile_square * 2
+				height: $size_tile_square
+			.Board
+				width: $size_tile_board
+				height: $size_tile_board
+			#NavigationSettingHeader
+				bottom: 0px
+				right: 0px
+			#NavigationSettingItem1
+				bottom: $size_tile_square
+				right: 0px
+			#NavigationSettingItem2
+				bottom: $size_tile_square * 2
+				right: 0px
+			#NavigationReportHeader
+				bottom: 0px
+				right: $size_tile_square
+			#NavigationReportItem1
+				bottom: 0px
+				right: $size_tile_square * 3
+			#NavigationReportItem2
+				bottom: $size_tile_square
+				right: $size_tile_square * 3
+			#NavigationReportItem3
+				bottom: 0px
+				right: $size_tile_square * 4
+			#NavigationReportItem4
+				bottom: $size_tile_square
+				right: $size_tile_square * 4
+			#NavigationReportItem5
+				bottom: 0px
+				right: $size_tile_square * 5
+			#NavigationProcessingHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 3
+			#NavigationProcessingItem1
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 4
+			#NavigationProcessingItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square *3
+			#NavigationProcessingItem3
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 4
+			#NavigationProcessingItem4
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 3
+			#NavigationProcessingItem5
+				bottom: $size_tile_square * 5
+				right: $size_tile_square * 2
+			#NavigationSecurityHeader
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 5
+			#NavigationSecurityItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 5
+			#NavigationSecurityItem2
+				bottom: $size_tile_square * 2
+				right: $size_tile_square * 5
+			#NavigationSecurityItem3
+				bottom: $size_tile_square
+				right: $size_tile_square * 5
+			#NavigationTransactionHeader
+				bottom: $size_tile_square * 2
+				right: $size_tile_square
+			#NavigationTransactionItem1
+				bottom: $size_tile_square * 3
+				right: $size_tile_square * 2
+			#NavigationTransactionItem2
+				bottom: $size_tile_square * 4
+				right: $size_tile_square * 2
+			#NavigationTransactionItem3
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterHeader
+				bottom: $size_tile_square * 3
+				right: $size_tile_square
+			#NavigationMasterItem1
+				bottom: $size_tile_square * 3
+				right: 0px
+			#NavigationMasterItem2
+				bottom: $size_tile_square * 4
+				right: 0px

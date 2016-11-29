@@ -1,0 +1,58 @@
+-# INITIALIZATION
+
+-# URL
+
+- urlCSS = '../../Style/CSS/'
+- urlJavaScript = '../../Java Script/Minimized/'
+- urlResource = '../../Resource/'
+- urlCSSGeneralPrefix = 'hik'
+- urlCSSSectionPrefix = 'hik'
+
+-# CONTENT
+
+- contentCompanyName = 'Huma Indo Kelapa'
+- contentCompanyWebsite = 'http://www.bcalife.co.id'
+- contentProductName = 'HIKES'
+- contentDescription = 'Huma Indo Kelapa Electronic Submission.'
+- contentCopyrightYear = '2016'
+
+/ META DATA
+
+%meta{ :charset => "utf-8" }
+%meta{ :name => "application-name", :content => "#{contentCompanyName} - #{contentProductName}" }
+%meta{ :name => "description", :content => "#{contentDescription}" }
+%meta{ :name => "keywords", :content => "#{contentDescription}" }
+%meta{ :name => "author", :content => "#{contentCompanyName}" }
+%meta{ :name => "designer", :content => "Ibrahim Aziz" }
+%meta{ :name => "copyright", :content => "Copyright #{contentCopyrightYear} #{contentCompanyName}" }
+%meta{ :name => "dcterms.description", :content => "#{contentDescription}" }
+%meta{ :name => "dcterms.creator", :content => "#{contentCompanyName}" }
+%meta{ :name => "dcterms.rightsHolder", :content => "#{contentCompanyName}" }
+%meta{ :name => "dcterms.rights", :content => "All rights reserved. No part of this document may be reproduced or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission from the Author, #{contentCompanyName}." }
+%meta{ :name => "dcterms.dateCopyrighted", :content => "#{contentCopyrightYear}" }
+%meta{ :content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport" }
+
+/ FAVICON
+
+/ %link{ :rel => "shortcut icon", :href => "#{urlResource}logo_favicon.ico" }
+/ %link{ :rel => "shortcut icon", :href => "#{urlResource}logo_favicon.ico", :type => "image/x-icon" }
+/ %link{ :rel => "icon", :href => "#{urlResource}logo_favicon.ico", :type => "image/x-icon" }
+
+/ CSS
+
+%link{ :id => "csslayout", :href => "#{urlCSS}#{urlCSSSectionPrefix}-layout-general.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "csslayout", :href => "#{urlCSS}#{urlCSSSectionPrefix}-layout-home.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "cssfont", :href => "#{urlCSS}#{urlCSSSectionPrefix}-font-general.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "cssinput", :href => "#{urlCSS}#{urlCSSSectionPrefix}-input-general.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "csslink", :href => "#{urlCSS}#{urlCSSSectionPrefix}-link-general.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "cssfontsize", :href => "#{urlCSS}#{urlCSSGeneralPrefix}-fontsize-medium.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "cssfontfamily", :href => "#{urlCSS}#{urlCSSSectionPrefix}-fontfamily-newjune.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "csstheme", :href => "#{urlCSS}#{urlCSSSectionPrefix}-animation-general.css", :rel => "stylesheet", :type => "text/css" }
+%link{ :id => "csstheme", :href => "#{urlCSS}#{urlCSSSectionPrefix}-theme-arjuna-svg.css", :rel => "stylesheet", :type => "text/css" }
+/ %link{ :id => "cssresponsive", :href => "#{urlCSS}#{urlCSSSectionPrefix}-responsive-general.css", :rel => "stylesheet", :type => "text/css" }
+
+/ JAVA SCRIPT
+
+%script{ :type => "text/javascript", :src => "#{urlJavaScript}jquery-3.1.1.min.js" }
+%script{ :type => "text/javascript", :src => "#{urlJavaScript}jquery-migrate-1.4.1.min.js" }
+%script{ :type => "text/javascript", :src => "#{urlJavaScript}ibrahimaziz.min.js" }

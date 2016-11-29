@@ -60,6 +60,12 @@ main
 				margin-right: $general_space_large
 				margin-bottom: $general_space_small
 
+body#Home
+	header
+		div.MainHeader
+			padding-left: $general_space_enormous
+			padding-right: $general_space_enormous
+
 
 // NAVIGATION
 
@@ -134,8 +140,8 @@ body#Home
 	nav
 		position: absolute
 		top: $size_height_mainheader
-		right: 0px
-		left: 260px
+		right: $general_space_enormous
+		left: 300px
 		bottom: 0px
 		width: auto
 		height: auto
@@ -154,16 +160,12 @@ body#Home
 		.NavigationItem
 			position: absolute
 			text-align: center
-			width: $size_tile_square
-			height: $size_tile_square
 			+Perspective(1000px)
 			.SpanNavigationItem
 				position: relative
 				top: 47.5%
 				transform: perspective(1px) translateY(-47.5%)
 			.Card, .Front, .Back
-				width: $size_tile_square
-				height: $size_tile_square
 			.Card
 				transform-style: preserve-3d
 				position: relative

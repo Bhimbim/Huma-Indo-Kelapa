@@ -47,11 +47,6 @@ header
 			margin: $general_space_tiny
 			font-size: $fontsize_span_message
 
-#Home
-	header
-		h1
-			margin-left: $general_space_large
-
 div.TitleContainer
 	margin-top: 12%
 	margin-bottom: $general_space_medium
@@ -67,12 +62,13 @@ div.TitleContainer
 // ASIDE
 
 aside
+	margin-left: $general_space_enormous
 	.ImageProfile
-		margin-left: $general_space_large
-		width: 200px
-		height: 100px
+		width: 240px
+		height: 120px
 	ul
-		margin: $general_space_large
+		margin-top: $general_space_medium
+		margin-bottom: $general_space_medium
 		padding: 0px
 		list-style-type: none
 		li
@@ -84,9 +80,9 @@ aside
 			.SpanProfileHeader, .SpanProfileDetail
 				display: block
 			.SpanProfileHeader
-				font-size: $fontsize_span_profiledetail
+				font-size: $fontsize_span_profiledetail * 1.1
 			.SpanProfileDetail
-				font-size: $fontsize_span_profiledetail
+				font-size: $fontsize_span_profiledetail * 1.1
 
 
 // NAVIGATION
