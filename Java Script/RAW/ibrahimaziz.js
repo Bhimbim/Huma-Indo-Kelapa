@@ -220,6 +220,14 @@ function userInitial(stringUserName, stringUserPosition)
 	$(".SpanProfileDetail").text(stringUserPosition);
 }
 
+function navigationNeutralizer(stringInputName)
+{
+	$("input[type='radio,checkbox'][name='" + stringInputName + "']").each(function()
+	{
+		this.checked = false;
+	});
+}
+
 
 // MAIN
 
