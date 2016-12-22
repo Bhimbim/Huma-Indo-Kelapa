@@ -37,6 +37,14 @@
     <title>Huma Indo Kelapa - Factory Management System, Security | User Group</title>
     <!-- JQUERY -->
     <script>
+      // LOAD
+      
+      $(window).load(function()
+      {
+      	progressPage("ProgressPageContainer");
+      });
+      
+      
       // READY
       
       $(document).ready(function()
@@ -46,6 +54,8 @@
       	navigationDetailShow();
       	formInitializeSize();
       	userInitial("Logan Hawlett", "administrator");
+      
+      	progressInitialization("Curtain");
       });
     </script>
   </head>
@@ -445,5 +455,15 @@
       </main>
     </div>
     <div id='Curtain'></div>
+    <div id='ProgressPageContainer'>
+      <div class='CurtainLeft'></div>
+      <div class='CurtainRight'></div>
+      <div class='Content'>
+        <img src='../../Resource/Gif/progress_circle.gif'>
+        <span>
+          It may take a few seconds ...
+        </span>
+      </div>
+    </div>
   </body>
 </html>

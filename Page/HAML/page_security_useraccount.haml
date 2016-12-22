@@ -12,6 +12,14 @@
 
 		:javascript
 
+			// LOAD
+
+			$(window).load(function()
+			{
+				progressPage("ProgressPageContainer");
+			});
+
+
 			// READY
 
 			$(document).ready(function()
@@ -21,6 +29,8 @@
 				navigationDetailShow();
 				formInitializeSize();
 				userInitial("Logan Hawlett", "administrator");
+
+				progressInitialization("Curtain");
 			});
 
 
@@ -252,3 +262,11 @@
 								%input#buttonReset.ButtonPrimary{ :type => "reset" }
 
 		#Curtain
+
+		#ProgressPageContainer
+			%div.CurtainLeft
+			%div.CurtainRight
+			%div.Content
+				%img{ :src => "../../Resource/Gif/progress_circle.gif" }
+				%span
+					It may take a few seconds ...

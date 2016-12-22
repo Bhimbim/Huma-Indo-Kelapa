@@ -327,3 +327,38 @@ function formInitializeMessage(stringTitle, stringDescription, booleanState)
 		$("#MessageDescription").text(stringDescription);
 	}
 }
+
+
+// PROGRESS
+
+function progressInitialization(stringProgressJavaScriptID)
+{
+	var stringProgressJQueryID = stringKres + stringProgressJavaScriptID;
+
+	if(document.getElementById(stringProgressJavaScriptID) == null)
+	{
+
+	}
+	else
+	{
+		$(stringProgressJQueryID).hide();
+	}
+}
+
+function progressPage(stringProgressJavaScriptID)
+{
+	var stringProgressJQueryID = stringKres + stringProgressJavaScriptID;
+
+	setTimeout(function()
+	{
+		$(stringProgressJQueryID).css("margin-top", "-100%");
+		$(stringProgressJQueryID).css("opacity", "0");
+	}, 
+	0);
+
+	setTimeout(function()
+	{
+		$(stringProgressJQueryID).css("display", "none");
+	}, 
+	0);
+}
