@@ -351,14 +351,14 @@ function progressPage(stringProgressJavaScriptID)
 
 	setTimeout(function()
 	{
-		$(stringProgressJQueryID).css("margin-top", "-100%");
-		$(stringProgressJQueryID).css("opacity", "0");
+		// $(stringProgressJQueryID).css("margin-top", "-100%");
+		// $(stringProgressJQueryID).css("opacity", "0");
 	}, 
 	0);
 
 	setTimeout(function()
 	{
-		$(stringProgressJQueryID).css("display", "none");
+		$(stringProgressJQueryID).hide();
 	}, 
-	0);
+	2000);
 }
