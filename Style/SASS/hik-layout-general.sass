@@ -94,17 +94,6 @@ nav
 		padding-left: $general_space_medium
 		padding-right: $general_space_medium
 		padding-bottom: ($size_height_mainheader - $size_icon_mdpi) / 2
-		img, #InitialProfile
-			float: left
-			width: $size_icon_mdpi
-			height: $size_icon_mdpi
-			line-height: $size_icon_mdpi
-			vertical-align: middle
-			background-position: center
-			background-size: contain
-			background-repeat: no-repeat
-			text-align: center
-			+BorderRadius(50%)
 		.ProfileContainer
 			float: left
 			margin-left: $general_space_small
@@ -126,6 +115,19 @@ nav
 			width: $size_icon_ldpi
 			height: $size_icon_ldpi
 			+Rotate-Z(45deg)
+
+nav, aside
+	img, #InitialProfile
+		float: left
+		width: $size_icon_mdpi
+		height: $size_icon_mdpi
+		line-height: $size_icon_mdpi
+		vertical-align: middle
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
+		text-align: center
+		+BorderRadius(50%)
 
 body#Login
 	nav
@@ -330,6 +332,7 @@ body#Home
 	right: 0px
 	bottom: 0px
 	z-index: 5
+	display: none
 	.CurtainLeft, .CurtainRight
 	.Content
 		position: relative
@@ -347,3 +350,10 @@ body#Home
 		img
 			width: $size_icon_hdpi
 			height: $size_icon_hdpi
+
+#ProgressPage.Login
+	.Content
+		margin-top: 5%
+		img
+			width: 240px
+			height: 360px

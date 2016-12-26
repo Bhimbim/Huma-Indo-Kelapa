@@ -17,6 +17,7 @@
 			$(document).ready(function()
 			{
 				navigationTileShow("RadioButtonNavigationTile");
+				userInitial("Logan Hawlett", "administrator");
 			});
 
 
@@ -32,12 +33,13 @@
 		/ ASIDE
 
 		%aside
-			%img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+			// %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" }
+			%div#InitialProfile
 
 			%ul
 				%li
-					%span.SpanProfileHeader Logan Howlett
-					%span.SpanProfileDetail username
+					%span#ProfileHeader.SpanProfileHeader Logan Howlett
+					%span#ProfileDetail.SpanProfileDetail username
 				%li
 					%span.SpanProfileHeader Administrator
 					%span.SpanProfileDetail user group
@@ -107,28 +109,28 @@
 				%label{ :for => "radioButtonNavigationHeaderProcessing" }
 					%div#NavigationProcessingHeader.NavigationHeader.Board
 						%span.SpanNavigationHeader Processing
-						%div.NavigationHorn
+						%div.NavigationWingRight
 				%div#NavigationProcessingItem1.NavigationItem.Base{ :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem RAW Material
-				%div#NavigationProcessingItem2.NavigationItem.Highlight{ :name => "NavigationItemProcessing" }
+				%div#NavigationProcessingItem2.NavigationItem.Base{ :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Flour
-				%div#NavigationProcessingItem3.NavigationItem.Highlight{ :name => "NavigationItemProcessing" }
+				%div#NavigationProcessingItem3.NavigationItem.Base{ :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Coconut Oil
-				%div#NavigationProcessingItem4.NavigationItem.Base{ :name => "NavigationItemProcessing" }
+				%div#NavigationProcessingItem4.NavigationItem.Highlight{ :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Pure Coconut Oil
-				%div#NavigationProcessingItem5.NavigationItem.Base{ :name => "NavigationItemProcessing" }
+				%div#NavigationProcessingItem5.NavigationItem.Highlight{ :name => "NavigationItemProcessing" }
 					%div.Card
 						%div.Front
 						%div.Back
@@ -137,21 +139,27 @@
 				%label{ :for => "radioButtonNavigationHeaderSecurity" }
 					%div#NavigationSecurityHeader.NavigationHeader.Square
 						%span.SpanNavigationHeader Security
-						%div.NavigationTail
-				%a.Clear{ :href => "../../Page/HTML/page_security_useraccount.html" }
+						%div.NavigationWingLeft
+				%a.Clear{ :href => "../../Page/HTML/page_security_userpassword.html" }
 					%div#NavigationSecurityItem1.NavigationItem.Base{ :name => "NavigationItemSecurity" }
+						%div.Card
+							%div.Front
+							%div.Back
+								%span.SpanNavigationItem User Password
+				%a.Clear{ :href => "../../Page/HTML/page_security_useraccount.html" }
+					%div#NavigationSecurityItem2.NavigationItem.Base{ :name => "NavigationItemSecurity" }
 						%div.Card
 							%div.Front
 							%div.Back
 								%span.SpanNavigationItem User Account
 				%a.Clear{ :href => "../../Page/HTML/page_security_usergroup.html" }
-					%div#NavigationSecurityItem2.NavigationItem.Highlight{ :name => "NavigationItemSecurity" }
+					%div#NavigationSecurityItem3.NavigationItem.Highlight{ :name => "NavigationItemSecurity" }
 						%div.Card
 							%div.Front
 							%div.Back
 								%span.SpanNavigationItem User Group
 				%a.Clear{ :href => "../../Page/HTML/page_security_resetpassword.html" }
-					%div#NavigationSecurityItem3.NavigationItem.Base{ :name => "NavigationItemSecurity" }
+					%div#NavigationSecurityItem4.NavigationItem.Base{ :name => "NavigationItemSecurity" }
 						%div.Card
 							%div.Front
 							%div.Back
@@ -160,23 +168,33 @@
 				%label{ :for => "radioButtonNavigationHeaderTransaction" }
 					%div#NavigationTransactionHeader.NavigationHeader.Rectangle
 						%span.SpanNavigationHeader Transaction
-						%div.NavigationHorn
-				%div#NavigationTransactionItem1.NavigationItem.Highlight{ :name => "NavigationItemTransaction" }
+						%div.NavigationTail
+				%div#NavigationTransactionItem1.NavigationItem.Base{ :name => "NavigationItemTransaction" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Purchasing
-				%div#NavigationTransactionItem2.NavigationItem.Base{ :name => "NavigationItemTransaction" }
+				%div#NavigationTransactionItem2.NavigationItem.Highlight{ :name => "NavigationItemTransaction" }
 					%div.Card
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Sales
+				%div#NavigationTransactionItem3.NavigationItem.Base{ :name => "NavigationItemTransaction" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Stock Opname
+				%div#NavigationTransactionItem4.NavigationItem.Base{ :name => "NavigationItemTransaction" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Edit Transaction
 				%input#radioButtonNavigationHeaderMaster{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemMaster" }
 				%label{ :for => "radioButtonNavigationHeaderMaster" }
 					%div#NavigationMasterHeader.NavigationHeader.Square
 						%span.SpanNavigationHeader Master
-						%div.NavigationWingRight
-				%div#NavigationMasterItem1.NavigationItem.Base{ :name => "NavigationItemMaster" }
+						%div.NavigationWingLeft
+				%div#NavigationMasterItem1.NavigationItem.Highlight{ :name => "NavigationItemMaster" }
 					%div.Card
 						%div.Front
 						%div.Back

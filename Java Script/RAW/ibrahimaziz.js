@@ -216,8 +216,8 @@ function userInitial(stringUserName, stringUserPosition)
 	}
 
 	$("#InitialProfile").text(stringUserInitial);
-	$(".SpanProfileHeader").text(stringUserName);
-	$(".SpanProfileDetail").text(stringUserPosition);
+	$("#ProfileHeader").text(stringUserName);
+	$("#ProfileDetail").text(stringUserPosition);
 }
 
 function navigationNeutralizer(stringInputName)

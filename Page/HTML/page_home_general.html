@@ -43,6 +43,7 @@
       $(document).ready(function()
       {
       	navigationTileShow("RadioButtonNavigationTile");
+      	userInitial("Logan Hawlett", "administrator");
       });
     </script>
   </head>
@@ -60,11 +61,12 @@
     </header>
     <!-- ASIDE -->
     <aside>
-      <img class='ImageProfile' src='../../Resource/Photo/photo_profile_loganhowlett.jpg'>
+      <!-- / %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" } -->
+      <div id='InitialProfile'></div>
       <ul>
         <li>
-          <span class='SpanProfileHeader'>Logan Howlett</span>
-          <span class='SpanProfileDetail'>username</span>
+          <span class='SpanProfileHeader' id='ProfileHeader'>Logan Howlett</span>
+          <span class='SpanProfileDetail' id='ProfileDetail'>username</span>
         </li>
         <li>
           <span class='SpanProfileHeader'>Administrator</span>
@@ -165,7 +167,7 @@
         <label for='radioButtonNavigationHeaderProcessing'>
           <div class='NavigationHeader Board' id='NavigationProcessingHeader'>
             <span class='SpanNavigationHeader'>Processing</span>
-            <div class='NavigationHorn'></div>
+            <div class='NavigationWingRight'></div>
           </div>
         </label>
         <div class='NavigationItem Base' id='NavigationProcessingItem1' name='NavigationItemProcessing'>
@@ -176,7 +178,7 @@
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationProcessingItem2' name='NavigationItemProcessing'>
+        <div class='NavigationItem Base' id='NavigationProcessingItem2' name='NavigationItemProcessing'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -184,7 +186,7 @@
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationProcessingItem3' name='NavigationItemProcessing'>
+        <div class='NavigationItem Base' id='NavigationProcessingItem3' name='NavigationItemProcessing'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -192,7 +194,7 @@
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationProcessingItem4' name='NavigationItemProcessing'>
+        <div class='NavigationItem Highlight' id='NavigationProcessingItem4' name='NavigationItemProcessing'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -200,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationProcessingItem5' name='NavigationItemProcessing'>
+        <div class='NavigationItem Highlight' id='NavigationProcessingItem5' name='NavigationItemProcessing'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -212,11 +214,21 @@
         <label for='radioButtonNavigationHeaderSecurity'>
           <div class='NavigationHeader Square' id='NavigationSecurityHeader'>
             <span class='SpanNavigationHeader'>Security</span>
-            <div class='NavigationTail'></div>
+            <div class='NavigationWingLeft'></div>
           </div>
         </label>
-        <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>
+        <a class='Clear' href='../../Page/HTML/page_security_userpassword.html'>
           <div class='NavigationItem Base' id='NavigationSecurityItem1' name='NavigationItemSecurity'>
+            <div class='Card'>
+              <div class='Front'></div>
+              <div class='Back'>
+                <span class='SpanNavigationItem'>User Password</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>
+          <div class='NavigationItem Base' id='NavigationSecurityItem2' name='NavigationItemSecurity'>
             <div class='Card'>
               <div class='Front'></div>
               <div class='Back'>
@@ -226,7 +238,7 @@
           </div>
         </a>
         <a class='Clear' href='../../Page/HTML/page_security_usergroup.html'>
-          <div class='NavigationItem Highlight' id='NavigationSecurityItem2' name='NavigationItemSecurity'>
+          <div class='NavigationItem Highlight' id='NavigationSecurityItem3' name='NavigationItemSecurity'>
             <div class='Card'>
               <div class='Front'></div>
               <div class='Back'>
@@ -236,7 +248,7 @@
           </div>
         </a>
         <a class='Clear' href='../../Page/HTML/page_security_resetpassword.html'>
-          <div class='NavigationItem Base' id='NavigationSecurityItem3' name='NavigationItemSecurity'>
+          <div class='NavigationItem Base' id='NavigationSecurityItem4' name='NavigationItemSecurity'>
             <div class='Card'>
               <div class='Front'></div>
               <div class='Back'>
@@ -249,10 +261,10 @@
         <label for='radioButtonNavigationHeaderTransaction'>
           <div class='NavigationHeader Rectangle' id='NavigationTransactionHeader'>
             <span class='SpanNavigationHeader'>Transaction</span>
-            <div class='NavigationHorn'></div>
+            <div class='NavigationTail'></div>
           </div>
         </label>
-        <div class='NavigationItem Highlight' id='NavigationTransactionItem1' name='NavigationItemTransaction'>
+        <div class='NavigationItem Base' id='NavigationTransactionItem1' name='NavigationItemTransaction'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -260,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationTransactionItem2' name='NavigationItemTransaction'>
+        <div class='NavigationItem Highlight' id='NavigationTransactionItem2' name='NavigationItemTransaction'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>
@@ -268,14 +280,30 @@
             </div>
           </div>
         </div>
+        <div class='NavigationItem Base' id='NavigationTransactionItem3' name='NavigationItemTransaction'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Stock Opname</span>
+            </div>
+          </div>
+        </div>
+        <div class='NavigationItem Base' id='NavigationTransactionItem4' name='NavigationItemTransaction'>
+          <div class='Card'>
+            <div class='Front'></div>
+            <div class='Back'>
+              <span class='SpanNavigationItem'>Edit Transaction</span>
+            </div>
+          </div>
+        </div>
         <input id='radioButtonNavigationHeaderMaster' name='RadioButtonNavigationTile' type='radio' value='NavigationItemMaster'>
         <label for='radioButtonNavigationHeaderMaster'>
           <div class='NavigationHeader Square' id='NavigationMasterHeader'>
             <span class='SpanNavigationHeader'>Master</span>
-            <div class='NavigationWingRight'></div>
+            <div class='NavigationWingLeft'></div>
           </div>
         </label>
-        <div class='NavigationItem Base' id='NavigationMasterItem1' name='NavigationItemMaster'>
+        <div class='NavigationItem Highlight' id='NavigationMasterItem1' name='NavigationItemMaster'>
           <div class='Card'>
             <div class='Front'></div>
             <div class='Back'>

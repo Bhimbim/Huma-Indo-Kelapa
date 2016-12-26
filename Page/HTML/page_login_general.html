@@ -44,9 +44,27 @@
       
       });
       
-      function goToChangePassword()
+      function goToHome()
       {
-      	window.location.replace("../../Page/HTML/page_home_general.html");
+      	var imageProgress = "#ProgressPage.Login img";
+      	var intDurationAnimation = 1200;
+      	var intDurationProgress = intDurationAnimation * 3;
+      	var intDurationComplete = intDurationProgress + intDurationAnimation;
+      
+      	$("#ProgressPage").show();
+      
+      	setTimeout(function()
+      	{
+      		$(imageProgress).attr("src", "../../Resource/Gif/animation_coconuttree_complete.gif");
+      	},
+      	intDurationProgress);
+      
+      	setTimeout(function()
+      	{
+      		$("#ProgressPage").hide();
+      		window.location.replace("../../Page/HTML/page_home_general.html");
+      	},
+      	intDurationComplete);
       }
     </script>
   </head>
@@ -88,10 +106,21 @@
               <span>Employee Login</span>
             </div>
           </label>
-          <input class='ButtonPrimary' id='buttonFind' onclick='goToChangePassword()' type='button'>
+          <input class='ButtonPrimary' id='buttonFind' onclick='goToHome()' type='button'>
           <a class='Underline' href='../../Page/HTML/page_login_general.html'></a>
         </fieldset>
       </form>
     </main>
+    <!-- PROGRESS PAGE -->
+    <div class='Login' id='ProgressPage'>
+      <div class='CurtainLeft'></div>
+      <div class='CurtainRight'></div>
+      <div class='Content'>
+        <img src='../../Resource/Gif/animation_coconuttree_progress.gif'>
+        <span>
+          It may take a few seconds ...
+        </span>
+      </div>
+    </div>
   </body>
 </html>
