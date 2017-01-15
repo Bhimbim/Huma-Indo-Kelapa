@@ -340,8 +340,27 @@ function filterNavigationItem(objectNavigationItem)
 			{
 				stringDivJavaScriptID = $(this).parent().parent().parent().attr("id");
 				stringDivJQueryID = stringKres + stringDivJavaScriptID;
+
+				if ($(stringDivJQueryID).hasClass(stringClassDisable) == true)
+				{
+					$(stringDivJQueryID).removeClass(stringClassDisable);
+				}
+				else
+				{
+
+				}
+
 				$(stringDivJQueryID).addClass(stringClassEnable);
-				$(stringDivJQueryID).parent().removeClass(stringClassDisable);
+
+				if ($(stringDivJQueryID).parent().hasClass(stringClassDisable) == true)
+				{
+					$(stringDivJQueryID).parent().removeClass(stringClassDisable);
+				}
+				else
+				{
+
+				}
+
 				$(stringDivJQueryID).parent().addClass(stringClassEnable);
 			}
 			else
