@@ -15,6 +15,11 @@ var stringNavigationLeftSlideIn = "0px";
 var stringMainLeftSlideOut = "0px";
 var stringMainLeftSlideIn = stringNavigationDistance;
 
+/* CLASS */
+
+var stringClassDisable = "Disable";
+var stringClassEnable = "Enable";
+
 
 // BASIC
 
@@ -226,6 +231,125 @@ function navigationNeutralizer(stringInputName)
 	{
 		this.checked = false;
 	});
+}
+
+function filterNavigationHeader(objectNavigationHeader)
+{
+	var stringJSONID;
+	var stringJSONText;
+	var stringDivJavaScriptID;
+	var stringJSONDivJavaScriptID;
+	var stringJSONDivJQueryID;
+	var stringRadioButtonJavaScriptID;
+	var stringRadioButtonJQueryID;
+
+	$("input:radio[name='RadioButtonNavigationTile']").prop("disabled", true);
+
+	$(".NavigationHeader").each(function()
+	{
+		if ($(this).hasClass(stringClassEnable) == true)
+		{
+			$(this).removeClass(stringClassEnable);
+		}
+		else
+		{
+			
+		}
+
+		if ($(this).hasClass(stringClassDisable) == true)
+		{
+			$(this).removeClass(stringClassDisable);
+		}
+		else 
+		{
+
+		}
+
+		$(this).addClass(stringClassDisable);
+	});
+
+	for (var i = 0; i < objectNavigationHeader.length; i++)
+	{
+		stringJSONID = objectNavigationHeader[i].id;
+		stringJSONText = objectNavigationHeader[i].text;
+		stringJSONDivJavaScriptID = "Navigation" + stringJSONID + "Header";
+		stringJSONDivJQueryID = stringKres + stringJSONDivJavaScriptID;
+		stringDivJQueryID = ".NavigationHeader" + stringJSONDivJQueryID;
+		stringRadioButtonJavaScriptID = "radioButtonNavigationHeader" + stringJSONID;
+		stringRadioButtonJQueryID = stringKres + stringRadioButtonJavaScriptID;
+
+		if ($(stringDivJQueryID).hasClass(stringClassDisable) == true)
+		{
+			$(stringDivJQueryID).removeClass(stringClassDisable);
+		}
+		else
+		{
+
+		}
+
+		$(stringDivJQueryID).addClass(stringClassEnable);
+		$(stringRadioButtonJQueryID).prop("disabled", false);
+	}
+}
+
+function filterNavigationItem(objectNavigationItem)
+{
+	var stringJSONID;
+	var stringJSONText;
+	var stringDivJavaScriptID;
+	var stringJSONDivJavaScriptID;
+	var stringJSONDivJQueryID;
+	var stringNavigationText;
+
+	$(".NavigationItem").each(function()
+	{
+		if ($(this).hasClass(stringClassEnable) == true)
+		{
+			$(this).removeClass(stringClassEnable);
+		}
+		else
+		{
+			
+		}
+
+		if ($(this).hasClass(stringClassDisable) == true)
+		{
+			$(this).removeClass(stringClassDisable);
+		}
+		else 
+		{
+
+		}
+
+		$(this).addClass(stringClassDisable);
+		$(this).parent().addClass(stringClassDisable);
+	});
+
+	for (var i = 0; i < objectNavigationItem.length; i++)
+	{
+		stringJSONID = objectNavigationItem[i].id;
+		stringJSONText = objectNavigationItem[i].text;
+		stringJSONDivJavaScriptID = "Navigation" + stringJSONID + "Header";
+		stringJSONDivJQueryID = stringKres + stringJSONDivJavaScriptID;
+
+		$(".SpanNavigationItem").each(function()
+		{
+			stringNavigationText = $(this).text();
+
+			if (stringNavigationText == stringJSONText)
+			{
+				stringDivJavaScriptID = $(this).parent().parent().parent().attr("id");
+				stringDivJQueryID = stringKres + stringDivJavaScriptID;
+				$(stringDivJQueryID).addClass(stringClassEnable);
+				$(stringDivJQueryID).parent().removeClass(stringClassDisable);
+				$(stringDivJQueryID).parent().addClass(stringClassEnable);
+			}
+			else
+			{
+
+			}
+		});
+	}
 }
 
 

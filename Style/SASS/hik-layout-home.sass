@@ -12,26 +12,30 @@
 
 @media screen and (min-width: 520px) and (min-height: 360px)
 	$size_tile_square: 60px
-	$size_tile_board: $size_tile_square * 2
+	$size_tile_squareWithoutPadding: $size_tile_square - ($general_space_thin * 2)
+	$size_tile_board: ($size_tile_square * 2) - ($general_space_thin * 2)
 	body#Home
 		width: 744px
 		nav
 			.NavigationHeader
 				font-size: 0.75em
+				padding: $general_space_thin
 			.NavigationItem
 				width: $size_tile_square
 				height: $size_tile_square
+				padding: 0px
 				font-size: 0.6em
 				+Perspective(1000px)
 				.Card, .Front, .Back
-					width: $size_tile_square
-					height: $size_tile_square
+					width: $size_tile_squareWithoutPadding
+					height: $size_tile_squareWithoutPadding
+					padding: $general_space_thin
 			.Square
-				width: $size_tile_square
-				height: $size_tile_square
+				width: $size_tile_squareWithoutPadding
+				height: $size_tile_squareWithoutPadding
 			.Rectangle
-				width: $size_tile_square * 2
-				height: $size_tile_square
+				width: $size_tile_board
+				height: $size_tile_squareWithoutPadding
 			.Board
 				width: $size_tile_board
 				height: $size_tile_board
@@ -122,26 +126,30 @@
 
 @media screen and (min-width: 800px) and (min-height: 480px)
 	$size_tile_square: 80px
-	$size_tile_board: $size_tile_square * 2
+	$size_tile_squareWithoutPadding: $size_tile_square - ($general_space_tiny * 2)
+	$size_tile_board: ($size_tile_square * 2) - ($general_space_tiny * 2)
 	body#Home
 		width: 992px
 		nav
 			.NavigationHeader
 				font-size: 0.9em
+				padding: $general_space_tiny
 			.NavigationItem
 				width: $size_tile_square
 				height: $size_tile_square
+				padding: 0px
 				font-size: 0.75em
 				+Perspective(1000px)
 				.Card, .Front, .Back
-					width: $size_tile_square
-					height: $size_tile_square
+					width: $size_tile_squareWithoutPadding
+					height: $size_tile_squareWithoutPadding
+					padding: $general_space_tiny
 			.Square
-				width: $size_tile_square
-				height: $size_tile_square
+				width: $size_tile_squareWithoutPadding
+				height: $size_tile_squareWithoutPadding
 			.Rectangle
-				width: $size_tile_square * 2
-				height: $size_tile_square
+				width: $size_tile_board
+				height: $size_tile_squareWithoutPadding
 			.Board
 				width: $size_tile_board
 				height: $size_tile_board
@@ -232,24 +240,28 @@
 
 @media screen and (min-width: 980px) and (min-height: 640px)
 	$size_tile_square: 100px
-	$size_tile_board: $size_tile_square * 2
+	$size_tile_squareWithoutPadding: $size_tile_square - ($general_space_little * 2)
+	$size_tile_board: ($size_tile_square * 2) - ($general_space_little * 2)
 	body#Home
 		width: 1240px
 		nav
 			.NavigationHeader
+				padding: $general_space_little
 			.NavigationItem
 				width: $size_tile_square
 				height: $size_tile_square
+				padding: 0px
 				+Perspective(1000px)
 				.Card, .Front, .Back
-					width: $size_tile_square
-					height: $size_tile_square
+					width: $size_tile_squareWithoutPadding
+					height: $size_tile_squareWithoutPadding
+					padding: $general_space_little
 			.Square
-				width: $size_tile_square
-				height: $size_tile_square
+				width: $size_tile_squareWithoutPadding
+				height: $size_tile_squareWithoutPadding
 			.Rectangle
-				width: $size_tile_square * 2
-				height: $size_tile_square
+				width: $size_tile_board
+				height: $size_tile_squareWithoutPadding
 			.Board
 				width: $size_tile_board
 				height: $size_tile_board

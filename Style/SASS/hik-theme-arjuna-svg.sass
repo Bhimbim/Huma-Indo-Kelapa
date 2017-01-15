@@ -54,7 +54,7 @@ $theme_success_color: #3cb94b
 $theme_fail_color: #c3232d
 $theme_valid_color: #c3232d
 $theme_invalid_color: #c3232d
-$theme_disable_color: #c3232d
+$theme_disable_color: #B4B4B4
 $theme_readonlt_color: #c3232d
 $theme_enable_color: #c3232d
 
@@ -222,11 +222,21 @@ body#Login
 
 body#Home
 	nav
-		.NavigationHeader
+		.NavigationHeader, .NavigationHeader.Disable
+			background-color: $theme_octonary_color
+			.SpanNavigationHeader
+				color: $theme_disable_color
+		.NavigationHeader.Enable
 			background-color: $theme_quaternary_color
 			.SpanNavigationHeader
 				color: $theme_primary_color
-		.NavigationItem
+		.NavigationItem, .NavigationItem.Disable
+			.SpanNavigationItem
+				color: $theme_disable_color
+			.Card
+				.Back
+					background-color: rgba($theme_octonary_red + 30, $theme_octonary_green + 30, $theme_octonary_blue + 30, 1)
+		.NavigationItem.Enable
 			.SpanNavigationItem
 				color: $theme_primary_color
 			.Card
@@ -244,22 +254,45 @@ body#Home
 .NavigationHorn
 	border-left-color: transparent
 	border-right-color: transparent
-	border-bottom-color: $theme_quaternary_color
+	border-bottom-color: $theme_octonary_color
 
 .NavigationWingLeft
 	border-top-color: transparent
 	border-bottom-color: transparent
-	border-right-color: $theme_quaternary_color
+	border-right-color: $theme_octonary_color
 
 .NavigationWingRight
 	border-top-color: transparent
 	border-bottom-color: transparent
-	border-left-color: $theme_quaternary_color
+	border-left-color: $theme_octonary_color
 
 .NavigationTail
 	border-left-color: transparent
 	border-right-color: transparent
-	border-top-color: $theme_quaternary_color
+	border-top-color: $theme_octonary_color
+
+.Enable
+	.NavigationHorn
+		border-bottom-color: $theme_quaternary_color
+	.NavigationWingLeft
+		border-right-color: $theme_quaternary_color
+	.NavigationWingRight
+		border-left-color: $theme_quaternary_color
+	.NavigationTail
+		border-top-color: $theme_quaternary_color
+	// background-color: $theme_quaternary_color !important
+
+.Disable
+	.NavigationHorn
+		border-bottom-color: $theme_octonary_color
+	.NavigationWingLeft
+		border-right-color: $theme_octonary_color !important
+	.NavigationWingRight
+		border-left-color: $theme_octonary_color
+	.NavigationTail
+		border-top-color: $theme_octonary_color
+	// background-color: $theme_octonary_color !important
+
 
 /* PROGRESS */
 

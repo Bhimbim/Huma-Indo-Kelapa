@@ -18,6 +18,28 @@
 			{
 				navigationTileShow("RadioButtonNavigationTile");
 				userInitial("Logan Hawlett", "administrator");
+
+				var objectNavigationHeader = [];
+				objectNavigationHeader.push({ id: "Setting", text: "Setting" });
+				objectNavigationHeader.push({ id: "Security", text: "User Setting" });
+				objectNavigationHeader.push({ id: "Processing", text: "Processing" });
+				objectNavigationHeader.push({ id: "Report", text: "Report" });
+				objectNavigationHeader.push({ id: "Transaction", text: "Transaction" });
+				// objectNavigationHeader.push({ id: "Master", text: "Master" });
+
+				var objectNavigationItem = [];
+				objectNavigationItem.push({ id: "UserPassword", text: "User Password" });
+				objectNavigationItem.push({ id: "Purchasing", text: "Purchasing" });
+				objectNavigationItem.push({ id: "PurchasingProduct", text: "Purchasing Product" });
+				objectNavigationItem.push({ id: "BasePrice", text: "Base Price" });
+				objectNavigationItem.push({ id: "RAWMaterial", text: "RAW Material" });
+				objectNavigationItem.push({ id: "Flour", text: "Flour" });
+
+
+				/* NAVIGATION */
+
+				filterNavigationHeader(objectNavigationHeader);
+				filterNavigationItem(objectNavigationItem);
 			});
 
 
