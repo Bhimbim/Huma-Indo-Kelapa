@@ -29,6 +29,8 @@
 
 				var objectNavigationItem = [];
 				objectNavigationItem.push({ id: "UserPassword", text: "User Password" });
+				// objectNavigationItem.push({ id: "UserAccount", text: "User Account" });
+				objectNavigationItem.push({ id: "UserGroup", text: "User Group" });
 				objectNavigationItem.push({ id: "Purchasing", text: "Purchasing" });
 				objectNavigationItem.push({ id: "PurchasingProduct", text: "Purchasing Product" });
 				objectNavigationItem.push({ id: "BasePrice", text: "Base Price" });
@@ -162,7 +164,7 @@
 					%div#NavigationSecurityHeader.NavigationHeader.Square
 						%span.SpanNavigationHeader Security
 						%div.NavigationWingLeft
-				%a.Clear{ :href => "../../Page/HTML/page_security_userpassword.html" }
+				%a.Clear{ :href => "../../Page/HTML/page_security_changepassword.html" }
 					%div#NavigationSecurityItem1.NavigationItem.Base{ :name => "NavigationItemSecurity" }
 						%div.Card
 							%div.Front

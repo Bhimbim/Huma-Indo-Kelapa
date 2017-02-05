@@ -505,3 +505,31 @@ function progressPage(stringProgressJavaScriptID)
 	}, 
 	2000);
 }
+
+
+// POP UP
+
+function popUpPageToggle(stringContentJavaScriptID)
+{
+	var stringContentJQueryID = stringKres + stringContentJavaScriptID;
+
+	if ($(stringContentJQueryID).css("display") == "block")
+	{
+		$(stringContentJQueryID).css("display", "none");
+		$("#PopUpPage").css("display", "none");
+	}
+	else
+	{
+		if ($("#PopUpPage").css("display") == "block")
+		{
+			
+		}
+		else
+		{
+			$("#PopUpPage").css("display", "block");
+		}
+
+		$("#PopUpPage .Content").css("display", "none");
+		$(stringContentJQueryID).css("display", "block");
+	}
+}
