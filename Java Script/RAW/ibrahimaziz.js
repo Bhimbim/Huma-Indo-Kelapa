@@ -433,9 +433,19 @@ function formInitializeMessage(stringTitle, stringDescription, booleanState)
 	var intColorGreen;
 	var intColorBlue;
 
-	if (stringDescription.length == 0)
+	if (booleanState != false && booleanState != true || stringDescription.length == 0 || stringDescription == null || stringDescription == undefined)
 	{
+		if (intMessageContainerRight == "-80" + stringPX)
+		{
+			$("#MessageContainer").css("right", "-480px");
+			$("#MessageWingLeft").css("margin-left", "-40px");
+			$("#MessageTitle").text("");
+			$("#MessageDescription").text("");
+		}
+		else
+		{
 
+		}
 	}
 	else
 	{
@@ -454,18 +464,8 @@ function formInitializeMessage(stringTitle, stringDescription, booleanState)
 
 		$("#MessageContainer").css("background-color", "rgba(" + intColorRed + ", " + intColorGreen + ", " + intColorBlue + ", 1)");
 		$("#MessageWingLeft").css("background-color", "rgba(" + (intColorRed + 30) + ", " + (intColorGreen + 30) + ", " + (intColorBlue + 30) + ", 1)");
-
-		/* if (intMessageContainerRight == "-80" + stringPX)
-		{
-			$("#MessageContainer").css("right", "-480px");
-			$("#MessageWingLeft").css("margin-left", "-40px");
-		}
-		else
-		{ */
-			$("#MessageContainer").css("right", "-80px");
-			$("#MessageWingLeft").css("margin-left", "0px");
-		// }
-
+		$("#MessageContainer").css("right", "-80px");
+		$("#MessageWingLeft").css("margin-left", "0px");		
 		$("#MessageTitle").text(stringTitle);
 		$("#MessageDescription").text(stringDescription);
 	}
