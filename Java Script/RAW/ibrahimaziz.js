@@ -335,7 +335,7 @@ function filterNavigationItem(objectNavigationItem)
 		$(".SpanNavigationItem").each(function()
 		{
 			stringNavigationText = $(this).text();
-
+			alert("| " + stringNavigationText + " == " + stringJSONText + " | -> " + (stringNavigationText == stringJSONText));
 			if (stringNavigationText == stringJSONText)
 			{
 				stringDivJavaScriptID = $(this).parent().parent().parent().attr("id");
