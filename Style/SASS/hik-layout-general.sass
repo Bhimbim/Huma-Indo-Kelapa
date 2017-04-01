@@ -10,55 +10,58 @@
 
 // HEADER
 
-main
-	header
-		div.MainHeader, div.SubHeader
+header
+	div.MainHeader, div.SubHeader
+		vertical-align: middle
+		left: 0px
+		right: 0px
+		padding-left: $general_space_large
+		padding-right: $general_space_large
+		overflow: hidden
+	div.MainHeader
+		top: 0px
+		height: $size_height_mainheader
+		img
+			width: 300px
+			height: 60px
 			vertical-align: middle
-			left: 0px
-			right: 0px
-			padding-left: $general_space_large
-			padding-right: $general_space_large
-			overflow: hidden
-		div.MainHeader
-			top: 0px
-			height: $size_height_mainheader
-		div.SubHeader
+	div.SubHeader
+		height: $size_height_subheader
+		padding-left: $general_space_large * 2
+		padding-right: $general_space_large * 2
+	div#MessageContainer
+		position: relative
+		float: right
+		top: -$size_icon_mdpi
+		right: -$general_space_medium * 4 - 400px
+		height: $size_height_subheader
+		width: 400px
+		overflow-x: hidden
+		-webkit-transform: skew(-20deg);
+		-moz-transform: skew(-20deg);
+		-o-transform: skew(-20deg);
+		div#MessageWingLeft
+			float: left
+			margin-left: -40px
 			height: $size_height_subheader
-			padding-left: $general_space_large * 2
-			padding-right: $general_space_large * 2
-		div#MessageContainer
-			position: relative
+			width: 30px
+			+Transition(all, 0.5s, ease-out)
+		div#MessageText
 			float: right
-			top: -$size_icon_mdpi
-			right: -$general_space_medium * 4 - 400px
-			height: $size_height_subheader
-			width: 400px
-			overflow-x: hidden
-			-webkit-transform: skew(-20deg);
-			-moz-transform: skew(-20deg);
-			-o-transform: skew(-20deg);
-			div#MessageWingLeft
-				float: left
-				margin-left: -40px
-				height: $size_height_subheader
-				width: 30px
-				+Transition(all, 0.5s, ease-out)
-			div#MessageText
-				float: right
-				margin-top: $general_space_small
-				margin-left: $general_space_tiny
-				margin-right: $general_space_enormous + $general_space_tiny
-				margin-bottom: $general_space_tiny
-				text-align: right
-				span#MessageTitle, span#MessageDescription
-					max-width: 280px
-					display: block
-			img#MessageImage
-				float: right
-				margin-top: $general_space_small
-				margin-left: $general_space_small
-				margin-right: $general_space_large
-				margin-bottom: $general_space_small
+			margin-top: $general_space_small
+			margin-left: $general_space_tiny
+			margin-right: $general_space_enormous + $general_space_tiny
+			margin-bottom: $general_space_tiny
+			text-align: right
+			span#MessageTitle, span#MessageDescription
+				max-width: 280px
+				display: block
+		img#MessageImage
+			float: right
+			margin-top: $general_space_small
+			margin-left: $general_space_small
+			margin-right: $general_space_large
+			margin-bottom: $general_space_small
 
 body#Home
 	header
@@ -372,8 +375,17 @@ body#Home
 	background-color: blue
 	.Content
 		position: relative
-		margin-top: 10%
+		margin-top: 0%
 		margin-left: auto
 		margin-right: auto
+		height: 100%
 		text-align: center
 		display: none
+		overflow: auto
+		form
+			padding-left: 0px
+			padding-right: 0px
+			min-width: auto !important
+			width: auto !important
+			min-height: auto !important
+			height: auto !important

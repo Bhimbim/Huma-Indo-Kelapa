@@ -194,109 +194,127 @@
       </div>
     </nav>
     <!-- MAIN -->
-    <div id='Window'>
+    <div id="Window">
       <main>
         <!-- HEADER -->
         <header>
           <div class='MainHeader'>
             <input class='ButtonNavigation' id='buttonNavigationTrigger' type='button'>
             <h1>
-              <a class='Clear' href='page_home_general.html'>Huma Indo Kelapa</a>
+              <a class='Clear' href='page_home_general.html'>
+                <!-- Huma Indo Kelapa -->
+                <img src='../../Resource/Logo/logo_title_primary.svg'>
+              </a>
             </h1>
             <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
             <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
           </div>
-          <div class='SubHeader'>
+          <div class="SubHeader">
             <h2>User Account</h2>
             <!-- %span.Description loren ipsum dolores o riordan loewn ipsum dorlores or riordan angels and airwaves -->
-            <ul class='ListNavigationDetail'>
-              <input checked='true' id='radioButtonFind' name='RadioButtonNavigationDetail' type='radio'>
+            <ul class="ListNavigationDetail">
+              <input checked="true" id="radioButtonFind" name="RadioButtonNavigationDetail" type="radio">
               <li>
-                <label for='radioButtonFind'>
+                <label for="radioButtonFind">
                   <h3>Find Existing</h3>
                 </label>
-                <div class='NavigationDetailBody'>
+                <div class="NavigationDetailBody">
                   <h3>Find Existing</h3>
                 </div>
-                <div class='NavigationDetailTail'></div>
+                <div class="NavigationDetailTail"></div>
               </li>
-              <input id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <input id="radioButtonAdd" name="RadioButtonNavigationDetail" type="radio">
               <li>
-                <label for='radioButtonAdd'>
+                <label for="radioButtonAdd">
                   <h3>Add New</h3>
                 </label>
-                <div class='NavigationDetailBody'>
+                <div class="NavigationDetailBody">
                   <h3>Add New</h3>
                 </div>
-                <div class='NavigationDetailTail'></div>
+                <div class="NavigationDetailTail"></div>
               </li>
             </ul>
-            <div id='MessageContainer'>
-              <div id='MessageWingLeft'></div>
+            <div id="MessageContainer">
+              <div id="MessageWingLeft"></div>
               <!-- %img#MessageImage -->
-              <div id='MessageText'>
-                <span id='MessageTitle'>Validation Error !</span>
+              <div id="MessageText">
+                <span id="MessageTitle">Validation Error !</span>
                 <br>
-                <span id='MessageDescription'>your email address is not in the  correct format, example : test@domain.com</span>
+                <span id="MessageDescription">your email address is not in the  correct format, example : test@domain.com</span>
               </div>
             </div>
           </div>
         </header>
         <!-- FORM -->
-        <div class='FormWindow'>
-          <div class='FormContainer'>
-            <form class='PositionerLeft'>
+        <div class="FormWindow">
+          <div class="FormContainer">
+            <form class="PositionerLeft">
               <fieldset>
                 <legend>User Data</legend>
                 <br>
-                <label class='Long' for='textSecurityGroupName'>User name</label>
+                <label class="Long" for="textSecurityGroupName">User name</label>
                 <br>
-                <input class='Long' id='textSecurityUserName' type='text'>
+                <input class="Long" id="textSecurityUserName" required="true" type="text">
                 <br>
-                <label class='Long' for='textSecurityGroupCode'>User code</label>
+                <label class="Long" for="textSecurityGroupCode">User code</label>
                 <br>
-                <input class='Long' id='textSecurityUserCode' type='text'>
+                <input class="Long" id="textSecurityUserCode" type="text">
+                <br>
+                <label class="Long" for="textSecurityUserRegisteredDate">User registered date</label>
+                <br>
+                <input class="Date Long" id="textSecurityUserRegisteredDate" type="text">
+                <br>
+                <label class="Long" for="textSecurityUserRegisteredTime">User registered time</label>
+                <br>
+                <input class="Time Long" id="textSecurityUserRegistaredTime" type="text">
+                <br>
+                <label class="Long" for="textSecurityUserRegisteredStatus">User status</label>
+                <br>
+                <select class="Long" id="selectSecurityUserStatus">
+                  <option value="active">Active</option>
+                  <option value="inactive">inactive</option>
+                </select>
               </fieldset>
               <br>
-              <div class='PositionerCenter Center'>
-                <label for='buttonFind'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_find.svg'>
+              <div class="PositionerCenter Center">
+                <label for="buttonFind">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_find.svg">
                     <span>Find Existing</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonFind' type='button'>
-                <label for='buttonReset'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                <input class="ButtonPrimary" id="buttonFind" type="button">
+                <label for="buttonReset">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_reset.svg">
                     <span>Reset</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonReset' type='reset'>
+                <input class="ButtonPrimary" id="buttonReset" type="reset">
               </div>
               <fieldset>
-                <div class='TableGenerator'>
-                  <div class='TableControl'>
-                    <div class='TableControlRow'>
-                      <div class='TableControlLeft'>
-                        <img src='../../Resource/Icon/Arjuna/icon_first_enable.svg'>
-                        <img src='../../Resource/Icon/Arjuna/icon_previous_enable.svg'>
-                        <img src='../../Resource/Icon/Arjuna/icon_next_enable.svg'>
-                        <img src='../../Resource/Icon/Arjuna/icon_last_enable.svg'>
+                <div class="TableGenerator">
+                  <div class="TableControl">
+                    <div class="TableControlRow">
+                      <div class="TableControlLeft">
+                        <img src="../../Resource/Icon/Arjuna/icon_first_enable.svg">
+                        <img src="../../Resource/Icon/Arjuna/icon_previous_enable.svg">
+                        <img src="../../Resource/Icon/Arjuna/icon_next_enable.svg">
+                        <img src="../../Resource/Icon/Arjuna/icon_last_enable.svg">
                       </div>
-                      <div class='TableControlCenter'>
+                      <div class="TableControlCenter">
                         User Account
                       </div>
-                      <div class='TableControlRight'>
+                      <div class="TableControlRight">
                         Jump to
-                        <input class='Short' type='number'>
+                        <input class="Short" type="number">
                       </div>
-                      <input class='ButtonPrimary' id='buttonFind' type='button'>
+                      <input class="ButtonPrimary" id="buttonFind" type="button">
                     </div>
                   </div>
-                  <div class='TableContainer'>
+                  <div class="TableContainer">
                     <table>
                       <thead>
                         <tr>
@@ -356,110 +374,110 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class='TableControl'>
-                    <div class='TableControlRow'>
-                      <div class='TableControlLeft'></div>
-                      <div class='TableControlCenter'></div>
-                      <div class='TableControlRight'>
+                  <div class="TableControl">
+                    <div class="TableControlRow">
+                      <div class="TableControlLeft"></div>
+                      <div class="TableControlCenter"></div>
+                      <div class="TableControlRight">
                         Show item per page :
-                        <input class='ButtonPage' id='buttonPage25' type='button' value='25'>
-                        <input class='ButtonPage' id='buttonPage50' type='button' value='50'>
-                        <input class='ButtonPage' id='buttonPage100' type='button' value='100'>
+                        <input class="ButtonPage" id="buttonPage25" type="button" value="25">
+                        <input class="ButtonPage" id="buttonPage50" type="button" value="50">
+                        <input class="ButtonPage" id="buttonPage100" type="button" value="100">
                       </div>
                     </div>
                   </div>
                 </div>
               </fieldset>
             </form>
-            <form class='PositionerLeft'>
+            <form class="PositionerLeft">
               <fieldset>
                 <legend>User Data</legend>
                 <br>
-                <label class='Long' for='textSecurityGroupName'>User name</label>
+                <label class="Long" for="textSecurityGroupName">User name</label>
                 <br>
-                <input class='Long' id='textSecurityUserName' type='text'>
+                <input class="Long" id="textSecurityUserName" type="text">
                 <br>
-                <label class='Long' for='textSecurityGroupCode'>User code</label>
+                <label class="Long" for="textSecurityGroupCode">User code</label>
                 <br>
-                <input class='Long' id='textSecurityUserCode' type='text'>
+                <input class="Long" id="textSecurityUserCode" type="text">
                 <br>
-                <label class='Long' for='areaSecurityNewPassword'>New password</label>
+                <label class="Long" for="areaSecurityNewPassword">New password</label>
                 <br>
-                <input class='Long' id='textSecurityNewPassword' type='password'>
+                <input class="Long" id="textSecurityNewPassword" type="password">
                 <br>
-                <label class='Long' for='areaSecurityConfirmNewPassword'>Confirm new password</label>
+                <label class="Long" for="areaSecurityConfirmNewPassword">Confirm new password</label>
                 <br>
-                <input class='Long' id='textSecurityConfirmNewPassword' type='password'>
+                <input class="Long" id="textSecurityConfirmNewPassword" type="password">
                 <br>
-                <label class='Long' for='areaSecurityConfirmNewPassword'>Sex</label>
+                <label class="Long" for="areaSecurityConfirmNewPassword">Sex</label>
                 <br>
-                <input id='radioButtonSecuritySexFemale' name='RadioButtonSecuritySex' type='radio' value='female'>
-                <div class='RadioButton'>
-                  <div class='Check'></div>
+                <input id="radioButtonSecuritySexFemale" name="RadioButtonSecuritySex" type="radio" value="female">
+                <div class="RadioButton">
+                  <div class="Check"></div>
                 </div>
-                <label for='radioButtonSecuritySexFemale'>Female</label>
-                <input id='radioButtonSecuritySexMale' name='RadioButtonSecuritySex' type='radio' value='male'>
-                <div class='RadioButton'>
-                  <div class='Check'></div>
+                <label for="radioButtonSecuritySexFemale">Female</label>
+                <input id="radioButtonSecuritySexMale" name="RadioButtonSecuritySex" type="radio" value="male">
+                <div class="RadioButton">
+                  <div class="Check"></div>
                 </div>
-                <label for='radioButtonSecuritySexMale'>Male</label>
+                <label for="radioButtonSecuritySexMale">Male</label>
                 <br>
-                <label class='Long' for='textSecurityAddress'>Religion</label>
+                <label class="Long" for="textSecurityAddress">Religion</label>
                 <br>
-                <select class='Long' id='selectSecurityReligion'>
-                  <option value='moslem'>Islam</option>
-                  <option value='catholic'>Kristen Katolik</option>
-                  <option value='protestan'>Kristen Protestan</option>
-                  <option value='hindu'>Hindu</option>
-                  <option value='budha'>Budha</option>
+                <select class="Long" id="selectSecurityReligion">
+                  <option value="moslem">Islam</option>
+                  <option value="catholic">Kristen Katolik</option>
+                  <option value="protestan">Kristen Protestan</option>
+                  <option value="hindu">Hindu</option>
+                  <option value="budha">Budha</option>
                 </select>
                 <br>
-                <label class='Long' for='textSecurityAddress'>Address</label>
+                <label class="Long" for="textSecurityAddress">Address</label>
                 <br>
-                <textarea class='Long' id='textSecurityAddress'></textarea>
+                <textarea class="Long" id="textSecurityAddress"></textarea>
                 <br>
-                <label class='Long' for='textSecurityTelephone'>Telephone</label>
+                <label class="Long" for="textSecurityTelephone">Telephone</label>
                 <br>
-                <input class='Long' id='phoneSecurityTelephone' type='tel'>
+                <input class="Long" id="phoneSecurityTelephone" type="tel">
                 <br>
-                <label class='Long' for='textSecurityGroupName'>Handphone</label>
+                <label class="Long" for="textSecurityGroupName">Handphone</label>
                 <br>
-                <input class='Long' id='phoneSecurityHandphone' type='tel'>
+                <input class="Long" id="phoneSecurityHandphone" type="tel">
                 <br>
-                <label class='Long' for='textSecurityGroupName'>Email</label>
+                <label class="Long" for="textSecurityGroupName">Email</label>
                 <br>
-                <input class='Long' id='emailSecurityEmail' type='email'>
+                <input class="Long" id="emailSecurityEmail" type="email">
               </fieldset>
               <br>
-              <div class='PositionerCenter Center'>
-                <label for='buttonAdd'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
+              <div class="PositionerCenter Center">
+                <label for="buttonAdd">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_add.svg">
                     <span>Add New</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonAdd' onclick="formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" type='button'>
-                <label for='buttonReset'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                <input class="ButtonPrimary" id="buttonAdd" onclick="formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" type="button">
+                <label for="buttonReset">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_reset.svg">
                     <span>Reset</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonReset' type='reset'>
+                <input class="ButtonPrimary" id="buttonReset" type="reset">
               </div>
             </form>
           </div>
         </div>
       </main>
     </div>
-    <div id='Curtain'></div>
-    <div id='ProgressPage'>
-      <div class='CurtainLeft'></div>
-      <div class='CurtainRight'></div>
-      <div class='Content'>
-        <img src='../../Resource/Gif/progress_circle.gif'>
+    <div id="Curtain"></div>
+    <div id="ProgressPage">
+      <div class="CurtainLeft"></div>
+      <div class="CurtainRight"></div>
+      <div class="Content">
+        <img src="../../Resource/Gif/progress_circle.gif">
         <span>
           It may take a few seconds ...
         </span>

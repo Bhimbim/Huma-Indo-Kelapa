@@ -72,12 +72,15 @@
     </script>
   </head>
   <!-- BODY -->
-  <body id='Home'>
+  <body id="Home">
     <!-- HEADER -->
     <header>
       <div class='MainHeader'>
         <h1>
-          <a class='Clear' href='page_home_general.html'>Huma Indo Kelapa</a>
+          <a class='Clear' href='page_home_general.html'>
+            <!-- Huma Indo Kelapa -->
+            <img src='../../Resource/Logo/logo_title_secondary.svg'>
+          </a>
         </h1>
         <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
         <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
@@ -86,260 +89,276 @@
     <!-- ASIDE -->
     <aside>
       <!-- / %img.ImageProfile{ :src => "../../Resource/Photo/photo_profile_loganhowlett.jpg" } -->
-      <div id='InitialProfile'></div>
+      <div id="InitialProfile"></div>
       <ul>
         <li>
-          <span class='SpanProfileHeader' id='ProfileHeader'>Logan Howlett</span>
-          <span class='SpanProfileDetail' id='ProfileDetail'>username</span>
+          <span class="SpanProfileHeader" id="ProfileHeader">Logan Howlett</span>
+          <span class="SpanProfileDetail" id="ProfileDetail">username</span>
         </li>
         <li>
-          <span class='SpanProfileHeader'>Administrator</span>
-          <span class='SpanProfileDetail'>user group</span>
+          <span class="SpanProfileHeader">Administrator</span>
+          <span class="SpanProfileDetail">user group</span>
         </li>
         <li>
-          <span class='SpanProfileHeader'>Jambi</span>
-          <span class='SpanProfileDetail'>branch</span>
+          <span class="SpanProfileHeader">Jambi</span>
+          <span class="SpanProfileDetail">branch</span>
         </li>
         <li>
-          <span class='SpanProfileHeader'>Jane Grey</span>
-          <span class='SpanProfileDetail'>supervisor</span>
+          <span class="SpanProfileHeader">Jane Grey</span>
+          <span class="SpanProfileDetail">supervisor</span>
         </li>
         <li>
-          <span class='SpanProfileHeader'>1234567890</span>
-          <span class='SpanProfileDetail'>employee id</span>
+          <span class="SpanProfileHeader">1234567890</span>
+          <span class="SpanProfileDetail">employee id</span>
         </li>
         <li>
-          <span class='SpanProfileHeader'>logan_howlett@hik.com</span>
-          <span class='SpanProfileDetail'>email</span>
+          <span class="SpanProfileHeader">logan_howlett@hik.com</span>
+          <span class="SpanProfileDetail">email</span>
         </li>
       </ul>
     </aside>
     <!-- MAIN -->
     <main>
       <nav>
-        <input id='radioButtonNavigationHeaderSetting' name='RadioButtonNavigationTile' type='radio' value='NavigationItemSetting'>
-        <label for='radioButtonNavigationHeaderSetting'>
-          <div class='NavigationHeader Square' id='NavigationSettingHeader'>
-            <span class='SpanNavigationHeader'>Setting</span>
-            <div class='NavigationHorn'></div>
+        <input id="radioButtonNavigationHeaderSetting" name="RadioButtonNavigationTile" type="radio" value="NavigationItemSetting">
+        <label for="radioButtonNavigationHeaderSetting">
+          <div class="NavigationHeader Square" id="NavigationSettingHeader">
+            <span class="SpanNavigationHeader">Setting</span>
+            <div class="NavigationHorn"></div>
           </div>
         </label>
-        <div class='NavigationItem Highlight' id='NavigationSettingItem1' name='NavigationItemSetting'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Base Price</span>
+        <div class="NavigationItem Highlight" id="NavigationSettingItem1" name="NavigationItemSetting">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Base Price</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationSettingItem2' name='NavigationItemSetting'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Minimum Selling Price</span>
+        <div class="NavigationItem Base" id="NavigationSettingItem2" name="NavigationItemSetting">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Minimum Selling Price</span>
             </div>
           </div>
         </div>
-        <input id='radioButtonNavigationHeaderReport' name='RadioButtonNavigationTile' type='radio' value='NavigationItemReport'>
-        <label for='radioButtonNavigationHeaderReport'>
-          <div class='NavigationHeader Board' id='NavigationReportHeader'>
-            <span class='SpanNavigationHeader'>Report</span>
-            <div class='NavigationWingLeft'></div>
+        <div class="NavigationItem Base" id="NavigationSettingItem3" name="NavigationItemSetting">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Ratio Production</span>
+            </div>
+          </div>
+        </div>
+        <input id="radioButtonNavigationHeaderReport" name="RadioButtonNavigationTile" type="radio" value="NavigationItemReport">
+        <label for="radioButtonNavigationHeaderReport">
+          <div class="NavigationHeader Board" id="NavigationReportHeader">
+            <span class="SpanNavigationHeader">Report</span>
+            <div class="NavigationWingLeft"></div>
           </div>
         </label>
-        <div class='NavigationItem Highlight' id='NavigationReportItem1' name='NavigationItemReport'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Purchasing</span>
+        <div class="NavigationItem Highlight" id="NavigationReportItem1" name="NavigationItemReport">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Purchasing</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationReportItem2' name='NavigationItemReport'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Purchasing Product</span>
+        <div class="NavigationItem Base" id="NavigationReportItem2" name="NavigationItemReport">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Purchasing Product</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationReportItem3' name='NavigationItemReport'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Movement Stock Product</span>
+        <div class="NavigationItem Base" id="NavigationReportItem3" name="NavigationItemReport">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Movement Stock Product</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationReportItem4' name='NavigationItemReport'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Sales</span>
+        <div class="NavigationItem Highlight" id="NavigationReportItem4" name="NavigationItemReport">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Sales</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationReportItem5' name='NavigationItemReport'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Payment Contract Employee</span>
+        <div class="NavigationItem Base" id="NavigationReportItem5" name="NavigationItemReport">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Payment Contract Employee</span>
             </div>
           </div>
         </div>
-        <input id='radioButtonNavigationHeaderProcessing' name='RadioButtonNavigationTile' type='radio' value='NavigationItemProcessing'>
-        <label for='radioButtonNavigationHeaderProcessing'>
-          <div class='NavigationHeader Board' id='NavigationProcessingHeader'>
-            <span class='SpanNavigationHeader'>Processing</span>
-            <div class='NavigationWingRight'></div>
+        <input id="radioButtonNavigationHeaderProcessing" name="RadioButtonNavigationTile" type="radio" value="NavigationItemProcessing">
+        <label for="radioButtonNavigationHeaderProcessing">
+          <div class="NavigationHeader Board" id="NavigationProcessingHeader">
+            <span class="SpanNavigationHeader">Processing</span>
+            <div class="NavigationWingRight"></div>
           </div>
         </label>
-        <div class='NavigationItem Base' id='NavigationProcessingItem1' name='NavigationItemProcessing'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>RAW Material</span>
+        <div class="NavigationItem Base" id="NavigationProcessingItem1" name="NavigationItemProcessing">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">RAW Material</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationProcessingItem2' name='NavigationItemProcessing'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Flour</span>
+        <div class="NavigationItem Base" id="NavigationProcessingItem2" name="NavigationItemProcessing">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Flour</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationProcessingItem3' name='NavigationItemProcessing'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Coconut Oil</span>
+        <div class="NavigationItem Base" id="NavigationProcessingItem3" name="NavigationItemProcessing">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Coconut Oil</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationProcessingItem4' name='NavigationItemProcessing'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Pure Coconut Oil</span>
+        <div class="NavigationItem Highlight" id="NavigationProcessingItem4" name="NavigationItemProcessing">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Pure Coconut Oil</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationProcessingItem5' name='NavigationItemProcessing'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Active Carbon</span>
+        <div class="NavigationItem Highlight" id="NavigationProcessingItem5" name="NavigationItemProcessing">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Active Carbon</span>
             </div>
           </div>
         </div>
-        <input id='radioButtonNavigationHeaderSecurity' name='RadioButtonNavigationTile' type='radio' value='NavigationItemSecurity'>
-        <label for='radioButtonNavigationHeaderSecurity'>
-          <div class='NavigationHeader Square' id='NavigationSecurityHeader'>
-            <span class='SpanNavigationHeader'>Security</span>
-            <div class='NavigationWingLeft'></div>
+        <input id="radioButtonNavigationHeaderSecurity" name="RadioButtonNavigationTile" type="radio" value="NavigationItemSecurity">
+        <label for="radioButtonNavigationHeaderSecurity">
+          <div class="NavigationHeader Square" id="NavigationSecurityHeader">
+            <span class="SpanNavigationHeader">Security</span>
+            <div class="NavigationWingLeft"></div>
           </div>
         </label>
-        <a class='Clear' href='../../Page/HTML/page_security_changepassword.html'>
-          <div class='NavigationItem Base' id='NavigationSecurityItem1' name='NavigationItemSecurity'>
-            <div class='Card'>
-              <div class='Front'></div>
-              <div class='Back'>
-                <span class='SpanNavigationItem'>User Password</span>
+        <a class="Clear" href="../../Page/HTML/page_security_changepassword.html">
+          <div class="NavigationItem Base" id="NavigationSecurityItem1" name="NavigationItemSecurity">
+            <div class="Card">
+              <div class="Front"></div>
+              <div class="Back">
+                <span class="SpanNavigationItem">User Password</span>
               </div>
             </div>
           </div>
         </a>
-        <a class='Clear' href='../../Page/HTML/page_security_useraccount.html'>
-          <div class='NavigationItem Base' id='NavigationSecurityItem2' name='NavigationItemSecurity'>
-            <div class='Card'>
-              <div class='Front'></div>
-              <div class='Back'>
-                <span class='SpanNavigationItem'>User Account</span>
+        <a class="Clear" href="../../Page/HTML/page_security_useraccount.html">
+          <div class="NavigationItem Base" id="NavigationSecurityItem2" name="NavigationItemSecurity">
+            <div class="Card">
+              <div class="Front"></div>
+              <div class="Back">
+                <span class="SpanNavigationItem">User Account</span>
               </div>
             </div>
           </div>
         </a>
-        <a class='Clear' href='../../Page/HTML/page_security_usergroup.html'>
-          <div class='NavigationItem Highlight' id='NavigationSecurityItem3' name='NavigationItemSecurity'>
-            <div class='Card'>
-              <div class='Front'></div>
-              <div class='Back'>
-                <span class='SpanNavigationItem'>User Group</span>
+        <a class="Clear" href="../../Page/HTML/page_security_usergroup.html">
+          <div class="NavigationItem Highlight" id="NavigationSecurityItem3" name="NavigationItemSecurity">
+            <div class="Card">
+              <div class="Front"></div>
+              <div class="Back">
+                <span class="SpanNavigationItem">User Group</span>
               </div>
             </div>
           </div>
         </a>
-        <a class='Clear' href='../../Page/HTML/page_security_resetpassword.html'>
-          <div class='NavigationItem Base' id='NavigationSecurityItem4' name='NavigationItemSecurity'>
-            <div class='Card'>
-              <div class='Front'></div>
-              <div class='Back'>
-                <span class='SpanNavigationItem'>Reset Password</span>
+        <a class="Clear" href="../../Page/HTML/page_security_resetpassword.html">
+          <div class="NavigationItem Base" id="NavigationSecurityItem4" name="NavigationItemSecurity">
+            <div class="Card">
+              <div class="Front"></div>
+              <div class="Back">
+                <span class="SpanNavigationItem">Reset Password</span>
               </div>
             </div>
           </div>
         </a>
-        <input id='radioButtonNavigationHeaderTransaction' name='RadioButtonNavigationTile' type='radio' value='NavigationItemTransaction'>
-        <label for='radioButtonNavigationHeaderTransaction'>
-          <div class='NavigationHeader Rectangle' id='NavigationTransactionHeader'>
-            <span class='SpanNavigationHeader'>Transaction</span>
-            <div class='NavigationTail'></div>
+        <input id="radioButtonNavigationHeaderTransaction" name="RadioButtonNavigationTile" type="radio" value="NavigationItemTransaction">
+        <label for="radioButtonNavigationHeaderTransaction">
+          <div class="NavigationHeader Rectangle" id="NavigationTransactionHeader">
+            <span class="SpanNavigationHeader">Transaction</span>
+            <div class="NavigationTail"></div>
           </div>
         </label>
-        <div class='NavigationItem Base' id='NavigationTransactionItem1' name='NavigationItemTransaction'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Purchasing</span>
+        <div class="NavigationItem Base" id="NavigationTransactionItem1" name="NavigationItemTransaction">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Purchasing</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Highlight' id='NavigationTransactionItem2' name='NavigationItemTransaction'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Sales</span>
+        <div class="NavigationItem Highlight" id="NavigationTransactionItem2" name="NavigationItemTransaction">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Sales</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationTransactionItem3' name='NavigationItemTransaction'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Stock Opname</span>
+        <div class="NavigationItem Base" id="NavigationTransactionItem3" name="NavigationItemTransaction">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Stock Opname</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationTransactionItem4' name='NavigationItemTransaction'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Edit Transaction</span>
+        <div class="NavigationItem Base" id="NavigationTransactionItem4" name="NavigationItemTransaction">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Edit Transaction</span>
             </div>
           </div>
         </div>
-        <input id='radioButtonNavigationHeaderMaster' name='RadioButtonNavigationTile' type='radio' value='NavigationItemMaster'>
-        <label for='radioButtonNavigationHeaderMaster'>
-          <div class='NavigationHeader Square' id='NavigationMasterHeader'>
-            <span class='SpanNavigationHeader'>Master</span>
-            <div class='NavigationWingLeft'></div>
+        <input id="radioButtonNavigationHeaderMaster" name="RadioButtonNavigationTile" type="radio" value="NavigationItemMaster">
+        <label for="radioButtonNavigationHeaderMaster">
+          <div class="NavigationHeader Square" id="NavigationMasterHeader">
+            <span class="SpanNavigationHeader">Master</span>
+            <div class="NavigationWingLeft"></div>
           </div>
         </label>
-        <div class='NavigationItem Highlight' id='NavigationMasterItem1' name='NavigationItemMaster'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Customer</span>
+        <div class="NavigationItem Highlight" id="NavigationMasterItem1" name="NavigationItemMaster">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Customer</span>
             </div>
           </div>
         </div>
-        <div class='NavigationItem Base' id='NavigationMasterItem2' name='NavigationItemMaster'>
-          <div class='Card'>
-            <div class='Front'></div>
-            <div class='Back'>
-              <span class='SpanNavigationItem'>Supplier</span>
+        <div class="NavigationItem Base" id="NavigationMasterItem2" name="NavigationItemMaster">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Supplier</span>
+            </div>
+          </div>
+        </div>
+        <div class="NavigationItem Base" id="NavigationMasterItem3" name="NavigationItemMaster">
+          <div class="Card">
+            <div class="Front"></div>
+            <div class="Back">
+              <span class="SpanNavigationItem">Employee</span>
             </div>
           </div>
         </div>

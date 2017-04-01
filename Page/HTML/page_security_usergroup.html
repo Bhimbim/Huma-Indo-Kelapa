@@ -196,173 +196,176 @@
       </div>
     </nav>
     <!-- MAIN -->
-    <div id='Window'>
+    <div id="Window">
       <main>
         <!-- HEADER -->
         <header>
           <div class='MainHeader'>
             <input class='ButtonNavigation' id='buttonNavigationTrigger' type='button'>
             <h1>
-              <a class='Clear' href='page_home_general.html'>Huma Indo Kelapa</a>
+              <a class='Clear' href='page_home_general.html'>
+                <!-- Huma Indo Kelapa -->
+                <img src='../../Resource/Logo/logo_title_primary.svg'>
+              </a>
             </h1>
             <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
             <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
           </div>
-          <div class='SubHeader'>
+          <div class="SubHeader">
             <h2>User Group</h2>
-            <ul class='ListNavigationDetail'>
-              <input checked='true' id='radioButtonFind' name='RadioButtonNavigationDetail' type='radio'>
+            <ul class="ListNavigationDetail">
+              <input checked="true" id="radioButtonFind" name="RadioButtonNavigationDetail" type="radio">
               <li>
-                <label for='radioButtonFind'>
+                <label for="radioButtonFind">
                   <h3>Find Existing</h3>
                 </label>
-                <div class='NavigationDetailBody'>
+                <div class="NavigationDetailBody">
                   <h3>Find Existing</h3>
                 </div>
-                <div class='NavigationDetailTail'></div>
+                <div class="NavigationDetailTail"></div>
               </li>
-              <input id='radioButtonAdd' name='RadioButtonNavigationDetail' type='radio'>
+              <input id="radioButtonAdd" name="RadioButtonNavigationDetail" type="radio">
               <li>
-                <label for='radioButtonAdd'>
+                <label for="radioButtonAdd">
                   <h3>Add New</h3>
                 </label>
-                <div class='NavigationDetailBody'>
+                <div class="NavigationDetailBody">
                   <h3>Add New</h3>
                 </div>
-                <div class='NavigationDetailTail'></div>
+                <div class="NavigationDetailTail"></div>
               </li>
             </ul>
-            <div id='MessageContainer'>
-              <div id='MessageWingLeft'></div>
+            <div id="MessageContainer">
+              <div id="MessageWingLeft"></div>
               <!-- %img#MessageImage -->
-              <div id='MessageText'>
-                <span id='MessageTitle'>Validation Error !</span>
+              <div id="MessageText">
+                <span id="MessageTitle">Validation Error !</span>
                 <br>
-                <span id='MessageDescription'>your email address is not in the  correct format, example : test@domain.com</span>
+                <span id="MessageDescription">your email address is not in the  correct format, example : test@domain.com</span>
               </div>
             </div>
           </div>
         </header>
         <!-- FORM -->
-        <div class='FormWindow'>
-          <div class='FormContainer'>
-            <form class='PositionerLeft'>
+        <div class="FormWindow">
+          <div class="FormContainer">
+            <form class="PositionerLeft">
               <fieldset>
                 <legend>Group Data</legend>
                 <br>
-                <label class='Long' for='textSecurityGroupName'>Group name</label>
+                <label class="Long" for="textSecurityGroupName">Group name</label>
                 <br>
-                <input class='Long' id='textSecurityGroupName' type='text'>
+                <input class="Long" id="textSecurityGroupName" type="text">
               </fieldset>
               <br>
-              <div class='PositionerCenter Center'>
-                <label for='buttonFind'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
+              <div class="PositionerCenter Center">
+                <label for="buttonFind">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_add.svg">
                     <span>Find Existing</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonFind' type='button'>
-                <label for='buttonReset'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                <input class="ButtonPrimary" id="buttonFind" type="button">
+                <label for="buttonReset">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_reset.svg">
                     <span>Reset</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonReset' type='reset'>
+                <input class="ButtonPrimary" id="buttonReset" type="reset">
               </div>
             </form>
-            <form class='PositionerLeft'>
+            <form class="PositionerLeft">
               <fieldset>
                 <legend>Group Data</legend>
                 <br>
-                <label class='Long' for='textSecurityGroupName'>Group name</label>
+                <label class="Long" for="textSecurityGroupName">Group name</label>
                 <br>
-                <input class='Long' id='textSecurityGroupName' type='text'>
+                <input class="Long" id="textSecurityGroupName" type="text">
                 <br>
-                <label class='Long' for='areaSecurityGroupDescription'>Group description</label>
+                <label class="Long" for="areaSecurityGroupDescription">Group description</label>
                 <br>
-                <textarea class='Long' id='areaSecurityGroupDescription'></textarea>
+                <textarea class="Long" id="areaSecurityGroupDescription"></textarea>
               </fieldset>
               <br>
               <fieldset>
                 <legend>Group Data</legend>
                 <br>
-                <div class='GroupInput PositionerLeft'>
-                  <span class='GroupHeader'>Security</span>
+                <div class="GroupInput PositionerLeft">
+                  <span class="GroupHeader">Security</span>
                   <br>
-                  <input id='checkboxSecurityChangePassword' name='CheckboxSecurity' type='checkbox' value='changepassword'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityChangePassword" name="CheckboxSecurity" type="checkbox" value="changepassword">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityChangePassword'>User Password</label>
+                  <label for="checkboxSecurityChangePassword">User Password</label>
                   <br>
-                  <input id='checkboxSecurityUserGroup' name='CheckboxSecurity' type='checkbox' value='usergroup'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityUserGroup" name="CheckboxSecurity" type="checkbox" value="usergroup">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityUserGroup'>User Group</label>
+                  <label for="checkboxSecurityUserGroup">User Group</label>
                   <br>
-                  <input id='checkboxSecurityUserAccount' name='CheckboxSecurity' type='checkbox' value='useraccount'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityUserAccount" name="CheckboxSecurity" type="checkbox" value="useraccount">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityUserAccount'>User Account</label>
+                  <label for="checkboxSecurityUserAccount">User Account</label>
                 </div>
-                <div class='GroupInput PositionerLeft'>
-                  <span class='GroupHeader'>Security</span>
+                <div class="GroupInput PositionerLeft">
+                  <span class="GroupHeader">Security</span>
                   <br>
-                  <input id='checkboxSecurityChangePassword' name='CheckboxSecurity' type='checkbox' value='changepassword'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityChangePassword" name="CheckboxSecurity" type="checkbox" value="changepassword">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityChangePassword'>User Password</label>
+                  <label for="checkboxSecurityChangePassword">User Password</label>
                   <br>
-                  <input id='checkboxSecurityUserGroup' name='CheckboxSecurity' type='checkbox' value='usergroup'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityUserGroup" name="CheckboxSecurity" type="checkbox" value="usergroup">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityUserGroup'>User Group</label>
+                  <label for="checkboxSecurityUserGroup">User Group</label>
                   <br>
-                  <input id='checkboxSecurityUserAccount' name='CheckboxSecurity' type='checkbox' value='useraccount'>
-                  <div class='Checkbox'>
-                    <div class='Check'></div>
+                  <input id="checkboxSecurityUserAccount" name="CheckboxSecurity" type="checkbox" value="useraccount">
+                  <div class="Checkbox">
+                    <div class="Check"></div>
                   </div>
-                  <label for='checkboxSecurityUserAccount'>User Account</label>
+                  <label for="checkboxSecurityUserAccount">User Account</label>
                 </div>
               </fieldset>
               <br>
-              <div class='PositionerCenter Center'>
-                <label for='buttonAdd'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_add.svg'>
+              <div class="PositionerCenter Center">
+                <label for="buttonAdd">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_add.svg">
                     <span>Add New</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonAdd' onclick="formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" type='button'>
-                <label for='buttonReset'>
-                  <div class='ButtonContainer'>
-                    <div class='ButtonHighlight'></div>
-                    <img src='../../Resource/Icon/Arjuna/icon_reset.svg'>
+                <input class="ButtonPrimary" id="buttonAdd" onclick="formInitializeMessage('Validation Error !', 'Loren ipsum dolores o riordan.', false)" type="button">
+                <label for="buttonReset">
+                  <div class="ButtonContainer">
+                    <div class="ButtonHighlight"></div>
+                    <img src="../../Resource/Icon/Arjuna/icon_reset.svg">
                     <span>Reset</span>
                   </div>
                 </label>
-                <input class='ButtonPrimary' id='buttonReset' type='reset'>
+                <input class="ButtonPrimary" id="buttonReset" type="reset">
               </div>
             </form>
           </div>
         </div>
       </main>
     </div>
-    <div id='Curtain'></div>
-    <div id='ProgressPage'>
-      <div class='CurtainLeft'></div>
-      <div class='CurtainRight'></div>
-      <div class='Content'>
-        <img src='../../Resource/Gif/progress_circle.gif'>
+    <div id="Curtain"></div>
+    <div id="ProgressPage">
+      <div class="CurtainLeft"></div>
+      <div class="CurtainRight"></div>
+      <div class="Content">
+        <img src="../../Resource/Gif/progress_circle.gif">
         <span>
           It may take a few seconds ...
         </span>

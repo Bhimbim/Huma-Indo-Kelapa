@@ -378,6 +378,19 @@ body#Login
 	.Check
 		background-color: $theme_quaternary_color
 
+select
+	background-image: url("../../Resource/Input/Arjuna/input_select_enable.svg")
+
+input.Date
+	background-image: url("../../Resource/Input/Arjuna/input_date_enable.svg")
+
+input.Time
+	background-image: url("../../Resource/Input/Arjuna/input_time_enable.svg")
+
+input:disabled
+
+input:read-only
+
 
 // BUTTON
 
@@ -397,3 +410,22 @@ body#Login
 .ButtonPage:hover
 	background-color: rgba($theme_quaternary_red + 30, $theme_quaternary_green + 30, $theme_quaternary_blue + 30, 1)
 	color: $theme_primary_color
+
+table
+	thead
+		input[type="button"], input[type="submit"], input[type="reset"]
+			border-color: $theme_primary_color
+			color: $theme_primary_color
+			background-color: transparent
+		input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover
+			background-color: $theme_primary_color
+			color: $theme_quaternary_color
+			border-color: $theme_primary_color
+	tbody
+		input[type="button"], input[type="submit"], input[type="reset"]
+			border-color: $theme_quaternary_color
+			color: $theme_quaternary_color
+			background-color: transparent
+		input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover
+			background-color: rgba($theme_quaternary_red + 30, $theme_quaternary_green + 30, $theme_quaternary_blue + 30, 1)
+			color: $theme_primary_color
