@@ -30,7 +30,7 @@
 				var objectNavigationItem = [];
 				objectNavigationItem.push({ id: "UserPassword", text: "User Password" });
 				// objectNavigationItem.push({ id: "UserAccount", text: "User Account" });
-				objectNavigationItem.push({ id: "UserGroup", text: "User Group" });
+				// objectNavigationItem.push({ id: "UserGroup", text: "User Group" });
 				objectNavigationItem.push({ id: "Purchasing", text: "Purchasing" });
 				objectNavigationItem.push({ id: "PurchasingProduct", text: "Purchasing Product" });
 				objectNavigationItem.push({ id: "BasePrice", text: "Base Price" });
@@ -99,6 +99,11 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Minimum Selling Price
+				%div#NavigationSettingItem3.NavigationItem.Base{ :name => "NavigationItemSetting" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Ratio Production
 				%input#radioButtonNavigationHeaderReport{ :type => "radio", :name => "RadioButtonNavigationTile", :value => "NavigationItemReport" }
 				%label{ :for => "radioButtonNavigationHeaderReport" }
 					%div#NavigationReportHeader.NavigationHeader.Board
@@ -238,3 +243,8 @@
 						%div.Front
 						%div.Back
 							%span.SpanNavigationItem Supplier
+				%div#NavigationMasterItem3.NavigationItem.Base{ :name => "NavigationItemMaster" }
+					%div.Card
+						%div.Front
+						%div.Back
+							%span.SpanNavigationItem Employee

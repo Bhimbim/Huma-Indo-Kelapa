@@ -92,11 +92,25 @@
 								%br
 								%label.Long{ :for => "textSecurityGroupName" } User name
 								%br
-								%input#textSecurityUserName.Long{ :type => "text" }
+								%input#textSecurityUserName.Long{ :type => "text", :required => "true" }
 								%br
 								%label.Long{ :for => "textSecurityGroupCode" } User code
 								%br
 								%input#textSecurityUserCode.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "textSecurityUserRegisteredDate" } User registered date
+								%br
+								%input#textSecurityUserRegisteredDate.Date.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "textSecurityUserRegisteredTime" } User registered time
+								%br
+								%input#textSecurityUserRegistaredTime.Time.Long{ :type => "text" }
+								%br
+								%label.Long{ :for => "textSecurityUserRegisteredStatus" } User status
+								%br
+								%select#selectSecurityUserStatus.Long
+									%option{ :value => "active" } Active
+									%option{ :value => "inactive" } inactive
 							%br
 
 							%div.PositionerCenter.Center

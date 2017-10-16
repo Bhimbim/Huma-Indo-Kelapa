@@ -201,7 +201,10 @@
           <div class='MainHeader'>
             <input class='ButtonNavigation' id='buttonNavigationTrigger' type='button'>
             <h1>
-              <a class='Clear' href='page_home_general.html'>Huma Indo Kelapa</a>
+              <a class='Clear' href='page_home_general.html'>
+                <!-- Huma Indo Kelapa -->
+                <img src='../../Resource/Logo/logo_title_primary.svg'>
+              </a>
             </h1>
             <input class='ButtonLogout' id='buttonLogoutTrigger' onclick='goToLogin()' type='button'>
             <input class='ButtonSetting' id='buttonSettingTrigger' type='button'>
@@ -251,11 +254,26 @@
                 <br>
                 <label class='Long' for='textSecurityGroupName'>User name</label>
                 <br>
-                <input class='Long' id='textSecurityUserName' type='text'>
+                <input class='Long' id='textSecurityUserName' required='true' type='text'>
                 <br>
                 <label class='Long' for='textSecurityGroupCode'>User code</label>
                 <br>
                 <input class='Long' id='textSecurityUserCode' type='text'>
+                <br>
+                <label class='Long' for='textSecurityUserRegisteredDate'>User registered date</label>
+                <br>
+                <input class='Date Long' id='textSecurityUserRegisteredDate' type='text'>
+                <br>
+                <label class='Long' for='textSecurityUserRegisteredTime'>User registered time</label>
+                <br>
+                <input class='Time Long' id='textSecurityUserRegistaredTime' type='text'>
+                <br>
+                <label class='Long' for='textSecurityUserRegisteredStatus'>User status</label>
+                <br>
+                <select class='Long' id='selectSecurityUserStatus'>
+                  <option value='active'>Active</option>
+                  <option value='inactive'>inactive</option>
+                </select>
               </fieldset>
               <br>
               <div class='PositionerCenter Center'>

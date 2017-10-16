@@ -34,7 +34,7 @@ input, textarea, select
 	border-style: solid
 	border-width: $size_border_thin
 	background-position: right center
-	background-size: auto
+	background-size: contain
 	background-repeat: no-repeat
 
 input, select
@@ -42,8 +42,26 @@ input, select
 
 select
 	height: $size_height_single
+	padding-top: $general_space_thin
+	padding-bottom: $general_space_thin
 	+Appearance(none)
 	+BorderRadius(0)
+
+select.Tiny
+	min-width: $size_width_tiny + $general_space_medium + ($size_border_thin * 2)
+	width: $size_width_tiny + $general_space_medium + ($size_border_thin * 2)
+
+select.Short
+	min-width: $size_width_short + $general_space_medium + ($size_border_thin * 2)
+	width: $size_width_short + $general_space_medium + ($size_border_thin * 2)
+
+select.Medium
+	min-width: $size_width_medium + $general_space_medium + ($size_border_thin * 2)
+	width: $size_width_medium + $general_space_medium + ($size_border_thin * 2)
+	
+select.Long
+	min-width: $size_width_long + $general_space_medium + ($size_border_thin * 2)
+	width: $size_width_long + $general_space_medium + ($size_border_thin * 2)
 
 textarea
 	min-height: $size_height_tripple
